@@ -1,0 +1,18 @@
+
+0) Readme: Prima descrizione del progetto.
+1) Definizione e creazione dei contenuti principali.
+2) Definizione e creazione delle tassonomie principali: category or tag.
+3) Integrazione della libreria CMB2.
+4) Integrazione della libreria per verifica dipendenze.
+5) Configurazione doppia lingua.
+6) Predisposizione della procedura per la creazione iniziale dei contenuti di default.
+7) Creazione dei campi dei contenuti principali.
+8) Versione definitiva di tutti i contenuti e di tutte le tassonomie.
+
+
+
+
+
+*** Funzionalità versioni successive ***
+- Supporto: spagnolo, francese, tedesco, portoghese.
+- Integrazione con API per la lettura delle schede dei libri.
