@@ -19,7 +19,7 @@ define(
 			'archive_page_en' => 'collections',
 			'archive_page_it' => 'raccolte',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
-			'icon'            => '',
+			'icon'            => 'dashicons-open-folder',
 		),
 		'book'       => array(
 			'name'            => 'kkw_book',
@@ -61,14 +61,14 @@ define(
 			'archive_page_en' => 'events',
 			'archive_page_it' => 'eventi',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
-			'icon'            => 'dashicons-book',
+			'icon'            => 'dashicons-calendar',
 		),
 		'news'       => array(
 			'name'            => 'kkw_news',
 			'archive_page_en' => 'news',
 			'archive_page_it' => 'notizie',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
-			'icon'            => 'dashicons-book',
+			'icon'            => 'dashicons-admin-site',
 		),
 	)
 );

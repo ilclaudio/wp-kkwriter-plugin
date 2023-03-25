@@ -9,6 +9,9 @@ if ( ! class_exists( 'MultilangManager' ) ) {
 if ( ! class_exists( 'SectionManager' ) ) {
 	include_once 'sections-manager.php';
 }
+if ( ! class_exists( 'CollectionsManager' ) ) {
+	include_once 'collections-manager.php';
+}
 if ( ! class_exists( 'BookManager' ) ) {
 	include_once 'books-manager.php';
 }
@@ -23,6 +26,12 @@ if ( ! class_exists( 'MultimediaManager' ) ) {
 }
 if ( ! class_exists( 'InterviewsManager' ) ) {
 	include_once 'interviews-manager.php';
+}
+if ( ! class_exists( 'EventsManager' ) ) {
+	include_once 'events-manager.php';
+}
+if ( ! class_exists( 'NewsManager' ) ) {
+	include_once 'news-manager.php';
 }
 
 /**
@@ -57,6 +66,10 @@ class PluginManager {
 		$sm = new SectionsManager();
 		$sm->setup();
 
+		// Setup the collection post type.
+		$cm = new CollectionsManager();
+		$cm->setup();
+
 		// Setup the book post type.
 		$bm = new BooksManager();
 		$bm->setup();
@@ -76,5 +89,14 @@ class PluginManager {
 		// Setup the interview post type.
 		$im = new InterviewsManager();
 		$im->setup();
+
+		// Setup the events post type.
+		$em = new EventsManager();
+		$em->setup();
+
+		// Setup the news post type.
+		$nm = new NewsManager();
+		$nm->setup();
+
 	}
 }
