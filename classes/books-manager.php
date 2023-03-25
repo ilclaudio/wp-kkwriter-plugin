@@ -1,9 +1,9 @@
 <?php
 
 /**
- * The Book manager.
+ * The Books manager.
  */
-class Book_Manager {
+class Books_Manager {
 	/**
 	 * Constructor of the Manager.
 	 */
@@ -27,22 +27,22 @@ class Book_Manager {
 	public function add_post_type() {
 
 		$labels = array(
-			'name'          => _x( 'Books', 'Post Type General Name', 'kk_writer_plugin' ),
-			'singular_name' => _x( 'Book', 'Post Type Singular Name', 'kk_writer_plugin' ),
-			'add_new'       => _x( 'Add a book', 'Post Type Singular Name', 'kk_writer_plugin' ),
-			'add_new_item'  => _x( 'Add a book', 'Post Type Singular Name', 'kk_writer_plugin' ),
-			'edit_item'     => _x( 'Edit a book', 'Post Type Singular Name', 'kk_writer_plugin' ),
-			'view_item'     => _x( 'View a book', 'Post Type Singular Name', 'kk_writer_plugin' ),
+			'name'          => _x( 'Books', 'Post Type General Name', KKW_DOMAIN ),
+			'singular_name' => _x( 'Book', 'Post Type Singular Name', KKW_DOMAIN ),
+			'add_new'       => _x( 'Add a book', 'Post Type Singular Name', KKW_DOMAIN ),
+			'add_new_item'  => _x( 'Add a book', 'Post Type Singular Name', KKW_DOMAIN ),
+			'edit_item'     => _x( 'Edit a book', 'Post Type Singular Name', KKW_DOMAIN ),
+			'view_item'     => _x( 'View a book', 'Post Type Singular Name', KKW_DOMAIN ),
 		);
 
 		$args = array(
-			'label'        => __( 'Book', 'design_laboratori_italia' ),
+			'label'        => __( 'Book', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+			'supports'     => KKW_POST_TYPES['book']['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => 'dashicons-book',
+			'menu_icon'    => KKW_POST_TYPES['book']['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
@@ -52,7 +52,7 @@ class Book_Manager {
 		register_post_type( KKW_POST_TYPES['book']['name'], $args );
 
 		// Add the custom fields.
-		// $this->add_fields();
+		$this->add_fields();
 	}
 
 	/**

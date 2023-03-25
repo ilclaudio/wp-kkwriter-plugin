@@ -16,3 +16,4 @@
 *** Funzionalità versioni successive ***
 - Supporto: spagnolo, francese, tedesco, portoghese.
 - Integrazione con API per la lettura delle schede dei libri.
+- Gestione delle collezioni/collections/raccolte.

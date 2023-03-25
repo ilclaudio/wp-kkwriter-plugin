@@ -3,9 +3,9 @@
  * Plugin Name: WP KK Writer Plugin
  * Version: 0.0.1
  * Author: BatClaudio
- * Plugin URI: https://www.claudiobattaglino.it/wp-kkwriter-plgin
+ * Plugin URI: https://github.com/ilclaudio/wp-kkwriter-plugin.git
  * Description: A plugin
- * Author URI: https://www.claudiobattaglino.it
+ * Author URI: https://www.wp-recipes.com
  * Text Domain: kk_writer_plugin
  * Domain Path: /languages
  */
@@ -25,7 +25,8 @@ add_action( 'init', 'setup_the_plugin', 0 );
 function setup_the_plugin() {
 	global $lab_manager;
 	include_once 'classes/plugin-manager.php';
-	$plugin_manager = PluginManager::get_instance();
+	$plugin_manager = new PluginManager();
 	$plugin_manager->plugin_setup();
+
 }
 
