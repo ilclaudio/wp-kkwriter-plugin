@@ -3,7 +3,7 @@
 /**
  * The Sections manager.
  */
-class SectionsManager {
+class MultimediaManager {
 	/**
 	 * Constructor of the Manager.
 	 */
@@ -27,29 +27,29 @@ class SectionsManager {
 	public function add_post_type() {
 
 		$labels = array(
-			'name'          => _x( 'Sections', 'Post Type General Name', KKW_DOMAIN ),
-			'singular_name' => _x( 'Section', 'Post Type Singular Name', KKW_DOMAIN ),
-			'add_new'       => _x( 'Add a section', 'Post Type Singular Name', KKW_DOMAIN ),
-			'add_new_item'  => _x( 'Add a section', 'Post Type Singular Name', KKW_DOMAIN ),
-			'edit_item'     => _x( 'Edit a section', 'Post Type Singular Name', KKW_DOMAIN ),
-			'view_item'     => _x( 'View a section', 'Post Type Singular Name', KKW_DOMAIN ),
+			'name'          => _x( 'MultiMedia', 'Post Type General Name', KKW_DOMAIN ),
+			'singular_name' => _x( 'MultiMedia', 'Post Type Singular Name', KKW_DOMAIN ),
+			'add_new'       => _x( 'Add a media', 'Post Type Singular Name', KKW_DOMAIN ),
+			'add_new_item'  => _x( 'Add a media', 'Post Type Singular Name', KKW_DOMAIN ),
+			'edit_item'     => _x( 'Edit a media', 'Post Type Singular Name', KKW_DOMAIN ),
+			'view_item'     => _x( 'View a media', 'Post Type Singular Name', KKW_DOMAIN ),
 		);
 
 		$args = array(
 			'label'        => __( 'Section', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['section']['supports'],
+			'supports'     => KKW_POST_TYPES['multimedia']['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['section']['icon'],
+			'menu_icon'    => KKW_POST_TYPES['multimedia']['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['section']['name'], $args );
+		register_post_type( KKW_POST_TYPES['multimedia']['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

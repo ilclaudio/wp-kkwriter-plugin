@@ -3,7 +3,7 @@
 /**
  * The Books manager.
  */
-class Books_Manager {
+class BooksManager {
 	/**
 	 * Constructor of the Manager.
 	 */

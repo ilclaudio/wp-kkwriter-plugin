@@ -12,6 +12,18 @@ if ( ! class_exists( 'SectionManager' ) ) {
 if ( ! class_exists( 'BookManager' ) ) {
 	include_once 'books-manager.php';
 }
+if ( ! class_exists( 'ReviewsManager' ) ) {
+	include_once 'reviews-manager.php';
+}
+if ( ! class_exists( 'ExcerptsManager' ) ) {
+	include_once 'excerpts-manager.php';
+}
+if ( ! class_exists( 'MultimediaManager' ) ) {
+	include_once 'multimedia-manager.php';
+}
+if ( ! class_exists( 'InterviewsManager' ) ) {
+	include_once 'interviews-manager.php';
+}
 
 /**
  * The manager that builds the tool and configures Wordpress.
@@ -34,34 +46,35 @@ class PluginManager {
 	public function plugin_setup() {
 
 		// Setup of the Configuration manager.
-		$polylang = new Configurations_Manager();
-		$polylang->setup();
+		$confm = new ConfigurationManager();
+		$confm->setup();
 
 		// Setup of the Multilang features.
-		$polylang = new Multilang_Manager();
-		$polylang->setup();
+		$langm = new MultilangManager();
+		$langm->setup();
 
 		// Setup of the sections.
-		$secm = new Sections_Manager();
-		$secm->setup();
+		$sm = new SectionsManager();
+		$sm->setup();
 
 		// Setup the book post type.
-		$bm = new Books_Manager();
+		$bm = new BooksManager();
 		$bm->setup();
 
+		// Setup the review post type.
+		$rm = new ReviewsManager();
+		$rm->setup();
 
+		// Setup the excerpt post type.
+		$em = new ExcerptsManager();
+		$em->setup();
 
-		// // Setup del post type News.
-		// $ctprog = new News_Manager();
-		// $ctprog->setup();
+		// Setup the media post type.
+		$mm = new MultimediaManager();
+		$mm->setup();
 
-		// // Setup del post type Eventi.
-		// $ctprog = new Event_Manager();
-		// $ctprog->setup();
-
-		// // Setup del post.
-		// $ctprog = new Post_Manager();
-		// $ctprog->setup();
-
+		// Setup the interview post type.
+		$im = new InterviewsManager();
+		$im->setup();
 	}
 }

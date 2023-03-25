@@ -3,7 +3,7 @@
 /**
  * The Configuration manager.
  */
-class Configuration_Manager {
+class ConfigurationManager {
 	/**
 	 * Constructor of the Manager.
 	 */

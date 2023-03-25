@@ -1,9 +1,9 @@
 <?php
 
 /**
- * The Configuration manager.
+ * The Multilang manager.
  */
-class Configuration_Manager {
+class MultilangManager {
 	/**
 	 * Constructor of the Manager.
 	 */
