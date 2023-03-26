@@ -98,5 +98,8 @@ class PluginManager {
 		$nm = new NewsManager();
 		$nm->setup();
 
+		// Needed to refrewsh permalinks.
+		// Same as: Admin->Settings->Permalinks->Save.
+		flush_rewrite_rules();
 	}
 }

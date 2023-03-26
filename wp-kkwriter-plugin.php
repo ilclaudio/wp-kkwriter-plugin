@@ -12,7 +12,15 @@
 
 define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
 
+/**
+ * The plugin configurations.
+ */
 require 'plugin-config.php';
+
+/**
+ * Utils functions.
+ */
+require 'inc/utils.php';
 
 
 add_action( 'init', 'setup_the_plugin', 0 );

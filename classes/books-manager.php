@@ -17,6 +17,12 @@ class BooksManager {
 	public function setup() {
 		// Register the post type.
 		add_action( 'init', array( $this, 'add_post_type' ) );
+
+		// Register the template of the detail page of the post type.
+		add_filter( 'single_template', array( $this, 'register_single_template' ) );
+
+		// Register the template for the archive page of the post type.
+		add_filter( 'archive_template', array( $this, 'register_archive_template' ) );
 	}
 
 	/**
@@ -55,6 +61,7 @@ class BooksManager {
 		$this->add_fields();
 	}
 
+	
 	/**
 	 * Add the custom fields of the custom post-type.
 	 *
@@ -64,4 +71,27 @@ class BooksManager {
 
 	}
 
+	/**
+	 * Finds the template of the post type.
+	 *
+	 * @param [String] $single - The path of the template found.
+	 * @return [String] - The path of the template to use.
+	 */
+	public function register_single_template( $single ) {
+		$result = kkw_register_single_template( ID_PT_BOOK, $single );
+		return $result;
+	}
+
+	/**
+	 * Finds the template for the archive of the post type.
+	 *
+	 * @param [String] $archive - The path of the template found.
+	 * @return [String] - The path of the template to use.
+	 */
+	public function register_archive_template( $archive ) {
+		$result = kkw_register_archive_template( ID_PT_BOOK, $archive );
+		return $result;
+
+
+	}
 }
