@@ -38,18 +38,18 @@ class EventsManager {
 		$args = array(
 			'label'        => __( 'Event', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['event']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_EVENT]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['event']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_EVENT]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['event']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_EVENT]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

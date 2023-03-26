@@ -38,18 +38,18 @@ class MultimediaManager {
 		$args = array(
 			'label'        => __( 'Section', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['multimedia']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['multimedia']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['multimedia']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

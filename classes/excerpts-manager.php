@@ -38,18 +38,18 @@ class ExcerptsManager {
 		$args = array(
 			'label'        => __( 'Section', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['excerpt']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_EXCERPT ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['excerpt']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_EXCERPT ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['excerpt']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

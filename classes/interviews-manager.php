@@ -38,18 +38,18 @@ class InterviewsManager {
 		$args = array(
 			'label'        => __( 'Interview', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['interview']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_INTERVIEW ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['interview']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_INTERVIEW ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['interview']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

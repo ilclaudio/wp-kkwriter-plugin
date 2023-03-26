@@ -38,18 +38,18 @@ class NewsManager {
 		$args = array(
 			'label'        => __( 'News', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['news']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_NEWS ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['news']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_NEWS ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['news']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_NEWS ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

@@ -38,18 +38,18 @@ class ReviewsManager {
 		$args = array(
 			'label'        => __( 'Section', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['review']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_REVIEW ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['review']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_REVIEW ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['review']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_REVIEW ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

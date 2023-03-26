@@ -38,18 +38,18 @@ class SectionsManager {
 		$args = array(
 			'label'        => __( 'Section', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['section']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_SECTION ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['section']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_SECTION ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['section']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_SECTION ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

@@ -44,18 +44,18 @@ class BooksManager {
 		$args = array(
 			'label'        => __( 'Book', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['book']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_BOOK ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['book']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_BOOK ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['book']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_BOOK ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();

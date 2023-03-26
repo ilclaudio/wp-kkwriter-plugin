@@ -38,18 +38,18 @@ class CollectionsManager {
 		$args = array(
 			'label'        => __( 'Collection', KKW_DOMAIN ),
 			'labels'       => $labels,
-			'supports'     => KKW_POST_TYPES['collection']['supports'],
+			'supports'     => KKW_POST_TYPES[ ID_PT_COLLECTION ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
 			'show_in_menu' => true,
-			'menu_icon'    => KKW_POST_TYPES['collection']['icon'],
+			'menu_icon'    => KKW_POST_TYPES[ ID_PT_COLLECTION ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
-		register_post_type( KKW_POST_TYPES['collection']['name'], $args );
+		register_post_type( KKW_POST_TYPES[ ID_PT_COLLECTION ]['name'], $args );
 
 		// Add the custom fields.
 		$this->add_fields();
