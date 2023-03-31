@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-31 18:08+0000\n"
-"PO-Revision-Date: 2023-03-31 18:10+0000\n"
+"PO-Revision-Date: 2023-03-31 18:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: classes/events-manager.php:39
 msgid "Event"
-msgstr ""
+msgstr "Evento"
 
 #: templates/archive/archive-kkw_book.php:5
 msgid "Hello"

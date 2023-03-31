@@ -21,7 +21,7 @@ require 'plugin-config.php';
 require 'inc/utils.php';
 
 
-add_action( 'init', 'setup_the_plugin', 0 );
+add_action( 'init', 'setup_the_plugin', 1 );
 
 /**
  * Setup the writer plugin.
