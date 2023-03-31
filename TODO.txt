@@ -1,18 +1,18 @@
 
-0) Readme: Prima descrizione del progetto.
-1) Definizione e creazione delle tassonomie principali: category or tag.
-2) Integrazione della libreria CMB2.
-3) Integrazione della libreria per verifica dipendenze.
-4) Configurazione doppia lingua.
-5) Creazione di un menu KKWriter.
-6) Predisposizione della procedura per la creazione iniziale dei contenuti di default.
-7) Creazione dei campi dei contenuti principali.
-8) Versione definitiva di tutti i contenuti e di tutte le tassonomie.
+0) Integrazione della libreria per verifica dipendenze.
+1) Integrazione della libreria CMB2.
+2) Configurazione doppia lingua: Polylang.
+3)  Creazione di un menu KKWriter.
+4) Definizione e creazione delle tassonomie principali: category or tag.
+5) Predisposizione della procedura per la creazione iniziale dei contenuti di default.
+6) Creazione dei campi dei contenuti principali.
+7) Versione definitiva di tutti i contenuti e di tutte le tassonomie.
+8) Readme: Prima descrizione del progetto.
 
 
 FATTE:
 - Definizione e creazione dei contenuti principali.
-
+- Configurazione doppia lingua: etichette.
 
 *** Funzionalità versioni successive ***
 - Supporto: spagnolo, francese, tedesco, portoghese.
