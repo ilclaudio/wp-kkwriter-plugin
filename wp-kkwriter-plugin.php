@@ -6,7 +6,7 @@
  * Plugin URI: https://github.com/ilclaudio/wp-kkwriter-plugin.git
  * Description: A plugin
  * Author URI: https://www.wp-recipes.com
- * Text Domain: kk_writer_plugin
+ * Text Domain: kkwdomain
  * Domain Path: /languages
  */
 

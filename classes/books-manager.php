@@ -33,16 +33,16 @@ class BooksManager {
 	public function add_post_type() {
 
 		$labels = array(
-			'name'          => _x( 'Books', 'Post Type General Name', KKW_DOMAIN ),
-			'singular_name' => _x( 'Book', 'Post Type Singular Name', KKW_DOMAIN ),
-			'add_new'       => _x( 'Add a book', 'Post Type Singular Name', KKW_DOMAIN ),
-			'add_new_item'  => _x( 'Add a book', 'Post Type Singular Name', KKW_DOMAIN ),
-			'edit_item'     => _x( 'Edit a book', 'Post Type Singular Name', KKW_DOMAIN ),
-			'view_item'     => _x( 'View a book', 'Post Type Singular Name', KKW_DOMAIN ),
+			'name'          => _x( 'Books', 'Post Type General Name', 'kkwdomain' ),
+			'singular_name' => _x( 'Book', 'Post Type Singular Name', 'kkwdomain' ),
+			'add_new'       => _x( 'Add a book', 'Post Type Singular Name', 'kkwdomain' ),
+			'add_new_item'  => _x( 'Add a book', 'Post Type Singular Name', 'kkwdomain' ),
+			'edit_item'     => _x( 'Edit a book', 'Post Type Singular Name', 'kkwdomain' ),
+			'view_item'     => _x( 'View a book', 'Post Type Singular Name', 'kkwdomain' ),
 		);
 
 		$args = array(
-			'label'        => __( 'Book', KKW_DOMAIN ),
+			'label'        => __( 'Book', 'kkwdomain' ),
 			'labels'       => $labels,
 			'supports'     => KKW_POST_TYPES[ ID_PT_BOOK ]['supports'],
 			'hierarchical' => false,

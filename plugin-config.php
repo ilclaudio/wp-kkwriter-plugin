@@ -3,7 +3,6 @@
 define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
 define( 'WP_DEFAULT_CATEGORY', 'category' );
 define( 'KKW_DEFAULT_SUPPORTS', array( 'title', 'editor', 'thumbnail' ) );
-define( 'KKW_DOMAIN', 'kk_writer_plugin' );
 define( 'KKW_PLUGIN_PATH', WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . KKW_PLUGIN_NAME );
 
 define( 'ID_PT_SECTION', 'section' );
