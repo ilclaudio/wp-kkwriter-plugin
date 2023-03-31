@@ -10,8 +10,6 @@
  * Domain Path: /languages
  */
 
-define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
-
 /**
  * The plugin configurations.
  */

@@ -1,0 +1,294 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP KK Writer Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-31 18:08+0000\n"
+"PO-Revision-Date: 2023-03-31 18:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: Italiano\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2\n"
+"X-Domain: kkwdomain"
+
+#. Description of the plugin
+msgid "A plugin"
+msgstr ""
+
+#: templates/archive/archive-kkw_book.php:2
+msgid "Archive detail page from the PLUGIN"
+msgstr ""
+
+#. Author of the plugin
+msgid "BatClaudio"
+msgstr ""
+
+#: classes/books-manager.php:45
+msgid "Book"
+msgstr "Libro"
+
+#: classes/collections-manager.php:39
+msgid "Collection"
+msgstr ""
+
+#: classes/events-manager.php:39
+msgid "Event"
+msgstr ""
+
+#: templates/archive/archive-kkw_book.php:5
+msgid "Hello"
+msgstr "Ciao"
+
+#. URI of the plugin
+msgid "https://github.com/ilclaudio/wp-kkwriter-plugin.git"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.wp-recipes.com"
+msgstr ""
+
+#: classes/interviews-manager.php:39
+msgid "Interview"
+msgstr ""
+
+#: classes/news-manager.php:39
+msgid "News"
+msgstr ""
+
+#: classes/books-manager.php:36
+msgctxt "Post Type General Name"
+msgid "Books"
+msgstr "Libri"
+
+#: classes/collections-manager.php:30
+msgctxt "Post Type General Name"
+msgid "Collections"
+msgstr ""
+
+#: classes/events-manager.php:30
+msgctxt "Post Type General Name"
+msgid "Events"
+msgstr ""
+
+#: classes/excerpts-manager.php:30
+msgctxt "Post Type General Name"
+msgid "Excerpts"
+msgstr ""
+
+#: classes/interviews-manager.php:30
+msgctxt "Post Type General Name"
+msgid "Interviews"
+msgstr ""
+
+#: classes/multimedia-manager.php:30
+msgctxt "Post Type General Name"
+msgid "MultiMedia"
+msgstr ""
+
+#: classes/news-manager.php:30
+msgctxt "Post Type General Name"
+msgid "News"
+msgstr ""
+
+#: classes/reviews-manager.php:30
+msgctxt "Post Type General Name"
+msgid "Reviews"
+msgstr ""
+
+#: classes/sections-manager.php:30
+msgctxt "Post Type General Name"
+msgid "Sections"
+msgstr ""
+
+#: classes/books-manager.php:38 classes/books-manager.php:39
+msgctxt "Post Type Singular Name"
+msgid "Add a book"
+msgstr ""
+
+#: classes/collections-manager.php:32 classes/collections-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add a collection"
+msgstr ""
+
+#: classes/events-manager.php:32 classes/events-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add a event"
+msgstr ""
+
+#: classes/excerpts-manager.php:32 classes/excerpts-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add a excerpt"
+msgstr ""
+
+#: classes/multimedia-manager.php:32 classes/multimedia-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add a media"
+msgstr ""
+
+#: classes/news-manager.php:32 classes/news-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add a news"
+msgstr ""
+
+#: classes/reviews-manager.php:32 classes/reviews-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add a review"
+msgstr ""
+
+#: classes/sections-manager.php:32 classes/sections-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add a section"
+msgstr ""
+
+#: classes/interviews-manager.php:32 classes/interviews-manager.php:33
+msgctxt "Post Type Singular Name"
+msgid "Add an interview"
+msgstr ""
+
+#: classes/books-manager.php:37
+msgctxt "Post Type Singular Name"
+msgid "Book"
+msgstr ""
+
+#: classes/collections-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "Collection"
+msgstr ""
+
+#: classes/books-manager.php:40
+msgctxt "Post Type Singular Name"
+msgid "Edit a book"
+msgstr ""
+
+#: classes/collections-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit a collection"
+msgstr ""
+
+#: classes/events-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit a event"
+msgstr ""
+
+#: classes/excerpts-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit a excerpt"
+msgstr ""
+
+#: classes/multimedia-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit a media"
+msgstr ""
+
+#: classes/news-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit a news"
+msgstr ""
+
+#: classes/reviews-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit a review"
+msgstr ""
+
+#: classes/sections-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit a section"
+msgstr ""
+
+#: classes/interviews-manager.php:34
+msgctxt "Post Type Singular Name"
+msgid "Edit an interview"
+msgstr ""
+
+#: classes/events-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "Event"
+msgstr ""
+
+#: classes/excerpts-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "Excerpt"
+msgstr ""
+
+#: classes/interviews-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "Interview"
+msgstr ""
+
+#: classes/multimedia-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "MultiMedia"
+msgstr ""
+
+#: classes/news-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "News"
+msgstr ""
+
+#: classes/reviews-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "Review"
+msgstr ""
+
+#: classes/sections-manager.php:31
+msgctxt "Post Type Singular Name"
+msgid "Section"
+msgstr ""
+
+#: classes/books-manager.php:41
+msgctxt "Post Type Singular Name"
+msgid "View a book"
+msgstr ""
+
+#: classes/collections-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View a collection"
+msgstr ""
+
+#: classes/events-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View a event"
+msgstr ""
+
+#: classes/excerpts-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View a excerpt"
+msgstr ""
+
+#: classes/multimedia-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View a media"
+msgstr ""
+
+#: classes/news-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View a news"
+msgstr ""
+
+#: classes/reviews-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View a review"
+msgstr ""
+
+#: classes/sections-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View a section"
+msgstr ""
+
+#: classes/interviews-manager.php:35
+msgctxt "Post Type Singular Name"
+msgid "View an interview"
+msgstr ""
+
+#: classes/excerpts-manager.php:39 classes/multimedia-manager.php:39
+#: classes/reviews-manager.php:39 classes/sections-manager.php:39
+msgid "Section"
+msgstr ""
+
+#. Name of the plugin
+msgid "WP KK Writer Plugin"
+msgstr ""
