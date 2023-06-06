@@ -15,14 +15,82 @@ class BooksManager {
 	 * @return void
 	 */
 	public function setup() {
+
+		// Register the taxonomies used by this post type.
+		add_action( 'init', array( $this, 'add_taxonomies' ) );
+
 		// Register the post type.
 		add_action( 'init', array( $this, 'add_post_type' ) );
+
+		// Register the custom fields.
+		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
 
 		// Register the template of the detail page of the post type.
 		add_filter( 'single_template', array( $this, 'register_single_template' ) );
 
 		// Register the template for the archive page of the post type.
 		add_filter( 'archive_template', array( $this, 'register_archive_template' ) );
+	}
+
+
+	public function add_taxonomies() {
+
+		// Author taxonomy.
+		$author_labels = array(
+			'name'              => _x( 'Author', 'taxonomy general name', 'kkwdomain' ),
+			'singular_name'     => _x( 'Author', 'taxonomy singular name', 'kkwdomain' ),
+			'search_items'      => __( 'Search author', 'kkwdomain' ),
+			'all_items'         => __( 'All the authors', 'kkwdomain' ),
+			'edit_item'         => __( 'Edit author', 'kkwdomain' ),
+			'update_item'       => __( 'Update author', 'kkwdomain' ),
+			'add_new_item'      => __( 'Add an author', 'kkwdomain' ),
+			'new_item_name'     => __( 'New author', 'kkwdomain' ),
+			'menu_name'         => __( 'Authors', 'kkwdomain' ),
+		);
+
+		$author_args = array(
+			'hierarchical'      => false,
+			'labels'            => $author_labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'author' ),
+		);
+
+		register_taxonomy(
+			KKW_AUTHOR_TAXONOMY,
+			array( KKW_POST_TYPES[ ID_PT_BOOK ]['name'] ),
+			$author_args
+		);
+
+		// Publisher taxonomy.
+		$publisher_labels = array(
+			'name'              => _x( 'Publisher', 'taxonomy general name', 'kkwdomain' ),
+			'singular_name'     => _x( 'Publisher', 'taxonomy singular name', 'kkwdomain' ),
+			'search_items'      => __( 'Search Publisher', 'kkwdomain' ),
+			'all_items'         => __( 'All the Publishers', 'kkwdomain' ),
+			'edit_item'         => __( 'Edit Publisher', 'kkwdomain' ),
+			'update_item'       => __( 'Update Publisher', 'kkwdomain' ),
+			'add_new_item'      => __( 'Add a Publisher', 'kkwdomain' ),
+			'new_item_name'     => __( 'New Publisher', 'kkwdomain' ),
+			'menu_name'         => __( 'Publishers', 'kkwdomain' ),
+		);
+
+		$publisher_args = array(
+			'hierarchical'      => false,
+			'labels'            => $publisher_labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'publisher' ),
+		);
+
+		register_taxonomy(
+			KKW_PUBLISHER_TAXONOMY,
+			array( KKW_POST_TYPES[ ID_PT_BOOK ]['name'] ),
+			$publisher_args
+		);
+
 	}
 
 	/**
@@ -57,18 +125,6 @@ class BooksManager {
 
 		register_post_type( KKW_POST_TYPES[ ID_PT_BOOK ]['name'], $args );
 
-		// Add the custom fields.
-		$this->add_fields();
-	}
-
-	
-	/**
-	 * Add the custom fields of the custom post-type.
-	 *
-	 * @return void
-	 */
-	public function add_fields() {
-
 	}
 
 	/**
@@ -91,7 +147,62 @@ class BooksManager {
 	public function register_archive_template( $archive ) {
 		$result = kkw_register_archive_template( ID_PT_BOOK, $archive );
 		return $result;
+	}
 
+	/**
+	 * Register the custom fields.
+	 *
+	 * @return void
+	 */
+	public function register_custom_fields() {
+		$prefix = KKW_POST_TYPES[ ID_PT_BOOK ]['name'] . '_';
+		$cmb    = new_cmb2_box(
+			array(
+				'id'           => $prefix . 'custom_fields',
+				'title'        => __( 'Book data', 'kkwdomain'),
+				'object_types' => array( KKW_POST_TYPES[ ID_PT_BOOK ]['name'] ),
+				'context'      => 'normal',
+				'priority'     => 'high',
+			)
+		);
+
+		// AUTHOR.
+		$cmb->add_field(
+			array(
+				'id'             => $prefix . 'author',
+				'name'           => __( 'Author', 'kkwdomain' ),
+				'desc'           => __( 'The author of the book.', 'kkwdomain' ),
+				'taxonomy'       => KKW_AUTHOR_TAXONOMY,
+				'type'           => 'taxonomy_select',
+				'remove_default' => 'true',
+				'query_args' => array(
+					'orderby'    => 'slug',
+					// 'hide_empty' => true,
+				),
+				'attributes'     => array(
+					'required' => 'required',
+				),
+			)
+		);
+
+		$cmb->add_field(
+			array(
+				'id'             => $prefix . 'publisher',
+				'name'           => __( 'Publisher', 'kkwdomain' ),
+				'desc'           => __( 'The publisher of the book.', 'kkwdomain' ),
+				'taxonomy'       => KKW_PUBLISHER_TAXONOMY,
+				'type'           => 'taxonomy_select',
+				'remove_default' => 'true',
+				'query_args' => array(
+					'orderby'    => 'slug',
+					// 'hide_empty' => true,
+				),
+				'attributes'     => array(
+					'required' => 'required',
+				),
+			)
+		);
 
 	}
+
 }

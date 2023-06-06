@@ -15,6 +15,8 @@ define( 'ID_PT_INTERVIEW', 'interview' );
 define( 'ID_PT_EVENT', 'event' );
 define( 'ID_PT_NEWS', 'news' );
 
+define( 'KKW_AUTHOR_TAXONOMY', 'author' );
+define( 'KKW_PUBLISHER_TAXONOMY', 'publisher' );
 
 define(
 	'KKW_POST_TYPES',

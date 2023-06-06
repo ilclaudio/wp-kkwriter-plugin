@@ -11,6 +11,11 @@
  */
 
 /**
+ * Load the library to build custom field types.
+ */
+require 'inc/vendor/CMB2/init.php';
+
+/**
  * The plugin configurations.
  */
 require 'plugin-config.php';
@@ -33,6 +38,5 @@ function setup_the_plugin() {
 	include_once 'classes/plugin-manager.php';
 	$plugin_manager = new PluginManager();
 	$plugin_manager->plugin_setup();
-
 }
 
