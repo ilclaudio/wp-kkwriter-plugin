@@ -1,16 +1,16 @@
 <?php
 
 /**
- * The Configuration manager.
+ * The Settings manager.
  */
-class ConfigurationManager {
+class KKW_SettingsManager {
 	/**
 	 * Constructor of the Manager.
 	 */
 	public function __construct() {}
 
 	/**
-	 * Setup the configurations.
+	 * Setup the Settings.
 	 *
 	 * @return void
 	 */

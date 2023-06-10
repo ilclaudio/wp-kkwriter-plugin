@@ -3,7 +3,7 @@
 /**
  * The Excerpts manager.
  */
-class ExcerptsManager {
+class KKW_ExcerptsManager {
 	/**
 	 * Constructor of the Manager.
 	 */

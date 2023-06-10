@@ -3,7 +3,7 @@
 /**
  * The Post manager.
  */
-class PostManager {
+class KKW_PostManager {
 	/**
 	 * Constructor of the Manager.
 	 */

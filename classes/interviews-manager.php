@@ -3,7 +3,7 @@
 /**
  * The Sections manager.
  */
-class InterviewsManager {
+class KKW_InterviewsManager {
 	/**
 	 * Constructor of the Manager.
 	 */

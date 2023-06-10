@@ -3,7 +3,7 @@
 /**
  * The Multilang manager.
  */
-class MultilangManager {
+class KKW_MultilangManager {
 	/**
 	 * Constructor of the Manager.
 	 */

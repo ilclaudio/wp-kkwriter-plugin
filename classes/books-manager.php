@@ -3,7 +3,7 @@
 /**
  * The Books manager.
  */
-class BooksManager {
+class KKW_BooksManager {
 	/**
 	 * Constructor of the Manager.
 	 */

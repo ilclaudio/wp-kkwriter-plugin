@@ -3,7 +3,7 @@
 /**
  * The Reviews manager.
  */
-class ReviewsManager {
+class KKW_ReviewsManager {
 	/**
 	 * Constructor of the Manager.
 	 */

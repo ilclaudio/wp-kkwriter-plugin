@@ -3,7 +3,7 @@
 /**
  * The Sections manager.
  */
-class MultimediaManager {
+class KKW_MultimediaManager {
 	/**
 	 * Constructor of the Manager.
 	 */

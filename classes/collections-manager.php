@@ -3,7 +3,7 @@
 /**
  * The Collections manager.
  */
-class CollectionsManager {
+class KKW_CollectionsManager {
 	/**
 	 * Constructor of the Manager.
 	 */

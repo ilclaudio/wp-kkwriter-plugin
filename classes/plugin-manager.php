@@ -1,36 +1,35 @@
 <?php
 
-if ( ! class_exists( 'ConfigurationManager' ) ) {
-	include_once 'configuration-manager.php';
-}
-if ( ! class_exists( 'MultilangManager' ) ) {
+if ( ! class_exists( 'KKW_MultilangManager' ) ) {
 	include_once 'multilang-manager.php';
 }
-if ( ! class_exists( 'SectionManager' ) ) {
-	include_once 'sections-manager.php';
-}
-if ( ! class_exists( 'CollectionsManager' ) ) {
+if ( ! class_exists( 'KKW_CollectionsManager' ) ) {
 	include_once 'collections-manager.php';
 }
-if ( ! class_exists( 'BookManager' ) ) {
+if ( ! class_exists( 'KKW_BookManager' ) ) {
 	include_once 'books-manager.php';
 }
-if ( ! class_exists( 'ReviewsManager' ) ) {
+if ( ! class_exists( 'KKW_ReviewsManager' ) ) {
 	include_once 'reviews-manager.php';
 }
-if ( ! class_exists( 'ExcerptsManager' ) ) {
+if ( ! class_exists( 'KKW_ExcerptsManager' ) ) {
 	include_once 'excerpts-manager.php';
 }
-if ( ! class_exists( 'MultimediaManager' ) ) {
+if ( ! class_exists( 'KKW_MultimediaManager' ) ) {
 	include_once 'multimedia-manager.php';
 }
-if ( ! class_exists( 'InterviewsManager' ) ) {
+if ( ! class_exists( 'KKW_InterviewsManager' ) ) {
 	include_once 'interviews-manager.php';
 }
-if ( ! class_exists( 'PostManager' ) ) {
+if ( ! class_exists( 'KKW_PostManager' ) ) {
 	include_once 'post-manager.php';
 }
-
+if ( ! class_exists( 'KKW_ActivationManager' ) ) {
+	include_once 'activation-manager.php';
+}
+if ( ! class_exists( 'KKW_SettingsManager' ) ) {
+	include_once 'settings-manager.php';
+}
 /**
  * The manager that builds the tool and configures Wordpress.
  */
@@ -51,45 +50,45 @@ class PluginManager {
 	 */
 	public function plugin_setup() {
 
-		// Setup of the Configuration manager.
-		$confm = new ConfigurationManager();
-		$confm->setup();
-
 		// Setup of the Multilang features.
-		$langm = new MultilangManager();
+		$langm = new KKW_MultilangManager();
 		$langm->setup();
 
-		// Setup of the sections.
-		$sm = new SectionsManager();
-		$sm->setup();
-
 		// Setup the collection post type.
-		$cm = new CollectionsManager();
+		$cm = new KKW_CollectionsManager();
 		$cm->setup();
 
 		// Setup the book post type.
-		$bm = new BooksManager();
+		$bm = new KKW_BooksManager();
 		$bm->setup();
 
 		// Setup the review post type.
-		$rm = new ReviewsManager();
+		$rm = new KKW_ReviewsManager();
 		$rm->setup();
 
 		// Setup the excerpt post type.
-		$em = new ExcerptsManager();
+		$em = new KKW_ExcerptsManager();
 		$em->setup();
 
 		// Setup the media post type.
-		$mm = new MultimediaManager();
+		$mm = new KKW_MultimediaManager();
 		$mm->setup();
 
 		// Setup the interview post type.
-		$im = new InterviewsManager();
+		$im = new KKW_InterviewsManager();
 		$im->setup();
 
 		// Setup the default post type.
-		$em = new PostManager();
+		$em = new KKW_PostManager();
 		$em->setup();
+
+		// Activate the plugin.
+		$em = new KKW_ActivationManager();
+		$em->loadData();
+
+		// Setup of the Settings manager.
+		$settm = new KKW_SettingsManager();
+		$settm->setup();
 
 		// Needed to refrewsh permalinks.
 		// Same as: Admin->Settings->Permalinks->Save.
