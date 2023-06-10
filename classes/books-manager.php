@@ -1,4 +1,9 @@
 <?php
+/**
+ * Definition of the BOOK post type.
+ *
+ * @package @package WP_KK_Writer_Plugin
+ */
 
 /**
  * The Books manager.
@@ -223,44 +228,110 @@ class KKW_BooksManager {
 			)
 		);
 
-		// // Field: AUTHOR.
-		// $cmb->add_field(
-		// 	array(
-		// 		'id'             => $prefix . 'author',
-		// 		'name'           => __( 'Author', 'kkwdomain' ),
-		// 		'desc'           => __( 'The author of the book.', 'kkwdomain' ),
-		// 		'taxonomy'       => KKW_AUTHOR_TAXONOMY,
-		// 		'type'           => 'taxonomy_select',
-		// 		'remove_default' => 'true',
-		// 		'query_args' => array(
-		// 			'orderby'    => 'slug',
-		// 			// 'hide_empty' => true,
-		// 		),
-		// 		'attributes'     => array(
-		// 			'required' => 'required',
-		// 		),
-		// 	)
-		// );
+		// Field: Short description.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'short_description',
+				'name'    => __( 'Short description', 'kkwdomain'),
+				'desc'    => __( 'A short description of the book', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 1,
+					'media_buttons' => false,
+					'teeny'         => true,
+					'quicktags'     => false,
+					'tinymce'       => array(
+						'toolbar1'       => 'bold,italic,link,unlink,undo,redo',
+						'valid_elements' => 'a[href],strong,em,p,br',
+					),
+				),
+			)
+		);
 
-		// // Field: PUBLISHER.
-		// $cmb->add_field(
-		// 	array(
-		// 		'id'             => $prefix . 'publisher',
-		// 		'name'           => __( 'Publisher', 'kkwdomain' ),
-		// 		'desc'           => __( 'The publisher of the book.', 'kkwdomain' ),
-		// 		'taxonomy'       => KKW_PUBLISHER_TAXONOMY,
-		// 		'type'           => 'taxonomy_select',
-		// 		'remove_default' => 'true',
-		// 		'query_args' => array(
-		// 			'orderby'    => 'slug',
-		// 			// 'hide_empty' => true,
-		// 		),
-		// 		'attributes'     => array(
-		// 			'required' => 'required',
-		// 		),
-		// 	)
-		// );
+		// Field: Series.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'series',
+				'name'    => __( 'Series', 'kkwdomain'),
+				'desc'    => __( 'The series of the book', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
 
+		// Field: Year.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'year',
+				'name'    => __( 'Year', 'kkwdomain'),
+				'desc'    => __( 'The publication year', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text_small',
+			)
+		);
+
+		// Field: Pages.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'pages',
+				'name'    => __( 'Pages', 'kkwdomain'),
+				'desc'    => __( 'The number of pages', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text_small',
+			)
+		);
+
+		// Field: Price.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'price',
+				'name'    => __( 'Price', 'kkwdomain'),
+				'desc'    => __( 'The price of the book with the currency.', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text_small',
+			)
+		);
+
+		// Field: ISBN.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'isbn',
+				'name'    => __( 'ISBN', 'kkwdomain'),
+				'desc'    => __( 'The ISBN code', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
+
+		// Field: EAN.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'ean',
+				'name'    => __( 'EAN', 'kkwdomain'),
+				'desc'    => __( 'The EAN code', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
+
+		// Field: Image gallery.
+		$cmb->add_field(
+			array(
+				'id'           => $prefix . 'gallery',
+				'name'         => __( 'Gallery', 'kkwdomain'),
+				'desc'         => __( 'Images and photos of the book', 'kkwdomain'),
+				'type'         => 'file_list',
+				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
+				// 'text'         => array(
+				// 	'add_upload_files_text' => 'Replacement', // default: "Add or Upload Files".
+				// 	'remove_image_text' => 'Replacement', // default: "Remove Image".
+				// 	'file_text' => 'Replacement', // default: "File:".
+				// 	'file_download_text' => 'Replacement', // default: "Download".
+				// 	'remove_text' => 'Replacement', // default: "Remove".
+				// ),
+			)
+		);
 	}
-
 }
