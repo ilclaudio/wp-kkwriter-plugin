@@ -27,11 +27,8 @@ if ( ! class_exists( 'MultimediaManager' ) ) {
 if ( ! class_exists( 'InterviewsManager' ) ) {
 	include_once 'interviews-manager.php';
 }
-if ( ! class_exists( 'EventsManager' ) ) {
-	include_once 'events-manager.php';
-}
-if ( ! class_exists( 'NewsManager' ) ) {
-	include_once 'news-manager.php';
+if ( ! class_exists( 'PostManager' ) ) {
+	include_once 'post-manager.php';
 }
 
 /**
@@ -90,13 +87,9 @@ class PluginManager {
 		$im = new InterviewsManager();
 		$im->setup();
 
-		// Setup the events post type.
-		$em = new EventsManager();
+		// Setup the default post type.
+		$em = new PostManager();
 		$em->setup();
-
-		// Setup the news post type.
-		$nm = new NewsManager();
-		$nm->setup();
 
 		// Needed to refrewsh permalinks.
 		// Same as: Admin->Settings->Permalinks->Save.

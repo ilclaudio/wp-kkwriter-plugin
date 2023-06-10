@@ -1,7 +1,9 @@
 <?php
 
 define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
-define( 'WP_DEFAULT_CATEGORY', 'category' );
+define( 'KKW_DEFAULT_CATEGORY', 'category' );
+define( 'KKW_DEFAULT_POST', 'post' );
+define( 'KKW_DEFAULT_PAGE', 'page' );
 define( 'KKW_DEFAULT_SUPPORTS', array( 'title', 'editor', 'thumbnail' ) );
 define( 'KKW_PLUGIN_PATH', WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . KKW_PLUGIN_NAME );
 
@@ -15,6 +17,9 @@ define( 'ID_PT_INTERVIEW', 'interview' );
 define( 'ID_PT_EVENT', 'event' );
 define( 'ID_PT_NEWS', 'news' );
 
+define( 'KKW_SECTION_TAXONOMY', 'section' );
+define( 'KKW_COLLECTION_TAXONOMY', 'collection' );
+define( 'KKW_BLOG_TYPE_TAXONOMY', 'blogtype' );
 define( 'KKW_AUTHOR_TAXONOMY', 'author' );
 define( 'KKW_PUBLISHER_TAXONOMY', 'publisher' );
 

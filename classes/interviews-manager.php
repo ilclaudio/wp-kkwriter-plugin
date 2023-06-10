@@ -45,7 +45,7 @@ class InterviewsManager {
 			'menu_icon'    => KKW_POST_TYPES[ ID_PT_INTERVIEW ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
-			'taxonomies'   => array( WP_DEFAULT_CATEGORY ),
+			'taxonomies'   => array( KKW_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
 
