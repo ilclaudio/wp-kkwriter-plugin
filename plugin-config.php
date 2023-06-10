@@ -93,3 +93,9 @@ define(
 		),
 	)
 );
+
+/* MENU */
+define( 'KKW_SLUG_MAIN_MENU', 'kkw_main_menu' );
+
+// ROLES AND PERMISSIONS.
+define( 'KKW_EDIT_PERMISSION', 'edit_posts' );

@@ -5,12 +5,15 @@
  */
 class KKW_ActivationManager {
 
-	/**
-	 * Initialize the plugin.
-	 *
-	 * @return void
-	 */
-	public function loadData() {
+/**
+ * Initialize the plugin.
+ *
+ * @return boolean
+ */
+	public function load_data() {
+		$result = true;
+		error_log( '@@@ Here you call the function to reload data:' );
+		return $result;
 	}
 
 /**

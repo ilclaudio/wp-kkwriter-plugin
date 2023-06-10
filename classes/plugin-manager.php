@@ -84,7 +84,7 @@ class PluginManager {
 
 		// Activate the plugin.
 		$em = new KKW_ActivationManager();
-		$em->loadData();
+		$em->load_data();
 
 		// Setup of the Settings manager.
 		$settm = new KKW_SettingsManager();
