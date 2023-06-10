@@ -17,6 +17,11 @@
 require 'inc/vendor/CMB2/init.php';
 
 /**
+ * Load the library to link post types.
+ */
+require 'inc/vendor/cmb2-attached-posts/cmb2-attached-posts-field.php';
+
+/**
  * The plugin configurations.
  */
 require 'plugin-config.php';

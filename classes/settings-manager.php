@@ -43,24 +43,6 @@ class KKW_SettingsManager {
 			3
 		);
 
-		// List of the books.
-		add_submenu_page(
-			$main_menu,                                                      // parent slug.
-			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // page title.
-			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // sub-menu title.
-			KKW_EDIT_PERMISSION,                                             // capability.
-			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']     // link.
-		);
-
-		// Add a book.
-		add_submenu_page(
-			$main_menu,
-			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
-			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
-			KKW_EDIT_PERMISSION,
-			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']
-		);
-
 		// Taxonomy: sections.
 		add_submenu_page(
 			$main_menu,
@@ -95,6 +77,42 @@ class KKW_SettingsManager {
 			'Publishers',
 			KKW_EDIT_PERMISSION,
 			'edit-tags.php?taxonomy=' . KKW_PUBLISHER_TAXONOMY
+		);
+
+		// List of the books.
+		add_submenu_page(
+			$main_menu,                                                      // parent slug.
+			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // page title.
+			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // sub-menu title.
+			KKW_EDIT_PERMISSION,                                             // capability.
+			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']     // link.
+		);
+		
+		// Add a book.
+		add_submenu_page(
+			$main_menu,
+			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
+			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']
+		);
+
+		// List of the reviews.
+		add_submenu_page(
+			$main_menu,
+			__( KKW_POST_TYPES[ ID_PT_REVIEW ]['plural_label'], 'kkwdomain' ),
+			__( KKW_POST_TYPES[ ID_PT_REVIEW ]['plural_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_REVIEW ]['name']
+		);
+
+		// Add a review.
+		add_submenu_page(
+			$main_menu,
+			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_REVIEW ]['singular_label'], 'kkwdomain' ),
+			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_REVIEW ]['singular_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_REVIEW ]['name']
 		);
 
 		// Page to reload default data.

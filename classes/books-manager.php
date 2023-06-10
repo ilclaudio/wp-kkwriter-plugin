@@ -9,10 +9,6 @@
  * The Books manager.
  */
 class KKW_BooksManager {
-	/**
-	 * Constructor of the Manager.
-	 */
-	public function __construct() {}
 
 	/**
 	 * Install and configure the Book post type.
@@ -20,7 +16,6 @@ class KKW_BooksManager {
 	 * @return void
 	 */
 	public function setup() {
-
 		// Register the taxonomies used by this post type.
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 
@@ -290,6 +285,26 @@ class KKW_BooksManager {
 				'desc'    => __( 'The price of the book with the currency.', 'kkwdomain'),
 				'default' => '',
 				'type'    => 'text_small',
+			)
+		);
+
+		// Field: Link publisher site.
+		$cmb->add_field(
+			array(
+				'id'         => $prefix . 'publisher_page',
+				'name'       => __( 'Publisher page', 'kkwdomain'),
+				'desc'       => __( 'The link to the book page on the publisher site', 'kkwdomain'),
+				'type'       => 'text_url',
+			)
+		);
+
+		// Field: Link publisher site.
+		$cmb->add_field(
+			array(
+				'id'         => $prefix . 'buy',
+				'name'       => __( 'Buy it', 'kkwdomain'),
+				'desc'       => __( 'The link to buy the book', 'kkwdomain'),
+				'type'       => 'text_url',
 			)
 		);
 
