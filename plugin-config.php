@@ -29,17 +29,31 @@ define( 'KKW_AUTHOR_TAXONOMY', 'author' );
 define( 'KKW_PUBLISHER_TAXONOMY', 'publisher' );
 
 define(
+	'KKW_CUSTOM_BOOK_TAXONOMIES',
+	array(
+		KKW_SECTION_TAXONOMY,
+		KKW_COLLECTION_TAXONOMY,
+		KKW_AUTHOR_TAXONOMY,
+		KKW_PUBLISHER_TAXONOMY,
+	)
+);
+
+define(
 	'KKW_POST_TYPES',
 	array(
 		ID_PT_SECTION    => array(
 			'name'            => 'kkw_section',
-			'archive_page_en' => 'sections',
+			'plural_label'    => 'sections',
+			'singular_label'  => 'Section',
+			'archive_page_en' => 'Sections',
 			'archive_page_it' => 'sezioni',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
 			'icon'            => 'dashicons-open-folder',
 		),
 		ID_PT_COLLECTION => array(
 			'name'            => 'kkw_collection',
+			'plural_label'    => 'Collections',
+			'singular_label'  => 'Collection',
 			'archive_page_en' => 'collections',
 			'archive_page_it' => 'raccolte',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -47,6 +61,8 @@ define(
 		),
 		ID_PT_BOOK       => array(
 			'name'            => 'kkw_book',
+			'plural_label'    => 'Books',
+			'singular_label'  => 'Book',
 			'archive_page_en' => 'books',
 			'archive_page_it' => 'libri',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -56,6 +72,8 @@ define(
 		),
 		ID_PT_REVIEW     => array(
 			'name'            => 'kkw_review',
+			'plural_label'    => 'Reviews',
+			'singular_label'  => 'Review',
 			'archive_page_en' => 'reviews',
 			'archive_page_it' => 'recensioni',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -63,6 +81,8 @@ define(
 		),
 		ID_PT_EXCERPT    => array(
 			'name'            => 'kkw_excerpt',
+			'plural_label'    => 'Excerpts',
+			'singular_label'  => 'Excerpt',
 			'archive_page_en' => 'excerpts',
 			'archive_page_it' => 'brani',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -70,6 +90,8 @@ define(
 		),
 		ID_PT_MULTIMEDIA => array(
 			'name'            => 'kkw_multimedia',
+			'plural_label'    => 'Multimedia',
+			'singular_label'  => 'Multimedia',
 			'archive_page_en' => 'multimedia_en',
 			'archive_page_it' => 'multimedia_it',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -77,24 +99,12 @@ define(
 		),
 		ID_PT_INTERVIEW  => array(
 			'name'            => 'kkw_interview',
+			'plural_label'    => 'Interviews',
+			'singular_label'  => 'Interview',
 			'archive_page_en' => 'interviews',
 			'archive_page_it' => 'interviste',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
 			'icon'            => 'dashicons-microphone',
-		),
-		ID_PT_EVENT      => array(
-			'name'            => 'kkw_event',
-			'archive_page_en' => 'events',
-			'archive_page_it' => 'eventi',
-			'supports'        => KKW_DEFAULT_SUPPORTS,
-			'icon'            => 'dashicons-calendar',
-		),
-		ID_PT_NEWS       => array(
-			'name'            => 'kkw_news',
-			'archive_page_en' => 'news',
-			'archive_page_it' => 'notizie',
-			'supports'        => KKW_DEFAULT_SUPPORTS,
-			'icon'            => 'dashicons-admin-site',
 		),
 	)
 );

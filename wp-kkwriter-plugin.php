@@ -45,4 +45,3 @@ function setup_the_plugin() {
 	$plugin_manager = new PluginManager();
 	$plugin_manager->plugin_setup();
 }
-

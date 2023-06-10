@@ -18,6 +18,9 @@ class KKW_SettingsManager {
 
 		// Register the menu.
 		add_action( 'admin_menu', array( $this, 'register_custom_menu' ) );
+
+		// Fix the menu navigation for taxonomies.
+		add_action( 'parent_file', array( $this, 'keep_taxonomy_menu_open' ) );
 	}
 
 	/**
@@ -32,7 +35,7 @@ class KKW_SettingsManager {
 		// Page that describes the plugin: general information / readme.
 		add_menu_page(
 			'',
-			'KK Writer Plugin',
+			__( 'KK Writer Plugin', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			$main_menu,
 			array( $this, 'get_plugin_presentation' ),
@@ -40,36 +43,65 @@ class KKW_SettingsManager {
 			3
 		);
 
-		// add_submenu_page(
-		// 	$main_menu,                                 // parent slug.
-		// 	'All ' . ORGANIZER_LABEL_PLURAL,            // page title.
-		// 	'All ' . ORGANIZER_LABEL_PLURAL,            // sub-menu title.
-		// 	KKW_EDIT_PERMISSION,                        // capability.
-		// 	'edit.php?post_type=' . ORGANIZER_POST_TYPE // your menu menu slug.
-		// );
+		// List of the books.
+		add_submenu_page(
+			$main_menu,                                                      // parent slug.
+			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // page title.
+			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // sub-menu title.
+			KKW_EDIT_PERMISSION,                                             // capability.
+			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']     // link.
+		);
 
-		// add_submenu_page(
-		// 	$main_menu,
-		// 	'Opportunity Types',
-		// 	'Opportunity Types',
-		// 	KKW_EDIT_PERMISSION,
-		// 	'edit-tags.php?taxonomy=' . TAXONOMY_OPPORTUNITY_TYPE . '&post_type=emt-types'
-		// );
+		// Add a book.
+		add_submenu_page(
+			$main_menu,
+			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
+			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']
+		);
 
-		// add_submenu_page(
-		// 	$main_menu,
-		// 	'Settings',
-		// 	'Settings',
-		// 	KKW_EDIT_PERMISSION,
-		// 	'kkw_settings_menu',
-		// 	array( $this, 'get_settings_page' )
-		// );
+		// Taxonomy: sections.
+		add_submenu_page(
+			$main_menu,
+			'Sections',
+			'Sections',
+			KKW_EDIT_PERMISSION,
+			'edit-tags.php?taxonomy=' . KKW_SECTION_TAXONOMY
+		);
+
+		// Taxonomy: collections.
+		add_submenu_page(
+			$main_menu,
+			'Collections',
+			'Collections',
+			KKW_EDIT_PERMISSION,
+			'edit-tags.php?taxonomy=' . KKW_COLLECTION_TAXONOMY
+		);
+
+		// Taxonomy: authors.
+		add_submenu_page(
+			$main_menu,
+			'Authors',
+			'Authors',
+			KKW_EDIT_PERMISSION,
+			'edit-tags.php?taxonomy=' . KKW_AUTHOR_TAXONOMY
+		);
+
+		// Taxonomy: publishers.
+		add_submenu_page(
+			$main_menu,
+			'Publishers',
+			'Publishers',
+			KKW_EDIT_PERMISSION,
+			'edit-tags.php?taxonomy=' . KKW_PUBLISHER_TAXONOMY
+		);
 
 		// Page to reload default data.
 		add_submenu_page(
 			$main_menu,
-			'Reload data',
-			'Reload data',
+			__( 'Reload data', 'kkwdomain' ),
+			__( 'Reload data', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'kkw_reload_menu',
 			array( $this, 'get_reloaddata_page' )
@@ -120,6 +152,20 @@ class KKW_SettingsManager {
 
 		echo '</div>';
 
+	}
+
+	/**
+	 * Return the name of the parent of a taxonomy in the menu.
+	 *
+	 * @param [type] $parent_file
+	 * @return void
+	 */
+	public function keep_taxonomy_menu_open( $parent_file ) {
+		global $current_screen;
+		$taxonomy = $current_screen->taxonomy;
+		if ( in_array( $taxonomy, KKW_CUSTOM_BOOK_TAXONOMIES ) )
+			$parent_file = KKW_SLUG_MAIN_MENU;
+		return $parent_file;
 	}
 
 }

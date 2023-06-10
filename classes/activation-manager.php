@@ -5,17 +5,16 @@
  * @package @package WP_KK_Writer_Plugin
  */
 
-
 /**
  * The Activation manager.
  */
 class KKW_ActivationManager {
 
-/**
- * Initialize the plugin.
- *
- * @return boolean
- */
+	/**
+	 * Initialize the plugin.
+	 *
+	 * @return boolean
+	 */
 	public function load_data() {
 		$result = true;
 		error_log( '@@@ Here you call the function to reload data @@@' );
@@ -30,8 +29,8 @@ class KKW_ActivationManager {
 	 *
 	 * @return boolean
 	 */
-	function load_taxonomy_terms() {
-		try{
+	private function load_taxonomy_terms() {
+		try {
 			foreach ( KKW_DEFAULT_TERMS as $item ) {
 				foreach ( $item['items'] as $term ) {
 					$slug = kkw_generate_slug( $term );

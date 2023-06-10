@@ -172,7 +172,7 @@ class KKW_BooksManager {
 			'supports'     => KKW_POST_TYPES[ ID_PT_BOOK ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
-			'show_in_menu' => true,
+			'show_in_menu' => false,
 			'menu_icon'    => KKW_POST_TYPES[ ID_PT_BOOK ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
