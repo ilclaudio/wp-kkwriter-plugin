@@ -1,4 +1,9 @@
 <?php
+/**
+ * Configuration data of the plugin.
+ *
+ * @package @package WP_KK_Writer_Plugin
+ */
 
 define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
 define( 'KKW_DEFAULT_CATEGORY', 'category' );
@@ -93,6 +98,9 @@ define(
 		),
 	)
 );
+
+/* */
+define( 'KKW_MAX_TAXONOMY_LENGTH', 60 );
 
 /* MENU */
 define( 'KKW_SLUG_MAIN_MENU', 'kkw_main_menu' );

@@ -8,6 +8,7 @@
  * Author URI: https://www.wp-recipes.com
  * Text Domain: kkwdomain
  * Domain Path: /languages
+ * @package WP_KK_Writer_Plugin
  */
 
 /**
@@ -19,6 +20,11 @@ require 'inc/vendor/CMB2/init.php';
  * The plugin configurations.
  */
 require 'plugin-config.php';
+
+/**
+ * The plugin default data.
+ */
+require 'default-data.php';
 
 /**
  * Utils functions.

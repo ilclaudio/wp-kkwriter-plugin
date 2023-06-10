@@ -82,15 +82,15 @@ class PluginManager {
 		$em = new KKW_PostManager();
 		$em->setup();
 
-		// Activate the plugin.
-		$em = new KKW_ActivationManager();
-		$em->load_data();
+		// // Activate the plugin.
+		// $em = new KKW_ActivationManager();
+		// $em->load_data();
 
-		// Setup of the Settings manager.
+		// Setup of the Settings manager (menu).
 		$settm = new KKW_SettingsManager();
 		$settm->setup();
 
-		// Needed to refrewsh permalinks.
+		// Needed to refresh permalinks.
 		// Same as: Admin->Settings->Permalinks->Save.
 		flush_rewrite_rules();
 	}

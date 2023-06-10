@@ -102,7 +102,7 @@ class KKW_SettingsManager {
 		}
 
 		echo "<div class='wrap'>";
-		echo '<h1>Reload plugin activation data</h1>';
+		echo '<h1>Reload default plugin data</h1>';
 
 		echo '<div id="admin_reload_data">';
 
