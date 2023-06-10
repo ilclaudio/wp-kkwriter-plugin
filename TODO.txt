@@ -1,20 +1,24 @@
 
-1) Integrazione della libreria CMB2.
+
+1) Versione definitiva di tutti i post type.
 2) Configurazione doppia lingua: Polylang.
-3) Integrazione della libreria per verifica dipendenze.
-4)  Creazione di un menu KKWriter.
-5) Definizione e creazione delle tassonomie principali: category or tag.
-6) Predisposizione della procedura per la creazione iniziale dei contenuti di default.
-7) Creazione dei campi dei contenuti principali.
-8) Versione definitiva di tutti i contenuti e di tutte le tassonomie.
-9) Readme: Prima descrizione del progetto.
+3) Integrazione della libreria per verifica dipendenze: Polylang.
+4) Readme: Prima descrizione del progetto.
+5) Traduzione etichette.
+6) Aggiungere gli stili per il backend.
 
 
 FATTE:
 - Definizione e creazione dei contenuti principali.
 - Configurazione doppia lingua: etichette.
+- Integrazione della libreria CMB2.
+- Creazione di un menu KKWriter.
+- Definizione e creazione delle tassonomie principali: category or tag.
+- Predisposizione della procedura per la creazione iniziale dei contenuti di default.
+- Versione definitiva di tutte le tassonomie.
 
 *** Funzionalità versioni successive ***
 - Supporto: spagnolo, francese, tedesco, portoghese.
 - Integrazione con API per la lettura delle schede dei libri.
 - Gestione delle collezioni/collections/raccolte.
+- Import dei contenuti e delle tassonomie da Excel.
