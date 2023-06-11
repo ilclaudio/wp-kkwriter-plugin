@@ -1,7 +1,7 @@
 attached-posts
 
 
-1) Query per la ricerca (del sito), ricerca oggetti collegati per libro.
+1) REST API: Query per la ricerca (del sito), ricerca oggetti collegati per libro.
 2) Configurazione doppia lingua: Polylang.
 3) Integrazione della libreria per verifica dipendenze (TGM-Plugin-Activation): Polylang.
 4) Readme: Prima descrizione del progetto.
