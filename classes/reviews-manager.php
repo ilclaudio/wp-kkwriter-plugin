@@ -1,4 +1,9 @@
 <?php
+/**
+ * Definition of the Review post type.
+ *
+ * @package @package WP_KK_Writer_Plugin
+ */
 
 /**
  * The Reviews manager.
@@ -24,7 +29,6 @@ class KKW_ReviewsManager {
 	 * @return void
 	 */
 	public function add_post_type() {
-
 		$labels = array(
 			'name'          => _x( 'Reviews', 'Post Type General Name', 'kkwdomain' ),
 			'singular_name' => _x( 'Review', 'Post Type Singular Name', 'kkwdomain' ),
@@ -33,7 +37,6 @@ class KKW_ReviewsManager {
 			'edit_item'     => _x( 'Edit a review', 'Post Type Singular Name', 'kkwdomain' ),
 			'view_item'     => _x( 'View a review', 'Post Type Singular Name', 'kkwdomain' ),
 		);
-
 		$args = array(
 			'label'        => __( 'Section', 'kkwdomain' ),
 			'labels'       => $labels,
@@ -46,7 +49,6 @@ class KKW_ReviewsManager {
 			'show_in_rest' => true,
 			'taxonomies'   => array( KKW_DEFAULT_CATEGORY ),
 		);
-
 		register_post_type( KKW_POST_TYPES[ ID_PT_REVIEW ]['name'], $args );
 	}
 
@@ -66,7 +68,6 @@ class KKW_ReviewsManager {
 				'priority'     => 'high',
 			)
 		);
-
 		// Field: Author.
 		$cmb->add_field(
 			array(
@@ -77,8 +78,7 @@ class KKW_ReviewsManager {
 				'type'    => 'text',
 			)
 		);
-
-		// Field: Author.
+		// Field: Source description.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'source_description',
@@ -98,7 +98,6 @@ class KKW_ReviewsManager {
 				),
 			)
 		);
-
 		// Field: Short description.
 		$cmb->add_field(
 			array(
@@ -119,6 +118,6 @@ class KKW_ReviewsManager {
 				),
 			)
 		);
-
 	}
+
 }

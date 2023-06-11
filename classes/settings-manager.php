@@ -1,4 +1,9 @@
 <?php
+/**
+ * Definition of the plugin settings and of the main menu.
+ *
+ * @package @package WP_KK_Writer_Plugin
+ */
 
 /**
  * The Settings manager.
@@ -113,6 +118,42 @@ class KKW_SettingsManager {
 			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_REVIEW ]['singular_label'], 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_REVIEW ]['name']
+		);
+
+		// List of the interviews.
+		add_submenu_page(
+			$main_menu,
+			__( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['plural_label'], 'kkwdomain' ),
+			__( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['plural_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name']
+		);
+
+		// Add an interview.
+		add_submenu_page(
+			$main_menu,
+			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['singular_label'], 'kkwdomain' ),
+			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['singular_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name']
+		);
+
+		// List of the excerpts.
+		add_submenu_page(
+			$main_menu,
+			__( KKW_POST_TYPES[ ID_PT_EXCERPT ]['plural_label'], 'kkwdomain' ),
+			__( KKW_POST_TYPES[ ID_PT_EXCERPT ]['plural_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['name']
+		);
+
+		// Add an excerpt.
+		add_submenu_page(
+			$main_menu,
+			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['singular_label'], 'kkwdomain' ),
+			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['singular_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['name']
 		);
 
 		// Page to reload default data.

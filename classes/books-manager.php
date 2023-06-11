@@ -18,16 +18,12 @@ class KKW_BooksManager {
 	public function setup() {
 		// Register the taxonomies used by this post type.
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-
 		// Register the post type.
 		add_action( 'init', array( $this, 'add_post_type' ) );
-
 		// Register the custom fields.
 		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
-
 		// Register the template of the detail page of the post type.
 		add_filter( 'single_template', array( $this, 'register_single_template' ) );
-
 		// Register the template for the archive page of the post type.
 		add_filter( 'archive_template', array( $this, 'register_archive_template' ) );
 	}
@@ -39,7 +35,6 @@ class KKW_BooksManager {
 	 * @return void
 	 */
 	public function register_taxonomies() {
-
 		// Section taxonomy.
 		$tax_labels = array(
 			'name'              => _x( 'Section', 'taxonomy general name', 'kkwdomain' ),
@@ -156,7 +151,6 @@ class KKW_BooksManager {
 	 * @return void
 	 */
 	public function add_post_type() {
-
 		$labels = array(
 			'name'          => _x( 'Books', 'Post Type General Name', 'kkwdomain' ),
 			'singular_name' => _x( 'Book', 'Post Type Singular Name', 'kkwdomain' ),
@@ -165,7 +159,6 @@ class KKW_BooksManager {
 			'edit_item'     => _x( 'Edit a book', 'Post Type Singular Name', 'kkwdomain' ),
 			'view_item'     => _x( 'View a book', 'Post Type Singular Name', 'kkwdomain' ),
 		);
-
 		$args = array(
 			'label'        => __( 'Book', 'kkwdomain' ),
 			'labels'       => $labels,
@@ -177,11 +170,8 @@ class KKW_BooksManager {
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( KKW_DEFAULT_CATEGORY ),
-			// 'menu_position' => 6,
 		);
-
 		register_post_type( KKW_POST_TYPES[ ID_PT_BOOK ]['name'], $args );
-
 	}
 
 	/**
@@ -222,7 +212,6 @@ class KKW_BooksManager {
 				'priority'     => 'high',
 			)
 		);
-
 		// Field: Short description.
 		$cmb->add_field(
 			array(
@@ -243,7 +232,6 @@ class KKW_BooksManager {
 				),
 			)
 		);
-
 		// Field: Series.
 		$cmb->add_field(
 			array(
@@ -254,7 +242,6 @@ class KKW_BooksManager {
 				'type'    => 'text',
 			)
 		);
-
 		// Field: Year.
 		$cmb->add_field(
 			array(
@@ -265,7 +252,6 @@ class KKW_BooksManager {
 				'type'    => 'text_small',
 			)
 		);
-
 		// Field: Pages.
 		$cmb->add_field(
 			array(
@@ -276,7 +262,6 @@ class KKW_BooksManager {
 				'type'    => 'text_small',
 			)
 		);
-
 		// Field: Price.
 		$cmb->add_field(
 			array(
@@ -287,7 +272,6 @@ class KKW_BooksManager {
 				'type'    => 'text_small',
 			)
 		);
-
 		// Field: Link publisher site.
 		$cmb->add_field(
 			array(
@@ -297,7 +281,6 @@ class KKW_BooksManager {
 				'type'       => 'text_url',
 			)
 		);
-
 		// Field: Link publisher site.
 		$cmb->add_field(
 			array(
@@ -307,7 +290,6 @@ class KKW_BooksManager {
 				'type'       => 'text_url',
 			)
 		);
-
 		// Field: ISBN.
 		$cmb->add_field(
 			array(
@@ -318,7 +300,6 @@ class KKW_BooksManager {
 				'type'    => 'text',
 			)
 		);
-
 		// Field: EAN.
 		$cmb->add_field(
 			array(
@@ -329,7 +310,6 @@ class KKW_BooksManager {
 				'type'    => 'text',
 			)
 		);
-
 		// Field: Image gallery.
 		$cmb->add_field(
 			array(
@@ -349,4 +329,5 @@ class KKW_BooksManager {
 			)
 		);
 	}
+
 }

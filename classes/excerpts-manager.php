@@ -4,10 +4,6 @@
  * The Excerpts manager.
  */
 class KKW_ExcerptsManager {
-	/**
-	 * Constructor of the Manager.
-	 */
-	public function __construct() {}
 
 	/**
 	 * Install and configure the Section post type.
@@ -25,7 +21,6 @@ class KKW_ExcerptsManager {
 	 * @return void
 	 */
 	public function add_post_type() {
-
 		$labels = array(
 			'name'          => _x( 'Excerpts', 'Post Type General Name', 'kkwdomain' ),
 			'singular_name' => _x( 'Excerpt', 'Post Type Singular Name', 'kkwdomain' ),
@@ -34,34 +29,20 @@ class KKW_ExcerptsManager {
 			'edit_item'     => _x( 'Edit a excerpt', 'Post Type Singular Name', 'kkwdomain' ),
 			'view_item'     => _x( 'View a excerpt', 'Post Type Singular Name', 'kkwdomain' ),
 		);
-
 		$args = array(
 			'label'        => __( 'Section', 'kkwdomain' ),
 			'labels'       => $labels,
 			'supports'     => KKW_POST_TYPES[ ID_PT_EXCERPT ]['supports'],
 			'hierarchical' => false,
 			'public'       => true,
-			'show_in_menu' => true,
+			'show_in_menu' => false,
 			'menu_icon'    => KKW_POST_TYPES[ ID_PT_EXCERPT ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( KKW_DEFAULT_CATEGORY ),
 			// 'menu_position' => 6,
 		);
-
 		register_post_type( KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'], $args );
-
-		// Add the custom fields.
-		$this->add_fields();
-	}
-
-	/**
-	 * Add the custom fields of the custom post-type.
-	 *
-	 * @return void
-	 */
-	public function add_fields() {
-
 	}
 
 }
