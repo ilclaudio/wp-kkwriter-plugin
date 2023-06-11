@@ -10,11 +10,6 @@
  */
 class KKW_PostManager {
 	/**
-	 * Constructor of the Manager.
-	 */
-	public function __construct() {}
-
-	/**
 	 * Install and configure the News post type.
 	 *
 	 * @return void
@@ -22,6 +17,8 @@ class KKW_PostManager {
 	public function setup() {
 		// Register the taxonomies used by this post type.
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		// Register the custom fields.
+		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
 	}
 
 	/**
@@ -48,7 +45,6 @@ class KKW_PostManager {
 			'show_ui'           => true,
 			'show_in_rest'      => true,
 			'show_admin_column' => true,
-			'show_in_rest'      => true,
 			'query_var'         => true,
 			'rewrite'           => array( 'slug' => 'blogtype' ),
 		);
@@ -56,6 +52,136 @@ class KKW_PostManager {
 			KKW_BLOG_TYPE_TAXONOMY,
 			array( KKW_DEFAULT_POST ),
 			$collection_args
+		);
+	}
+
+	public function register_custom_fields() {
+		$prefix = KKW_POST_TYPES[ KKW_DEFAULT_POST ]['name'] . '_';
+		$cmb    = new_cmb2_box(
+			array(
+				'id'           => $prefix . 'custom_fields',
+				'title'        => __( 'Post custom data', 'kkwdomain'),
+				'object_types' => array( KKW_POST_TYPES[ KKW_DEFAULT_POST ]['name'] ),
+				'context'      => 'normal',
+				'priority'     => 'high',
+			)
+		);
+		// Field: BLOG TYPE.
+		$cmb->add_field(
+			array(
+				'id'             => $prefix . 'blog_type',
+				'name'           => __( 'Type', 'kkwdomain' ),
+				'desc'           => __( 'The type of the post.', 'kkwdomain' ),
+				'taxonomy'       => KKW_BLOG_TYPE_TAXONOMY,
+				'type'           => 'taxonomy_select',
+				'remove_default' => 'true',
+				'query_args' => array(
+					'orderby'    => 'slug',
+					// 'hide_empty' => true,
+				),
+				'attributes'     => array(
+					'required' => 'required',
+				),
+			)
+		);
+		// Field: Start date.
+		$cmb->add_field(
+			array(
+				'id'             => $prefix . 'start_date',
+				'name'           => __( 'Start date', 'kkwdomain' ),
+				'desc'           => __( 'The start date of the event', 'kkwdomain' ),
+				'type' => 'text_date',
+				'date_format' => 'd-m-Y',
+				'data-datepicker' => json_encode(
+					array(
+						'yearRange' => '-100:+0',
+					)
+				),
+			)
+		);
+		// Field: End date.
+		$cmb->add_field(
+			array(
+				'id'             => $prefix . 'end_date',
+				'name'           => __( 'End date', 'kkwdomain' ),
+				'desc'           => __( 'The end date of the event', 'kkwdomain' ),
+				'type' => 'text_date',
+				'date_format' => 'd-m-Y',
+				'data-datepicker' => json_encode(
+					array(
+						'yearRange' => '-100:+0',
+					)
+				),
+			)
+		);
+		// Field: Address.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'address',
+				'name'    => __( 'Address', 'kkwdomain'),
+				'desc'    => __( 'The address of the event', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
+		// Field: Contact name.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'contact_person',
+				'name'    => __( 'Contact person', 'kkwdomain'),
+				'desc'    => __( 'The contact person', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
+		// Field: Contact mail.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'contact_mail',
+				'name'    => __( 'Contact mail', 'kkwdomain'),
+				'desc'    => __( 'The contact mail', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
+		// Field: Contact telephone.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'contact_phone',
+				'name'    => __( 'Contact phone number', 'kkwdomain'),
+				'desc'    => __( 'The contact phone number', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
+		// Field: External link.
+		$cmb->add_field(
+			array(
+				'id'         => $prefix . 'external_link',
+				'name'       => __( 'External link', 'kkwdomain'),
+				'desc'       => __( 'The link to the event/news', 'kkwdomain'),
+				'type'       => 'text_url',
+			)
+		);
+		// Field: Video link.
+		$cmb->add_field(
+			array(
+				'id'         => $prefix . 'video_link',
+				'name'       => __( 'Video link', 'kkwdomain'),
+				'desc'       => __( 'The link to the video', 'kkwdomain'),
+				'type'       => 'text_url',
+			)
+		);
+		// Field: Image gallery.
+		$cmb->add_field(
+			array(
+				'id'           => $prefix . 'gallery',
+				'name'         => __( 'Gallery', 'kkwdomain'),
+				'desc'         => __( 'Images and photos of the book', 'kkwdomain'),
+				'type'         => 'file_list',
+				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
+			)
 		);
 	}
 
