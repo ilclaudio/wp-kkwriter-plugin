@@ -44,7 +44,7 @@ class KKW_SettingsManager {
 			KKW_EDIT_PERMISSION,
 			$main_menu,
 			array( $this, 'get_plugin_presentation' ),
-			'dashicons-book',
+			'dashicons-welcome-write-blog',
 			3
 		);
 

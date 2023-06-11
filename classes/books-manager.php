@@ -22,10 +22,6 @@ class KKW_BooksManager {
 		add_action( 'init', array( $this, 'add_post_type' ) );
 		// Register the custom fields.
 		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
-		// Register the template of the detail page of the post type.
-		add_filter( 'single_template', array( $this, 'register_single_template' ) );
-		// Register the template for the archive page of the post type.
-		add_filter( 'archive_template', array( $this, 'register_archive_template' ) );
 	}
 
 
@@ -175,28 +171,6 @@ class KKW_BooksManager {
 	}
 
 	/**
-	 * Finds the template of the post type.
-	 *
-	 * @param [String] $single - The path of the template found.
-	 * @return [String] - The path of the template to use.
-	 */
-	public function register_single_template( $single ) {
-		$result = kkw_register_single_template( ID_PT_BOOK, $single );
-		return $result;
-	}
-
-	/**
-	 * Finds the template for the archive of the post type.
-	 *
-	 * @param [String] $archive - The path of the template found.
-	 * @return [String] - The path of the template to use.
-	 */
-	public function register_archive_template( $archive ) {
-		$result = kkw_register_archive_template( ID_PT_BOOK, $archive );
-		return $result;
-	}
-
-	/**
 	 * Register the custom fields.
 	 *
 	 * @return void
@@ -319,13 +293,6 @@ class KKW_BooksManager {
 				'type'         => 'file_list',
 				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
 				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
-				// 'text'         => array(
-				// 	'add_upload_files_text' => 'Replacement', // default: "Add or Upload Files".
-				// 	'remove_image_text' => 'Replacement', // default: "Remove Image".
-				// 	'file_text' => 'Replacement', // default: "File:".
-				// 	'file_download_text' => 'Replacement', // default: "Download".
-				// 	'remove_text' => 'Replacement', // default: "Remove".
-				// ),
 			)
 		);
 	}

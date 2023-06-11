@@ -67,8 +67,6 @@ define(
 			'archive_page_it' => 'libri',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
 			'icon'            => 'dashicons-book',
-			'single-page'     => 'single-kkw_book.php',
-			'archive-page'    => 'archive-kkw_book.php',
 		),
 		ID_PT_REVIEW     => array(
 			'name'            => 'kkw_review',
