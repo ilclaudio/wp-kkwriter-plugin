@@ -1,4 +1,9 @@
 <?php
+/**
+ * Definition of the default POST type.
+ *
+ * @package @package WP_KK_Writer_Plugin
+ */
 
 /**
  * The Post manager.

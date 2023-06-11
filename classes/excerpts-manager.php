@@ -1,4 +1,9 @@
 <?php
+/**
+ * Definition of the EXCERPT post type.
+ *
+ * @package @package WP_KK_Writer_Plugin
+ */
 
 /**
  * The Excerpts manager.

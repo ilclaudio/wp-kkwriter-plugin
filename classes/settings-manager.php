@@ -92,7 +92,7 @@ class KKW_SettingsManager {
 			KKW_EDIT_PERMISSION,                                             // capability.
 			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']     // link.
 		);
-		
+
 		// Add a book.
 		add_submenu_page(
 			$main_menu,
@@ -154,6 +154,24 @@ class KKW_SettingsManager {
 			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['singular_label'], 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['name']
+		);
+
+		// List of the multimedia.
+		add_submenu_page(
+			$main_menu,
+			__( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['plural_label'], 'kkwdomain' ),
+			__( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['plural_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name']
+		);
+
+		// Add a multimedia.
+		add_submenu_page(
+			$main_menu,
+			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['singular_label'], 'kkwdomain' ),
+			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['singular_label'], 'kkwdomain' ),
+			KKW_EDIT_PERMISSION,
+			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name']
 		);
 
 		// Page to reload default data.

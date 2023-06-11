@@ -1,6 +1,6 @@
 <?php
 /**
- * Definition of the Review post type.
+ * Definition of the REVIEW post type.
  *
  * @package @package WP_KK_Writer_Plugin
  */

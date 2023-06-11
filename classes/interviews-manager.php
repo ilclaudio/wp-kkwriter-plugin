@@ -1,6 +1,6 @@
 <?php
 /**
- * Definition of the Interview post type.
+ * Definition of the INTERVIEW post type.
  *
  * @package @package WP_KK_Writer_Plugin
  */
