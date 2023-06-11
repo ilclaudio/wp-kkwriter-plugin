@@ -131,6 +131,24 @@ class KKW_InterviewsManager {
 				'type'       => 'text_url',
 			)
 		);
+		// Field: link to a book.
+		$cmb->add_field(
+			array(
+			'id'      => $prefix . 'book_link',
+			'name'    => __( 'Book', 'kkwdomain' ),
+			'before'  => __( 'Select linked books' , 'kkwdomain' ),
+			'type'    => 'custom_attached_posts',
+			'column'  => true, // Output in the admin post-listing as a custom column. https://github.com/CMB2/CMB2/wiki/Field-Parameters#column
+			'options' => array(
+					'show_thumbnails' => false, // Show thumbnails on the left
+					'filter_boxes'    => true, // Show a text box for filtering the results
+					'query_args'      => array(
+							'posts_per_page' => -1,
+							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+					),
+				),
+			)
+		);
 	}
 
 }
