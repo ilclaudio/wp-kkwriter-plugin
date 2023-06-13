@@ -12,18 +12,22 @@
 class KKW_SearchManager {
 
 	public static function get_books() {
-		$books = array( 'uno', 'due', 'tre' );
-		return wp_json_encode( $books );
+		$results = new WP_Query(
+			array(
+				'post_type' => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+			),
+		);
+		return $results->get_posts();
 	}
 
 	public static function get_book() {
 		$book = 'uno';
-		return wp_json_encode( $book );
+		return $book;
 	}
 
 	public static function find() {
 		$results = array( 'uno', 'due', 'tre' );
-		return wp_json_encode( $results );
+		return $results;
 	}
 
 }

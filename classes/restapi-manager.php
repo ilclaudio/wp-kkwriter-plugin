@@ -39,39 +39,47 @@ class KKW_RestApiManager {
 
 		register_rest_route(
 			'wp-kkwriter/v1',
-			'getBook',
+			'getBook/(?P<id>\d+)',
 			array(
 				'methods'  => WP_REST_SERVER::READABLE,
 				'callback' => array( $this, 'get_book' ),
 			)
 		);
+
 	}
 
 	/**
-	 * Return the books.
+	 * Return all the books.
 	 *
 	 * @return void
 	 */
 	public function get_books() {
-		return KKW_SearchManager::get_books();
+		$results = KKW_SearchManager::get_books();
+		return rest_ensure_response( $results );
 	}
 
 	/**
-	 * Return the book.
+	 * Return a book by id.
 	 *
 	 * @return void
 	 */
-	public function get_book() {
-		return KKW_SearchManager::get_book();
+	public function get_book( WP_REST_Request $request ) {
+		$id = isset( $request['id'] ) ? $request['id'] : null;
+		return rest_ensure_response( KKW_SearchManager::get_book() );
 	}
 
+
+
 	/**
-	 * Find objects.
+	 * Find objects by: type, title, text.
 	 *
 	 * @return void
 	 */
-	public function find() {
-		return KKW_SearchManager::find();
+	public function find( WP_REST_Request $request ) {
+		$id = isset( $request['type'] ) ? $request['type'] : null;
+		$id = isset( $request['type'] ) ? $request['type'] : null;
+		$id = isset( $request['type'] ) ? $request['type'] : null;
+		return rest_ensure_response( KKW_SearchManager::find() );
 	}
 
 }
