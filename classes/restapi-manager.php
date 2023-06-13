@@ -53,7 +53,7 @@ class KKW_RestApiManager {
 	 * @return void
 	 */
 	public function get_books() {
-		return 'get_books';
+		return KKW_SearchManager::get_books();
 	}
 
 	/**
@@ -62,7 +62,7 @@ class KKW_RestApiManager {
 	 * @return void
 	 */
 	public function get_book() {
-		return 'get_book';
+		return KKW_SearchManager::get_book();
 	}
 
 	/**
@@ -71,7 +71,7 @@ class KKW_RestApiManager {
 	 * @return void
 	 */
 	public function find() {
-		return 'find';
+		return KKW_SearchManager::find();
 	}
 
 }
