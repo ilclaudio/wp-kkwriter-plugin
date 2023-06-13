@@ -1,4 +1,9 @@
 <?php
+/**
+ * Definition of the Plugin Manager.
+ *
+ * @package @package WP_KK_Writer_Plugin
+ */
 
 if ( ! class_exists( 'KKW_MultilangManager' ) ) {
 	include_once 'multilang-manager.php';
@@ -29,6 +34,9 @@ if ( ! class_exists( 'KKW_ActivationManager' ) ) {
 }
 if ( ! class_exists( 'KKW_SettingsManager' ) ) {
 	include_once 'settings-manager.php';
+}
+if ( ! class_exists( 'KKW_RestApiManager' ) ) {
+	include_once 'restapi-manager.php';
 }
 /**
  * The manager that builds the tool and configures Wordpress.
@@ -89,6 +97,10 @@ class PluginManager {
 		// Setup of the Settings manager (menu).
 		$settm = new KKW_SettingsManager();
 		$settm->setup();
+
+		// Setup of the Rest Api manager.
+		$rest = new KKW_RestApiManager();
+		$rest->setup();
 
 		// Needed to refresh permalinks.
 		// Same as: Admin->Settings->Permalinks->Save.
