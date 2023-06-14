@@ -56,12 +56,12 @@ class KKW_PostManager {
 	}
 
 	public function register_custom_fields() {
-		$prefix = KKW_POST_TYPES[ KKW_DEFAULT_POST ]['name'] . '_';
+		$prefix = KKW_DEFAULT_POST . '_';
 		$cmb    = new_cmb2_box(
 			array(
 				'id'           => $prefix . 'custom_fields',
 				'title'        => __( 'Post custom data', 'kkwdomain'),
-				'object_types' => array( KKW_POST_TYPES[ KKW_DEFAULT_POST ]['name'] ),
+				'object_types' => array( KKW_DEFAULT_POST ),
 				'context'      => 'normal',
 				'priority'     => 'high',
 			)
@@ -186,7 +186,7 @@ class KKW_PostManager {
 		// Field: link to a book.
 		$cmb->add_field(
 			array(
-				'id'      => $prefix . 'book_link',
+				'id'      => $prefix . BOOK_LINK_SUFFIX,
 				'name'    => __( 'Book', 'kkwdomain' ),
 				'before'  => __( 'Select linked books' , 'kkwdomain' ),
 				'type'    => 'custom_attached_posts',

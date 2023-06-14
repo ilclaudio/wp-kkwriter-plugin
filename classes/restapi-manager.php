@@ -18,7 +18,12 @@ class KKW_RestApiManager {
 	 * @return void
 	 */
 	public function setup() {
+		// Define REST API endpoints.
+		add_action( 'rest_api_init', array( $this, 'define_endpoints' ) );
+	}
 
+	// Definition of all the endpoints.
+	public function define_endpoints () {
 		register_rest_route(
 			'wp-kkwriter/v1',
 			'getBooks',
@@ -27,7 +32,6 @@ class KKW_RestApiManager {
 				'callback' => array( $this, 'get_books' ),
 			)
 		);
-
 		register_rest_route(
 			'wp-kkwriter/v1',
 			'find',
@@ -36,7 +40,6 @@ class KKW_RestApiManager {
 				'callback' => array( $this, 'find' ),
 			)
 		);
-
 		register_rest_route(
 			'wp-kkwriter/v1',
 			'getBook/(?P<id>\d+)',
@@ -45,7 +48,6 @@ class KKW_RestApiManager {
 				'callback' => array( $this, 'get_book' ),
 			)
 		);
-
 	}
 
 	/**
@@ -67,8 +69,6 @@ class KKW_RestApiManager {
 		$id = isset( $request['id'] ) ? $request['id'] : null;
 		return rest_ensure_response( KKW_SearchManager::get_book() );
 	}
-
-
 
 	/**
 	 * Find objects by: type, title, text.

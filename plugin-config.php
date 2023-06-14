@@ -5,13 +5,15 @@
  * @package @package WP_KK_Writer_Plugin
  */
 
+ // PLUGIN CONSTANTS.
 define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
+define( 'KKW_PLUGIN_PATH', WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . KKW_PLUGIN_NAME );
+define( 'KKW_PLUGIN_URL', '' );
+
+// POST TYPES.
 define( 'KKW_DEFAULT_CATEGORY', 'category' );
 define( 'KKW_DEFAULT_POST', 'post' );
 define( 'KKW_DEFAULT_PAGE', 'page' );
-define( 'KKW_DEFAULT_SUPPORTS', array( 'title', 'editor', 'thumbnail' ) );
-define( 'KKW_PLUGIN_PATH', WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . KKW_PLUGIN_NAME );
-
 define( 'ID_PT_SECTION', 'section' );
 define( 'ID_PT_COLLECTION', 'section' );
 define( 'ID_PT_BOOK', 'book' );
@@ -22,6 +24,10 @@ define( 'ID_PT_INTERVIEW', 'interview' );
 define( 'ID_PT_EVENT', 'event' );
 define( 'ID_PT_NEWS', 'news' );
 
+define( 'KKW_DEFAULT_SUPPORTS', array( 'title', 'editor', 'thumbnail' ) );
+define( 'BOOK_LINK_SUFFIX', 'book_link' );
+
+// TAXONOMIES.
 define( 'KKW_SECTION_TAXONOMY', 'section' );
 define( 'KKW_COLLECTION_TAXONOMY', 'collection' );
 define( 'KKW_BLOG_TYPE_TAXONOMY', 'blogtype' );
