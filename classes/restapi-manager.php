@@ -53,7 +53,7 @@ class KKW_RestApiManager {
 	/**
 	 * Return all the books.
 	 *
-	 * @return void
+	 * @return array.
 	 */
 	public function get_books() {
 		$results = KKW_SearchManager::get_books();
@@ -63,7 +63,8 @@ class KKW_RestApiManager {
 	/**
 	 * Return a book by id.
 	 *
-	 * @return void
+	 * @param WP_REST_Request $request - The request.
+	 * @return object.
 	 */
 	public function get_book( WP_REST_Request $request ) {
 		$id = isset( $request['id'] ) ? $request['id'] : null;
@@ -72,12 +73,11 @@ class KKW_RestApiManager {
 
 	/**
 	 * Find objects by: type, title, text.
-	 *
-	 * @return void
+	 * 
+	 * @param WP_REST_Request $request - The request.
+	 * @return array.
 	 */
 	public function find( WP_REST_Request $request ) {
-		$id = isset( $request['type'] ) ? $request['type'] : null;
-		$id = isset( $request['type'] ) ? $request['type'] : null;
 		$id = isset( $request['type'] ) ? $request['type'] : null;
 		return rest_ensure_response( KKW_SearchManager::find() );
 	}
