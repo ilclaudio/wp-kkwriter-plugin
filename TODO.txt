@@ -1,14 +1,13 @@
 attached-posts
 
 
-1) REST API: Query per la ricerca (del sito), ricerca oggetti collegati per libro.
+1) REST API: get_book Tornare gli oggetti collegati a un libro.
+2) REST API (chiave valore): Sezioni, Editori, Autori, 
 2) Configurazione doppia lingua: Polylang.
 3) Integrazione della libreria per verifica dipendenze (TGM-Plugin-Activation): Polylang.
 4) Readme: Prima descrizione del progetto.
 5) Traduzione etichette.
 6) Aggiungere gli stili per il backend.
-7) Introduzione della posizione degli eventi: CMB2-field-Leaflet-Geocoder
-8) Introduzione librerie: CMB2-conditional-logic - cmb-field-select2-master - CMB2-taxonomy-hierarchy-child.
 
 
 FATTE:
@@ -20,9 +19,12 @@ FATTE:
 - Predisposizione della procedura per la creazione iniziale dei contenuti di default.
 - Versione definitiva di tutte le tassonomie.
 - Versione definitiva di tutti i post type.
+- REST API: Query per la ricerca (del sito).
 
 *** Funzionalità versioni successive ***
 - Supporto: spagnolo, francese, tedesco, portoghese.
 - Integrazione con API per la lettura delle schede dei libri.
 - Gestione delle collezioni/collections/raccolte.
 - Import dei contenuti e delle tassonomie da Excel.
+- Introduzione della posizione degli eventi: CMB2-field-Leaflet-Geocoder
+- Introduzione librerie: CMB2-conditional-logic - cmb-field-select2-master - CMB2-taxonomy-hierarchy-child.
