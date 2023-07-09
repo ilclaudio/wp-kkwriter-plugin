@@ -78,9 +78,9 @@ class KKW_RestApiManager {
 	 * @return array.
 	 */
 	public function find( WP_REST_Request $request ) {
-		$title        = isset( $request['title'] ) ? $request['title'] : '';
-		$section      = isset( $request['section'] ) ? $request['section'] : null;
-		$publisher    = isset( $request['publisher'] ) ? $request['publisher'] : null;
+		$title         = isset( $request['title'] ) ? $request['title'] : '';
+		$section       = isset( $request['section'] ) ? $request['section'] : null;
+		$publisher     = isset( $request['publisher'] ) ? $request['publisher'] : null;
 		$search_string = isset( $request['search_string'] ) ? $request['search_string'] : '';
 
 		$parameters = array(

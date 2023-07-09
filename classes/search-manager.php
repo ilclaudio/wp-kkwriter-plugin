@@ -59,17 +59,30 @@ class KKW_SearchManager {
 		return $norm_item;
 	}
 
+	/**
+	 * Find books.
+	 *
+	 * @param array $parameters
+	 * @return arra.
+	 */
 	public static function find( $parameters ) {
 
 		// Base args of the query.
 		$query_args = array(
-			'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
-			'orderby'        => 'title',
-			'order'          => 'ASC',
-			'meta_query'     => array(),
-			'tax_query'      => array(),
-			's'              => $parameters['search_string'],
+			'post_type'         => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+			'orderby'           => 'title',
+			'order'             => 'ASC',
+			'meta_query'        => array(),
+			'tax_query'         => array(),
 		);
+
+		// Prepare title and search_string filters.
+		if ( $parameters['title'] ) {
+			$query_args['title'] = $parameters['title'];
+		}
+		if ( $parameters['search_string'] ) {
+			$query_args['s'] = $parameters['search_string'];
+		}
 
 		// Prepare filters.
 		$meta_filters = array();
@@ -109,7 +122,44 @@ class KKW_SearchManager {
 	}
 
 	public static function prepare_filters( $parameters, &$meta_filters, &$tax_filters ) {
-
+		foreach ( $parameters as $label => $value ) {
+			if ( $value ) {
+				switch ( $label ) {
+					case 'section':
+						array_push(
+							$tax_filters,
+							array(
+								'taxonomy' => KKW_SECTION_TAXONOMY,
+								'field'    => 'slug',
+								'terms'    => $value,
+							),
+						);
+						break;
+					case 'publisher':
+						array_push(
+							$tax_filters,
+							array(
+								'taxonomy' => KKW_PUBLISHER_TAXONOMY,
+								'field'    => 'slug',
+								'terms'    => $value,
+							),
+						);
+						break;
+					// case 'arrival_date':
+					// 	array_push(
+					// 		$meta_filters,
+					// 		array(
+					// 			'key'     => 'emt_start_date',
+					// 			'value'   =>  DateTime::createFromFormat( EMT_FORM_DATE_FORMAT, $par['value'] )->format( EMT_ACF_DB_DATE_FORMAT ),
+					// 			'compare' => '>=',
+					// 			'type'    => 'DATE',
+					// 		),
+					// 	);
+					// 	break;
+				}
+			}
+		}
+		return true;
 	}
 
 	/**
