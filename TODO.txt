@@ -2,7 +2,7 @@ attached-posts
 
 
 1) REST API: get_book Tornare gli oggetti collegati a un libro.
-2) REST API (chiave valore): Sezioni, Editori, Autori, 
+2) REST API (chiave valore): Sezioni, Editori, Autori, Categorie.
 2) Configurazione doppia lingua: Polylang.
 3) Integrazione della libreria per verifica dipendenze (TGM-Plugin-Activation): Polylang.
 4) Readme: Prima descrizione del progetto.
