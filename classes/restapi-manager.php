@@ -68,18 +68,28 @@ class KKW_RestApiManager {
 	 */
 	public function get_book( WP_REST_Request $request ) {
 		$id = isset( $request['id'] ) ? $request['id'] : null;
-		return rest_ensure_response( KKW_SearchManager::get_book() );
+		return rest_ensure_response( KKW_SearchManager::get_book( $id ) );
 	}
 
 	/**
-	 * Find objects by: type, title, text.
+	 * Find objects by: section, title, text.
 	 * 
 	 * @param WP_REST_Request $request - The request.
 	 * @return array.
 	 */
 	public function find( WP_REST_Request $request ) {
-		$id = isset( $request['type'] ) ? $request['type'] : null;
-		return rest_ensure_response( KKW_SearchManager::find() );
+		$title        = isset( $request['title'] ) ? $request['title'] : '';
+		$section      = isset( $request['section'] ) ? $request['section'] : null;
+		$publisher    = isset( $request['publisher'] ) ? $request['publisher'] : null;
+		$search_string = isset( $request['search_string'] ) ? $request['search_string'] : '';
+
+		$parameters = array(
+			'title'        => $title,
+			'section'      => $section,
+			'publisher'    => $publisher,
+			'search_string' => $search_string,
+		);
+		return rest_ensure_response( KKW_SearchManager::find( $parameters ) );
 	}
 
 }

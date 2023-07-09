@@ -17,39 +17,20 @@ class KKW_SearchManager {
 	 * @return array.
 	 */
 	public static function get_books() {
+		// Get all the posts.
 		$results = new WP_Query(
 			array(
 				'post_type' => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
-			),
+				'orderby'   => 'title',
+				'order'     => 'ASC',
+			)
 		);
 		$posts = $results->get_posts();
-
 		// Loop through each post to retrieve and include meta tags, related post types and taxonomies.
 		foreach ( $posts as &$post ) {
-			// Add related meta tags (custom fields).
-			$post->meta_tags = array();
-			$meta_tags       = get_post_meta( $post->ID );
-			array_push( $post->meta_tags, $meta_tags );
-
-			// Add related taxonomies.
-			$taxonomies    = get_post_taxonomies( $post->ID );
-			$taxonomy_data = array();
-			// Loop through each taxonomy and retrieve the terms.
-			foreach ( $taxonomies as $taxonomy ) {
-				$terms = wp_get_post_terms(
-					$post->ID,
-					$taxonomy,
-					array( 'fields' => 'names' )
-				);
-				$taxonomy_data[ $taxonomy ] = $terms;
-			}
-			// Add the taxonomy data to the post object.
-			$post->taxonomies = $taxonomy_data;
-
-			// Add related post (fields of type `custom_attached_posts`).
-			// $post->related_posts = array();
+			self::fill_post_with_meta( $post );
 		}
-
+		// Get a normalized array.
 		$normalized = array();
 		foreach ( $posts as &$post ) {
 			$norm_item = self::normalize_book( $post );
@@ -58,14 +39,107 @@ class KKW_SearchManager {
 		return $normalized;
 	}
 
-	public static function get_book() {
-		$book = 'uno';
-		return $book;
+	/**
+	 * Return a book by id.
+	 *
+	 * @param integer $id.
+	 * @return object.
+	 */
+	public static function get_book( $id ) {
+		// Get all the posts.
+		$results = new WP_Query(
+			array(
+				'p'         => $id,
+				'post_type' => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+			)
+		);
+		$post = $results->get_posts()[0];
+		self::fill_post_with_meta( $post );
+		$norm_item = self::normalize_book( $post );
+		return $norm_item;
 	}
 
-	public static function find() {
-		$results = array( 'uno', 'due', 'tre' );
-		return $results;
+	public static function find( $parameters ) {
+
+		// Base args of the query.
+		$query_args = array(
+			'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+			'orderby'        => 'title',
+			'order'          => 'ASC',
+			'meta_query'     => array(),
+			'tax_query'      => array(),
+			's'              => $parameters['search_string'],
+		);
+
+		// Prepare filters.
+		$meta_filters = array();
+		$tax_filters  = array();
+		self::prepare_filters( $parameters, $meta_filters, $tax_filters );
+
+		// Add meta filters.
+		if ( count ( $meta_filters ) ) {
+			$query_args['meta_query'] = array_merge(
+				array( 'relation' => 'AND' ),
+				$meta_filters,
+			);
+		}
+
+		// Add tax filters.
+		if ( count ( $tax_filters ) ) {
+			$query_args['tax_query'] = array_merge(
+				array( 'relation' => 'AND' ),
+				$tax_filters,
+			);
+		}
+
+		// Find the posts.
+		$results = new WP_Query( $query_args );
+		$posts = $results->get_posts();
+		// Loop through each post to retrieve and include meta tags, related post types and taxonomies.
+		foreach ( $posts as &$post ) {
+			self::fill_post_with_meta( $post );
+		}
+		// Get a normalized array.
+		$normalized = array();
+		foreach ( $posts as &$post ) {
+			$norm_item = self::normalize_book( $post );
+			array_push( $normalized, $norm_item );
+		}
+		return $normalized;
+	}
+
+	public static function prepare_filters( $parameters, &$meta_filters, &$tax_filters ) {
+
+	}
+
+	/**
+	 * Fill the post adding meta_tags, taxonomies, etc.
+	 *
+	 * @param WP_Post $post.
+	 * @return void.
+	 */
+	public static function fill_post_with_meta( &$post ) {
+		// Add related meta tags (custom fields).
+		$post->meta_tags = array();
+		$meta_tags       = get_post_meta( $post->ID );
+		array_push( $post->meta_tags, $meta_tags );
+
+		// Add related taxonomies.
+		$taxonomies    = get_post_taxonomies( $post->ID );
+		$taxonomy_data = array();
+		// Loop through each taxonomy and retrieve the terms.
+		foreach ( $taxonomies as $taxonomy ) {
+			$terms = wp_get_post_terms(
+				$post->ID,
+				$taxonomy,
+				array( 'fields' => 'names' )
+			);
+			$taxonomy_data[ $taxonomy ] = $terms;
+		}
+		// Add the taxonomy data to the post object.
+		$post->taxonomies = $taxonomy_data;
+		// Add related post (fields of type `custom_attached_posts`).
+		// $post->related_posts = array();
 	}
 
 	/**
@@ -74,7 +148,7 @@ class KKW_SearchManager {
 	 * @param WP_Post $post - The post to be converted.
 	 * @return array.
 	 */
-	public static function normalize_book ( $post ){
+	public static function normalize_book ( $post ) {
 		$book = array();
 
 		// Add the post fields.
