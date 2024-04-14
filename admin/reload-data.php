@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div>
 		<p>Click the button to reload all the data of the plugin: pages, taxonomy terms, etc. .</p>
-		<a href="admin.php?page=kkw_reload_menu&action=reload" class="button button-primary">Reload</a>
+		<a href="admin.php?page=kkw_loadexamples_menu&action=reload" class="button button-primary">Reload</a>
 	</div>
 
 </div>

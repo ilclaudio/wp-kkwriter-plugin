@@ -2,7 +2,7 @@
 /**
  * Definition of the Search Manager.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 
@@ -63,7 +63,7 @@ class KKW_SearchManager {
 	 * Find books.
 	 *
 	 * @param array $parameters
-	 * @return arra.
+	 * @return array.
 	 */
 	public static function find( $parameters ) {
 

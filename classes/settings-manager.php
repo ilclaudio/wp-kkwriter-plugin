@@ -177,11 +177,11 @@ class KKW_SettingsManager {
 		// Page to reload default data.
 		add_submenu_page(
 			$main_menu,
-			__( 'Reload data', 'kkwdomain' ),
-			__( 'Reload data', 'kkwdomain' ),
+			__( 'Load example data', 'kkwdomain' ),
+			__( 'Load example data', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
-			'kkw_reload_menu',
-			array( $this, 'get_reloaddata_page' )
+			'kkw_loadexamples_menu',
+			array( $this, 'get_loadexamples_page' )
 		);
 
 	}
@@ -200,7 +200,7 @@ class KKW_SettingsManager {
 	 *
 	 * @return void
 	 */
-	public function get_reloaddata_page() {
+	public function get_loadexamples_page() {
 		// @TODO: check the user permission
 		$result_activation = false;
 		$is_reload         = false;
@@ -211,19 +211,19 @@ class KKW_SettingsManager {
 		}
 
 		echo "<div class='wrap'>";
-		echo '<h1>Reload default plugin data</h1>';
+		echo '<h1>Load examples</h1>';
 
-		echo '<div id="admin_reload_data">';
+		echo '<div id="admin_load_examples">';
 
-		echo '<p>Click the button to reload all the data of the plugin: pages, templates and default post types, taxonomies, etc. .</p>';
-		echo '<a href="admin.php?page=kkw_reload_menu&action=reload" class="button button-primary">Reload data</a>';
+		echo '<p>Click the button load some example data: books, sections, authors, publishers, etc. .</p>';
+		echo '<a href="admin.php?page=kkw_loadexamples_menu&action=reload" class="button button-primary">Load example data</a>';
 		echo '</div>';
 
 		if ( $is_reload ) {
 			if ( $result_activation ) {
-				echo '<div id="admin_result_reload"><em>Data reloaded successfully</em>.</div>';
+				echo '<div class="admin_result_reload"><em>Example data loaded successfully</em>.</div>';
 			} else {
-				echo '<div id="admin_result_reload"><em>Data reloaded failed</em>.</div>';
+				echo '<div class="admin_result_reload"><em>Example data not reloaded</em>.</div>';
 			}
 		}
 

@@ -30,6 +30,7 @@ class KKW_RestApiManager {
 			array(
 				'methods'  => WP_REST_SERVER::READABLE,
 				'callback' => array( $this, 'get_books' ),
+				'permission_callback' => '__return_true',
 			)
 		);
 		register_rest_route(
@@ -38,6 +39,7 @@ class KKW_RestApiManager {
 			array(
 				'methods'  => WP_REST_SERVER::READABLE,
 				'callback' => array( $this, 'find' ),
+				'permission_callback' => '__return_true',
 			)
 		);
 		register_rest_route(
@@ -46,6 +48,7 @@ class KKW_RestApiManager {
 			array(
 				'methods'  => WP_REST_SERVER::READABLE,
 				'callback' => array( $this, 'get_book' ),
+				'permission_callback' => '__return_true',
 			)
 		);
 	}

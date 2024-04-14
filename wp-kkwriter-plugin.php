@@ -29,7 +29,7 @@ require 'plugin-config.php';
 /**
  * The plugin default data.
  */
-require 'default-data.php';
+require 'example-data.php';
 
 /**
  * Utils functions.
