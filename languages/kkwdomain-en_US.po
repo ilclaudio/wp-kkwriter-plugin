@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-31 18:08+0000\n"
-"PO-Revision-Date: 2024-04-16 21:01+0000\n"
+"POT-Creation-Date: 2023-03-31 18:09+0000\n"
+"PO-Revision-Date: 2024-04-16 20:58+0000\n"
 "Last-Translator: \n"
-"Language-Team: Italiano\n"
-"Language: it_IT\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #. Description of the plugin
 msgid "A plugin"
-msgstr "Un plugin"
+msgstr ""
 
 #: templates/archive/archive-kkw_book.php:2
 msgid "Archive detail page from the PLUGIN"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: classes/books-manager.php:45
 msgid "Book"
-msgstr "Libro"
+msgstr ""
 
 #: classes/collections-manager.php:39
 msgid "Collection"
@@ -37,11 +37,11 @@ msgstr ""
 
 #: classes/events-manager.php:39
 msgid "Event"
-msgstr "Evento"
+msgstr ""
 
 #: templates/archive/archive-kkw_book.php:5
 msgid "Hello"
-msgstr "Ciao"
+msgstr ""
 
 #. URI of the plugin
 msgid "https://github.com/ilclaudio/wp-kkwriter-plugin.git"
@@ -62,7 +62,7 @@ msgstr ""
 #: classes/books-manager.php:36
 msgctxt "Post Type General Name"
 msgid "Books"
-msgstr "Libri"
+msgstr ""
 
 #: classes/collections-manager.php:30
 msgctxt "Post Type General Name"
@@ -107,17 +107,17 @@ msgstr ""
 #: classes/books-manager.php:38 classes/books-manager.php:39
 msgctxt "Post Type Singular Name"
 msgid "Add a book"
-msgstr "Aggiungi un libro"
+msgstr ""
 
 #: classes/collections-manager.php:32 classes/collections-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add a collection"
-msgstr "Aggiungi una collana"
+msgstr ""
 
 #: classes/events-manager.php:32 classes/events-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add a event"
-msgstr "Aggiungi un evento"
+msgstr ""
 
 #: classes/excerpts-manager.php:32 classes/excerpts-manager.php:33
 msgctxt "Post Type Singular Name"
@@ -152,7 +152,7 @@ msgstr ""
 #: classes/books-manager.php:37
 msgctxt "Post Type Singular Name"
 msgid "Book"
-msgstr "Libro"
+msgstr ""
 
 #: classes/collections-manager.php:31
 msgctxt "Post Type Singular Name"
@@ -162,7 +162,7 @@ msgstr ""
 #: classes/books-manager.php:40
 msgctxt "Post Type Singular Name"
 msgid "Edit a book"
-msgstr "Modifica un libro"
+msgstr ""
 
 #: classes/collections-manager.php:34
 msgctxt "Post Type Singular Name"
