@@ -40,7 +40,7 @@ class KKW_SettingsManager {
 		// Page that describes the plugin: general information / readme.
 		add_menu_page(
 			'',
-			__( 'KK Writer Plugin', 'kkwdomain' ),
+			__( 'KKW Plugin', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			$main_menu,
 			array( $this, 'get_plugin_presentation' ),

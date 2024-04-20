@@ -12,14 +12,19 @@
  */
 
 /**
- * Load the library to build custom field types.
+ * Load the library CMB2 to build custom field types.
  */
 require 'inc/vendor/CMB2/init.php';
 
 /**
- * Load the library to link post types.
+ * Load the library CMB2 Attached Post.
  */
 require 'inc/vendor/cmb2-attached-posts/cmb2-attached-posts-field.php';
+
+/**
+ * Load the library CMB2 Post Search.
+ */
+require 'inc/vendor/CMB2-Post-Search-field/cmb2_post_search_field.php';
 
 /**
  * The plugin configurations.
