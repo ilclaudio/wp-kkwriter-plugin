@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WP KK Writer Plugin
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: BatClaudio
  * Plugin URI: https://github.com/ilclaudio/wp-kkwriter-plugin.git
  * Description: A plugin
