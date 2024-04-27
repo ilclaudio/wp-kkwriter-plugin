@@ -42,7 +42,6 @@ require 'example-data.php';
 require 'inc/utils.php';
 
 
-add_action( 'init', 'setup_the_plugin', 1 );
 
 /**
  * Setup the writer plugin.
@@ -55,3 +54,4 @@ function setup_the_plugin() {
 	$kkw_plugin_manager = new KKW_PluginManager();
 	$kkw_plugin_manager->plugin_setup();
 }
+add_action( 'init', 'setup_the_plugin', 1 );
