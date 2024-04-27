@@ -41,7 +41,7 @@ if ( ! class_exists( 'KKW_RestApiManager' ) ) {
 /**
  * The manager that builds the tool and configures Wordpress.
  */
-class PluginManager {
+class KKW_PluginManager {
 
 	/**
 	 * The static instance of the LabManager.

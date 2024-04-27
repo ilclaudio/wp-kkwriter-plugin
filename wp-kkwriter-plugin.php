@@ -50,8 +50,8 @@ add_action( 'init', 'setup_the_plugin', 1 );
  * @return void
  */
 function setup_the_plugin() {
-	global $lab_manager;
+	global $kkw_plugin_manager;
 	include_once 'classes/plugin-manager.php';
-	$plugin_manager = new PluginManager();
-	$plugin_manager->plugin_setup();
+	$kkw_plugin_manager = new KKW_PluginManager();
+	$kkw_plugin_manager->plugin_setup();
 }
