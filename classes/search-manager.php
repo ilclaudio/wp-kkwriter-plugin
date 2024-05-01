@@ -33,8 +33,8 @@ class KKW_SearchManager {
 		// Get a normalized array.
 		$normalized = array();
 		foreach ( $posts as &$post ) {
-			$norm_item = self::normalize_book( $post );
-			array_push( $normalized, $norm_item );
+			$book_object = self::normalize_book( $post );
+			array_push( $normalized, $book_object );
 		}
 		return $normalized;
 	}
@@ -55,8 +55,8 @@ class KKW_SearchManager {
 		);
 		$post = $results->get_posts()[0];
 		self::fill_post_with_meta( $post );
-		$norm_item = self::normalize_book( $post );
-		return $norm_item;
+		$book_object = self::normalize_book( $post );
+		return $book_object;
 	}
 
 	/**
@@ -115,13 +115,13 @@ class KKW_SearchManager {
 		// Get a normalized array.
 		$normalized = array();
 		foreach ( $posts as &$post ) {
-			$norm_item = self::normalize_book( $post );
-			array_push( $normalized, $norm_item );
+			$book_object = self::normalize_book( $post );
+			array_push( $normalized, $book_object );
 		}
 		return $normalized;
 	}
 
-	public static function prepare_filters( $parameters, &$meta_filters, &$tax_filters ) {
+	private static function prepare_filters( $parameters, &$meta_filters, &$tax_filters ) {
 		foreach ( $parameters as $label => $value ) {
 			if ( $value ) {
 				switch ( $label ) {
@@ -168,15 +168,16 @@ class KKW_SearchManager {
 	 * @param WP_Post $post.
 	 * @return void.
 	 */
-	public static function fill_post_with_meta( &$post ) {
+	private static function fill_post_with_meta( &$post ) {
 		// Add related meta tags (custom fields).
 		$post->meta_tags = array();
 		$meta_tags       = get_post_meta( $post->ID );
 		array_push( $post->meta_tags, $meta_tags );
 
 		// Add related taxonomies.
-		$taxonomies    = get_post_taxonomies( $post->ID );
-		$taxonomy_data = array();
+		$post->taxonomies = array();
+		$taxonomies       = get_post_taxonomies( $post->ID );
+		$taxonomy_data    = array();
 		// Loop through each taxonomy and retrieve the terms.
 		foreach ( $taxonomies as $taxonomy ) {
 			$terms = wp_get_post_terms(
@@ -188,8 +189,27 @@ class KKW_SearchManager {
 		}
 		// Add the taxonomy data to the post object.
 		$post->taxonomies = $taxonomy_data;
-		// Add related post (fields of type `custom_attached_posts`).
-		// $post->related_posts = array();
+
+		// Add post images.
+		$featured_image       = self::get_featured_image( $post->ID );
+		$post->featured_image = $featured_image;
+	}
+
+	/**
+	 * Retrieve the featured image of the post.
+	 *
+	 * @param integer $post_id
+	 * @return array
+	 */
+	private static function get_featured_image( int $post_id ){
+		$image = array();
+		$thumbnail_id = get_post_thumbnail_id( $post_id );
+		if ( $thumbnail_id ) {
+				$image_src    = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+				$image['id']  = $thumbnail_id;
+				$image['url'] = $image_src ? $image_src[0] : '';
+		}
+		return $image;
 	}
 
 	/**
@@ -198,16 +218,16 @@ class KKW_SearchManager {
 	 * @param WP_Post $post - The post to be converted.
 	 * @return array.
 	 */
-	public static function normalize_book ( $post ) {
+	private static function normalize_book ( $post ) {
 		$book = array();
 
 		// Add the post fields.
-		$book['id']          = $post->ID;
-		$book['title']       = $post->post_title;
-		$book['status']      = $post->post_status;
-		$book['slug']        = $post->post_name;
-		$book['type']        = $post->post_type;
-		$book['content']     = $post->post_content;
+		$book['id']      = $post->ID;
+		$book['title']   = $post->post_title;
+		$book['status']  = $post->post_status;
+		$book['slug']    = $post->post_name;
+		$book['type']    = $post->post_type;
+		$book['content'] = $post->post_content;
 
 		// Add the meta-tags.
 		$has_meta            = ( count( $post->meta_tags) > 0 ) && ( count( $post->meta_tags[0] )  > 0 );
