@@ -14,8 +14,8 @@ define( 'KKW_PLUGIN_URL', '' );
 define( 'KKW_DEFAULT_CATEGORY', 'category' );
 define( 'KKW_DEFAULT_POST', 'post' );
 define( 'KKW_DEFAULT_PAGE', 'page' );
-define( 'ID_PT_SECTION', 'section' );
-define( 'ID_PT_COLLECTION', 'section' );
+// @TODO: define( 'ID_PT_SECTION', 'section' );
+// @TODO: define( 'ID_PT_COLLECTION', 'section' );
 define( 'ID_PT_BOOK', 'book' );
 define( 'ID_PT_REVIEW', 'review' );
 define( 'ID_PT_EXCERPT', 'excerpt' );
@@ -47,24 +47,24 @@ define(
 define(
 	'KKW_POST_TYPES',
 	array(
-		ID_PT_SECTION    => array(
-			'name'            => 'kkw_section',
-			'plural_label'    => 'sections',
-			'singular_label'  => 'Section',
-			'archive_page_en' => 'Sections',
-			'archive_page_it' => 'sezioni',
-			'supports'        => KKW_DEFAULT_SUPPORTS,
-			'icon'            => 'dashicons-open-folder',
-		),
-		ID_PT_COLLECTION => array(
-			'name'            => 'kkw_collection',
-			'plural_label'    => 'Collections',
-			'singular_label'  => 'Collection',
-			'archive_page_en' => 'collections',
-			'archive_page_it' => 'raccolte',
-			'supports'        => KKW_DEFAULT_SUPPORTS,
-			'icon'            => 'dashicons-open-folder',
-		),
+		// ID_PT_SECTION    => array(
+		// 	'name'            => 'kkw_section',
+		// 	'plural_label'    => 'sections',
+		// 	'singular_label'  => 'Section',
+		// 	'archive_page_en' => 'Sections',
+		// 	'archive_page_it' => 'sezioni',
+		// 	'supports'        => KKW_DEFAULT_SUPPORTS,
+		// 	'icon'            => 'dashicons-open-folder',
+		// ),
+		// ID_PT_COLLECTION => array(
+		// 	'name'            => 'kkw_collection',
+		// 	'plural_label'    => 'Collections',
+		// 	'singular_label'  => 'Collection',
+		// 	'archive_page_en' => 'collections',
+		// 	'archive_page_it' => 'raccolte',
+		// 	'supports'        => KKW_DEFAULT_SUPPORTS,
+		// 	'icon'            => 'dashicons-open-folder',
+		// ),
 		ID_PT_BOOK       => array(
 			'name'            => 'kkw_book',
 			'plural_label'    => 'Books',

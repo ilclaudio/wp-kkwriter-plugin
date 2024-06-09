@@ -8,9 +8,9 @@
 if ( ! class_exists( 'KKW_MultilangManager' ) ) {
 	include_once 'multilang-manager.php';
 }
-if ( ! class_exists( 'KKW_CollectionsManager' ) ) {
-	include_once 'collections-manager.php';
-}
+// if ( ! class_exists( 'KKW_CollectionsManager' ) ) {
+// 	include_once 'collections-manager.php';
+// }
 if ( ! class_exists( 'KKW_BookManager' ) ) {
 	include_once 'books-manager.php';
 }
@@ -62,9 +62,9 @@ class KKW_PluginManager {
 		$langm = new KKW_MultilangManager();
 		$langm->setup();
 
-		// Setup the collection post type.
-		$cm = new KKW_CollectionsManager();
-		$cm->setup();
+		// // Setup the collection post type.
+		// $cm = new KKW_CollectionsManager();
+		// $cm->setup();
 
 		// Setup the book post type.
 		$bm = new KKW_BooksManager();
