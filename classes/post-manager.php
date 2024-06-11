@@ -47,6 +47,7 @@ class KKW_PostManager {
 			'show_admin_column' => true,
 			'query_var'         => true,
 			'rewrite'           => array( 'slug' => 'blogtype' ),
+			'taxonomies'        => array( KKW_DEFAULT_CATEGORY, KKW_DEFAULT_TAGS ),
 		);
 		register_taxonomy(
 			KKW_BLOG_TYPE_TAXONOMY,

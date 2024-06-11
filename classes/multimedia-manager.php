@@ -50,7 +50,7 @@ class KKW_MultimediaManager {
 			'menu_icon'    => KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
-			'taxonomies'   => array( KKW_DEFAULT_CATEGORY ),
+			'taxonomies'   => array( KKW_DEFAULT_TAGS ),
 		);
 		register_post_type( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name'], $args );
 	}

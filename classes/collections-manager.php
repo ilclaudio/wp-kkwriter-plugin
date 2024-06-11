@@ -50,7 +50,7 @@ class KKW_CollectionsManager {
 			'menu_icon'    => KKW_POST_TYPES[ ID_PT_COLLECTION ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
-			'taxonomies'   => array( KKW_DEFAULT_CATEGORY ),
+			'taxonomies'   => array( KKW_DEFAULT_TAGS ),
 			// 'menu_position' => 6,
 		);
 
