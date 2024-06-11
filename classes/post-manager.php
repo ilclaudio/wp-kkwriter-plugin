@@ -67,24 +67,6 @@ class KKW_PostManager {
 				'priority'     => 'high',
 			)
 		);
-		// Field: BLOG TYPE.
-		$cmb->add_field(
-			array(
-				'id'             => $prefix . 'blog_type',
-				'name'           => __( 'Type', 'kkwdomain' ),
-				'desc'           => __( 'The type of the post.', 'kkwdomain' ),
-				'taxonomy'       => KKW_BLOG_TYPE_TAXONOMY,
-				'type'           => 'taxonomy_select',
-				'remove_default' => 'true',
-				'query_args' => array(
-					'orderby'    => 'slug',
-					// 'hide_empty' => true,
-				),
-				'attributes'     => array(
-					'required' => 'required',
-				),
-			)
-		);
 		// Field: Start date.
 		$cmb->add_field(
 			array(
