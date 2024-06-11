@@ -166,7 +166,7 @@ class KKW_BooksManager {
 			'menu_icon'    => KKW_POST_TYPES[ ID_PT_BOOK ]['icon'],
 			'has_archive'  => true,
 			'show_in_rest' => true,
-			'taxonomies'   => array( KKW_DEFAULT_TAGS ),
+			'taxonomies'   => array( KKW_DEFAULT_CATEGORY, KKW_DEFAULT_TAGS ),
 		);
 		register_post_type( KKW_POST_TYPES[ ID_PT_BOOK ]['name'], $args );
 	}
