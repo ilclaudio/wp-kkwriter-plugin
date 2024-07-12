@@ -289,7 +289,7 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'show_in_carousel',
-				'name'    => __( 'Show in carouser', 'kkwdomain'),
+				'name'    => __( 'Show in carousel', 'kkwdomain'),
 				'desc'    => __( 'Show the book in the carousel', 'kkwdomain'),
 				'default' => '',
 				'type'    => 'checkbox',

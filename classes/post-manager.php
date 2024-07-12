@@ -10,7 +10,7 @@
  */
 class KKW_PostManager {
 	/**
-	 * Install and configure the News post type.
+	 * Install and configure the Post/Event/News post type.
 	 *
 	 * @return void
 	 */
@@ -184,6 +184,26 @@ class KKW_PostManager {
 							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
 					),
 				),
+			)
+		);
+		// Field Show in carousel.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'show_in_carousel',
+				'name'    => __( 'Show in carousel', 'kkwdomain'),
+				'desc'    => __( 'Show the book in the carousel', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'checkbox',
+			)
+		);
+		// Field Show in evidence section.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'show_in_evidence',
+				'name'    => __( 'Show in evidence', 'kkwdomain'),
+				'desc'    => __( "Show the book in the 'in evidence' section", 'kkwdomain'),
+				'default' => '',
+				'type'    => 'checkbox',
 			)
 		);
 	}
