@@ -16,55 +16,54 @@ class KKW_PostManager {
 	 */
 	public function setup() {
 		// Register the taxonomies used by this post type.
-		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		// Register the custom fields.
 		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
 	}
 
-	/**
-	 * Add taxonomies used by this post type.
-	 *
-	 * @return void
-	 */
-	public function register_taxonomies() {
-		// Blog Type taxonomy.
-		$tax_labels = array(
-			'name'              => _x( 'Blog type', 'taxonomy general name', 'kkwdomain' ),
-			'singular_name'     => _x( 'Blog type', 'taxonomy singular name', 'kkwdomain' ),
-			'search_items'      => __( 'Search Blog type', 'kkwdomain' ),
-			'all_items'         => __( 'All Blog types', 'kkwdomain' ),
-			'edit_item'         => __( 'Edit Blog type', 'kkwdomain' ),
-			'update_item'       => __( 'Update Blog type', 'kkwdomain' ),
-			'add_new_item'      => __( 'Add a Blog type', 'kkwdomain' ),
-			'new_item_name'     => __( 'New Blog type', 'kkwdomain' ),
-			'menu_name'         => __( 'Blog types', 'kkwdomain' ),
-		);
-		$collection_args = array(
-			'hierarchical'      => false,
-			'labels'            => $tax_labels,
-			'show_ui'           => true,
-			'show_in_rest'      => true,
-			'show_admin_column' => true,
-			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'blogtype' ),
-			'taxonomies'        => array( KKW_DEFAULT_CATEGORY, KKW_DEFAULT_TAGS ),
-		);
-		register_taxonomy(
-			KKW_BLOG_TYPE_TAXONOMY,
-			array( KKW_DEFAULT_POST ),
-			$collection_args
-		);
-	}
-
 	public function register_custom_fields() {
-		$prefix = KKW_DEFAULT_POST . '_';
-		$cmb    = new_cmb2_box(
+		$prefix = 'kkw_';
+		$cmb = new_cmb2_box(
 			array(
-				'id'           => $prefix . 'custom_fields',
-				'title'        => __( 'Post custom data', 'kkwdomain'),
-				'object_types' => array( KKW_DEFAULT_POST ),
-				'context'      => 'normal',
-				'priority'     => 'high',
+				'id'            => $prefix . 'post_type_metabox',
+				'title'         => __( 'Post custom data', 'kkwdomain'),
+				'object_types'  => array( KKW_DEFAULT_POST ),
+				'context'       => 'normal',
+				'priority'      => 'high',
+				'show_names'    => true,
+			)
+		);
+		// Field: Post type: article, event, news, ecc.
+		$cmb->add_field(
+			array(
+				'id'            => $prefix . 'post_type',
+				'name'          => __( 'Type', 'kkwdomain' ),
+				'type'          => 'select',
+				'options'       => array(
+						'article'   => __( 'Article', 'kkwdomain' ),
+						'event'     => __( 'Event', 'kkwdomain' ),
+						'news'      => __( 'News', 'kkwdomain' ),
+				),
+				'default'       => 'article',
+			)
+		);
+		// Field: Short description.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'short_description',
+				'name'    => __( 'Short description', 'kkwdomain'),
+				'desc'    => __( 'A short excerpt from the interview', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 1,
+					'media_buttons' => false,
+					'teeny'         => true,
+					'quicktags'     => false,
+					'tinymce'       => array(
+						'toolbar1'       => 'bold,italic,link,unlink,undo,redo',
+						'valid_elements' => 'a[href],strong,em,p,br',
+					),
+				),
 			)
 		);
 		// Field: Start date.
@@ -82,6 +81,7 @@ class KKW_PostManager {
 				),
 			)
 		);
+
 		// Field: End date.
 		$cmb->add_field(
 			array(

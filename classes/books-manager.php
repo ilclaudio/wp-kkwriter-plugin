@@ -177,10 +177,10 @@ class KKW_BooksManager {
 	 * @return void
 	 */
 	public function register_custom_fields() {
-		$prefix = KKW_POST_TYPES[ ID_PT_BOOK ]['name'] . '_';
+		$prefix = 'kkw_';
 		$cmb    = new_cmb2_box(
 			array(
-				'id'           => $prefix . 'custom_fields',
+				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_BOOK ]['name'] . '_custom_fields',
 				'title'        => __( 'Book data', 'kkwdomain'),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_BOOK ]['name'] ),
 				'context'      => 'normal',
@@ -285,6 +285,17 @@ class KKW_BooksManager {
 				'type'    => 'text',
 			)
 		);
+		// Field: Image gallery.
+		$cmb->add_field(
+			array(
+				'id'           => $prefix . 'gallery',
+				'name'         => __( 'Gallery', 'kkwdomain'),
+				'desc'         => __( 'Images and photos of the book', 'kkwdomain'),
+				'type'         => 'file_list',
+				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
+			)
+		);
 		// Field Show in carousel.
 		$cmb->add_field(
 			array(
@@ -303,17 +314,6 @@ class KKW_BooksManager {
 				'desc'    => __( "Show the book in the 'in evidence' section", 'kkwdomain'),
 				'default' => '',
 				'type'    => 'checkbox',
-			)
-		);
-		// Field: Image gallery.
-		$cmb->add_field(
-			array(
-				'id'           => $prefix . 'gallery',
-				'name'         => __( 'Gallery', 'kkwdomain'),
-				'desc'         => __( 'Images and photos of the book', 'kkwdomain'),
-				'type'         => 'file_list',
-				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
-				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
 			)
 		);
 	}

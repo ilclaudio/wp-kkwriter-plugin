@@ -52,10 +52,10 @@ class KKW_ExcerptsManager {
 	}
 
 	public function register_custom_fields() {
-		$prefix = KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'] . '_';
+		$prefix = 'kkw_';
 		$cmb    = new_cmb2_box(
 			array(
-				'id'           => $prefix . 'custom_fields',
+				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'] . '_custom_fields',
 				'title'        => __( 'Interview data', 'kkwdomain'),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'] ),
 				'context'      => 'normal',

@@ -61,10 +61,10 @@ class KKW_MultimediaManager {
 	 * @return void
 	 */
 	public function register_custom_fields() {
-		$prefix = KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name'] . '_';
+		$prefix = 'kkw_';
 		$cmb    = new_cmb2_box(
 			array(
-				'id'           => $prefix . 'custom_fields',
+				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name'] . '_custom_fields',
 				'title'        => __( 'Multimedia data', 'kkwdomain'),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name'] ),
 				'context'      => 'normal',

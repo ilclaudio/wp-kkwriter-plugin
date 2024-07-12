@@ -18,6 +18,7 @@ class KKW_InterviewsManager {
 	public function setup() {
 		// Register the post type.
 		add_action( 'init', array( $this, 'add_post_type' ) );
+
 		// Register the custom fields.
 		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
 	}
@@ -52,10 +53,10 @@ class KKW_InterviewsManager {
 	}
 
 	public function register_custom_fields() {
-		$prefix = KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name'] . '_';
+		$prefix = 'kkw_';
 		$cmb    = new_cmb2_box(
 			array(
-				'id'           => $prefix . 'custom_fields',
+				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name'] . '_custom_fields',
 				'title'        => __( 'Interview data', 'kkwdomain'),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name'] ),
 				'context'      => 'normal',

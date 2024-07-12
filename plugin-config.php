@@ -29,7 +29,6 @@ define( 'BOOK_LINK_SUFFIX', 'book_link' );
 // TAXONOMIES.
 define( 'KKW_SECTION_TAXONOMY', 'section' );
 define( 'KKW_COLLECTION_TAXONOMY', 'collection' );
-define( 'KKW_BLOG_TYPE_TAXONOMY', 'blogtype' );
 define( 'KKW_AUTHOR_TAXONOMY', 'author' );
 define( 'KKW_PUBLISHER_TAXONOMY', 'publisher' );
 
