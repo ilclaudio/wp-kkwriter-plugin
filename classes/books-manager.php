@@ -285,6 +285,26 @@ class KKW_BooksManager {
 				'type'    => 'text',
 			)
 		);
+		// Field Show in carousel.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'show_in_carousel',
+				'name'    => __( 'Show in carouser', 'kkwdomain'),
+				'desc'    => __( 'Show the book in the carousel', 'kkwdomain'),
+				'default' => '',
+				'type'    => 'checkbox',
+			)
+		);
+		// Field Show in evidence section.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'show_in_evidence',
+				'name'    => __( 'Show in evidence', 'kkwdomain'),
+				'desc'    => __( "Show the book in the 'in evidence' section", 'kkwdomain'),
+				'default' => '',
+				'type'    => 'checkbox',
+			)
+		);
 		// Field: Image gallery.
 		$cmb->add_field(
 			array(
