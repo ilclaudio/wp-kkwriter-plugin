@@ -232,21 +232,21 @@ class KKW_SearchManager {
 		// Add the meta-tags.
 		$has_meta            = ( count( $post->meta_tags) > 0 ) && ( count( $post->meta_tags[0] )  > 0 );
 		$book['description'] = $has_meta &&
-			array_key_exists('kkw_book_year', $post->meta_tags[0]) &&
-			$post->meta_tags[0]['kkw_book_short_description'][0] ?
-			$post->meta_tags[0]['kkw_book_short_description'][0] : '';
+			array_key_exists('kkw_year', $post->meta_tags[0]) &&
+			$post->meta_tags[0]['kkw_short_description'][0] ?
+			$post->meta_tags[0]['kkw_short_description'][0] : '';
 		$book['year']        = $has_meta && 
-			array_key_exists('kkw_book_year', $post->meta_tags[0]) &&
-			$post->meta_tags[0]['kkw_book_year'][0] ?
-				$post->meta_tags[0]['kkw_book_year'][0] : '';
+			array_key_exists('kkw_year', $post->meta_tags[0]) &&
+			$post->meta_tags[0]['kkw_year'][0] ?
+				$post->meta_tags[0]['kkw_year'][0] : '';
 		$book['pages']        = $has_meta && 
-			array_key_exists('kkw_book_pages', $post->meta_tags[0]) &&
-			$post->meta_tags[0]['kkw_book_pages'][0] ?
-			$post->meta_tags[0]['kkw_book_pages'][0] : '';
+			array_key_exists('kkw_pages', $post->meta_tags[0]) &&
+			$post->meta_tags[0]['kkw_pages'][0] ?
+			$post->meta_tags[0]['kkw_pages'][0] : '';
 		$book['isbn']        = $has_meta &&
-			array_key_exists('kkw_book_isbn', $post->meta_tags[0]) &&
-				$post->meta_tags[0]['kkw_book_isbn'][0] ?
-				$post->meta_tags[0]['kkw_book_isbn'][0] : '';
+			array_key_exists('kkw_isbn', $post->meta_tags[0]) &&
+				$post->meta_tags[0]['kkw_isbn'][0] ?
+				$post->meta_tags[0]['kkw_isbn'][0] : '';
 
 		// Add the taxonomies.
 		$has_taxonomies = count( $post->taxonomies ) > 0;

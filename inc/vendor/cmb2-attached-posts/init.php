@@ -121,7 +121,7 @@ class WDS_CMB2_Attached_Posts_Field {
 		$filter_boxes = '';
 		// Check 'filter' setting
 		if ( $this->field->options( 'filter_boxes' ) ) {
-			$filter_boxes = '<div class="search-wrap"><input type="text" placeholder="' . sprintf( __( 'Filter %s', 'cmb' ), $post_type_labels ) . '" class="regular-text search" name="%s" /></div>';
+			$filter_boxes = '<div class="search-wrap"><input type="text" placeholder="' . sprintf( __( 'Filtra %s', 'cmb' ), $post_type_labels ) . '" class="regular-text search" name="%s" /></div>';
 		}
 
 		// Check to see if we have any meta values saved yet
@@ -139,7 +139,7 @@ class WDS_CMB2_Attached_Posts_Field {
 
 		// Open our retrieved, or found posts, list
 		echo '<div class="retrieved-wrap column-wrap">';
-		echo '<h4 class="attached-posts-section">' . sprintf( __( 'Available %s', 'cmb' ), $post_type_labels ) . '</h4>';
+		echo '<h4 class="attached-posts-section">' . sprintf( __( '%s Disponibili', 'cmb' ), $post_type_labels ) . '</h4>';
 
 		// Set .has_thumbnail
 		$has_thumbnail = $this->field->options( 'show_thumbnails' ) ? ' has-thumbnails' : '';
@@ -166,7 +166,7 @@ class WDS_CMB2_Attached_Posts_Field {
 				'types'      => $query_users ? 'user' : (array) $args['post_type'],
 				'cmbId'      => $this->field->cmb_id,
 				'errortxt'   => esc_attr( $field_type->_text( 'error_text', __( 'An error has occurred. Please reload the page and try again.' ) ) ),
-				'findtxt'    => esc_attr( $field_type->_text( 'find_text', __( 'Find Posts or Pages' ) ) ),
+				'findtxt'    => esc_attr( $field_type->_text( 'find_text', __( 'Cerca' ) ) ),
 				'groupId'    => $this->field->group ? $this->field->group->id() : false,
 				'fieldId'    => $this->field->_id(),
 				'exclude'    => isset( $args['post__not_in'] ) ? $args['post__not_in'] : array(),
@@ -179,7 +179,7 @@ class WDS_CMB2_Attached_Posts_Field {
 
 		// Open our attached posts list
 		echo '<div class="attached-wrap column-wrap">';
-		echo '<h4 class="attached-posts-section">' . sprintf( __( 'Attached %s', 'cmb' ), $post_type_labels ) . '</h4>';
+		echo '<h4 class="attached-posts-section">' . sprintf( __( '%s selezionati/e', 'cmb' ), $post_type_labels ) . '</h4>';
 
 		if ( $filter_boxes ) {
 			printf( $filter_boxes, 'attached-search' );
@@ -365,7 +365,7 @@ class WDS_CMB2_Attached_Posts_Field {
 		$post_type_obj = get_post_type_object( $object->post_type );
 		$label = isset( $post_type_obj->labels->singular_name ) ? $post_type_obj->labels->singular_name : $post_type_obj->label;
 
-		return apply_filters( 'cmb2_attached_posts_field_label', ' &mdash; <span class="object-label">' . $label . '</span> ', $label, $object );
+		return ' &mdash; <span class="object-label">'. $label .'</span>';
 	}
 
 	/**
@@ -468,8 +468,9 @@ class WDS_CMB2_Attached_Posts_Field {
 			);
 		}
 
-		$url = set_url_scheme( $url );
-		$url = apply_filters( 'cmb2_attached_posts_field_assets_url', $url );
+		// $url = set_url_scheme( $url );
+		// $url = apply_filters( 'cmb2_attached_posts_field_assets_url', $url );
+		$url =  get_stylesheet_directory_uri() . '/inc/vendor/cmb2-attached-posts/';
 
 		$requirements = array(
 			'jquery-ui-core',
@@ -486,7 +487,7 @@ class WDS_CMB2_Attached_Posts_Field {
 
 		if ( ! $once ) {
 			wp_localize_script( 'cmb2-attached-posts-field', 'CMBAP', array(
-				'edit_link_template' => str_replace( get_the_ID(), 'REPLACEME', get_edit_post_link( get_the_ID() ) ),
+				'edit_link_template' => str_replace( get_the_ID(), 'REPLACEME', get_edit_post_link( get_the_ID() ) || '' ),
 				'ajaxurl'            => admin_url( 'admin-ajax.php', 'relative' ),
 			) );
 
