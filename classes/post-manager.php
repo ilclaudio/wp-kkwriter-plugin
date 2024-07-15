@@ -35,7 +35,7 @@ class KKW_PostManager {
 		// Field: Post type: article, event, news, ecc.
 		$cmb->add_field(
 			array(
-				'id'            => $prefix . 'post_type',
+				'id'            => $prefix . 'group',
 				'name'          => __( 'Type', 'kkwdomain' ),
 				'type'          => 'select',
 				'options'       => array(

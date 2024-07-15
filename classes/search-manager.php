@@ -230,23 +230,28 @@ class KKW_SearchManager {
 		$book['content'] = $post->post_content;
 
 		// Add the meta-tags.
-		$has_meta            = ( count( $post->meta_tags) > 0 ) && ( count( $post->meta_tags[0] )  > 0 );
+		$has_meta      = ( count( $post->meta_tags) > 0 ) && ( count( $post->meta_tags[0] )  > 0 );
+		$prefix        = 'kkw_';
+		$book['group'] = $has_meta &&
+			array_key_exists( $prefix . 'group', $post->meta_tags[0]) &&
+			$post->meta_tags[0][ $prefix . 'group'][0] ?
+			$post->meta_tags[0][ $prefix . 'group'][0] : '';
 		$book['description'] = $has_meta &&
-			array_key_exists('kkw_year', $post->meta_tags[0]) &&
-			$post->meta_tags[0]['kkw_short_description'][0] ?
-			$post->meta_tags[0]['kkw_short_description'][0] : '';
+			array_key_exists( $prefix . 'short_description', $post->meta_tags[0]) &&
+			$post->meta_tags[0][ $prefix . 'short_description'][0] ?
+			$post->meta_tags[0][ $prefix . 'short_description'][0] : '';
 		$book['year']        = $has_meta && 
-			array_key_exists('kkw_year', $post->meta_tags[0]) &&
-			$post->meta_tags[0]['kkw_year'][0] ?
-				$post->meta_tags[0]['kkw_year'][0] : '';
+			array_key_exists( $prefix . 'year', $post->meta_tags[0]) &&
+			$post->meta_tags[0][ $prefix . 'year'][0] ?
+				$post->meta_tags[0][ $prefix . 'year'][0] : '';
 		$book['pages']        = $has_meta && 
-			array_key_exists('kkw_pages', $post->meta_tags[0]) &&
-			$post->meta_tags[0]['kkw_pages'][0] ?
-			$post->meta_tags[0]['kkw_pages'][0] : '';
+			array_key_exists( $prefix . 'pages', $post->meta_tags[0]) &&
+			$post->meta_tags[0][ $prefix . 'pages'][0] ?
+			$post->meta_tags[0][ $prefix . 'pages'][0] : '';
 		$book['isbn']        = $has_meta &&
-			array_key_exists('kkw_isbn', $post->meta_tags[0]) &&
-				$post->meta_tags[0]['kkw_isbn'][0] ?
-				$post->meta_tags[0]['kkw_isbn'][0] : '';
+			array_key_exists( $prefix . 'isbn', $post->meta_tags[0]) &&
+				$post->meta_tags[0][ $prefix . 'isbn'][0] ?
+				$post->meta_tags[0][ $prefix . 'isbn'][0] : '';
 
 		// Add the taxonomies.
 		$has_taxonomies = count( $post->taxonomies ) > 0;
