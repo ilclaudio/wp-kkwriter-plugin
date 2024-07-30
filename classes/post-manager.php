@@ -81,7 +81,23 @@ class KKW_PostManager {
 				),
 			)
 		);
-
+		// Field: Start hour.
+		$cmb->add_field(
+			array(
+				'id'         => $prefix . 'start_hour',
+				'name'       => __( 'Start hour', 'kkwdomain' ),
+				'type'       => 'text_time',
+				'attributes' => array(
+					'data-timepicker' => json_encode( array(
+					'timeOnlyTitle' => __( 'Start hour', 'kkwdomain' ),
+					'timeFormat' => 'HH:mm',
+					'stepMinute' => 5,
+					)
+				),
+			),
+			'time_format' => 'h:i:s A',
+			)
+		);
 		// Field: End date.
 		$cmb->add_field(
 			array(
@@ -95,6 +111,23 @@ class KKW_PostManager {
 						'yearRange' => '-100:+0',
 					)
 				),
+			)
+		);
+		// Field: End hour.
+		$cmb->add_field(
+			array(
+				'id'         => $prefix . 'end_hour',
+				'name'       => __( 'End hour', 'kkwdomain' ),
+				'type'       => 'text_time',
+				'attributes' => array(
+					'data-timepicker' => json_encode( array(
+					'timeOnlyTitle' => __( 'End hour', 'kkwdomain' ),
+					'timeFormat' => 'HH:mm',
+					'stepMinute' => 5,
+					)
+				),
+			),
+			'time_format' => 'h:i:s A',
 			)
 		);
 		// Field: Address.
