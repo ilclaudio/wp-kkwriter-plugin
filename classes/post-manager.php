@@ -135,7 +135,7 @@ class KKW_PostManager {
 			array(
 				'id'      => $prefix . 'address',
 				'name'    => __( 'Address', 'kkwdomain'),
-				'desc'    => __( 'The address of the event', 'kkwdomain'),
+				'desc'    => __( 'The full address of the event', 'kkwdomain'),
 				'default' => '',
 				'type'    => 'text',
 			)

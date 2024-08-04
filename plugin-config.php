@@ -8,7 +8,7 @@
  // PLUGIN CONSTANTS.
 define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
 define( 'KKW_PLUGIN_PATH', WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . KKW_PLUGIN_NAME );
-define( 'KKW_PLUGIN_URL', '' );
+define( 'KKW_PLUGIN_URL', plugin_dir_url(__FILE__) );
 
 // POST TYPES.
 define( 'KKW_DEFAULT_CATEGORY', 'category' );
