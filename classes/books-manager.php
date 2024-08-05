@@ -285,6 +285,17 @@ class KKW_BooksManager {
 				'type'    => 'text',
 			)
 		);
+		// Field: Back cover.
+		$cmb->add_field(
+			array(
+				'id'           => $prefix . 'back_cover',
+				'name'         => __( 'Back cover', 'kkwdomain'),
+				'desc'         => __( 'The back cover of the book', 'kkwdomain'),
+				'type'         => 'file',
+				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
+			)
+		);
 		// Field: Image gallery.
 		$cmb->add_field(
 			array(
