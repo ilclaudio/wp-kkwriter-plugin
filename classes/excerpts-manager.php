@@ -80,6 +80,16 @@ class KKW_ExcerptsManager {
 					),
 			)
 		);
+		// Priority.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'pages',
+				'name'    => __( 'Priority', 'kkwdomain'),
+				'desc'    => __( 'The priority of this item', 'kkwdomain'),
+				'default' => '1',
+				'type'    => 'text_small',
+			)
+		);
 	}
 
 }
