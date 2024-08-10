@@ -88,6 +88,7 @@ class KKW_ExcerptsManager {
 				'desc'    => __( 'The priority of this item', 'kkwdomain'),
 				'default' => '1',
 				'type'    => 'text_small',
+				'column'  => true,
 			)
 		);
 	}
