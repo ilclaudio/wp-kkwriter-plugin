@@ -252,6 +252,10 @@ class KKW_SearchManager {
 			array_key_exists( $prefix . 'isbn', $post->meta_tags[0]) &&
 				$post->meta_tags[0][ $prefix . 'isbn'][0] ?
 				$post->meta_tags[0][ $prefix . 'isbn'][0] : '';
+		$book['price']        = $has_meta &&
+				array_key_exists( $prefix . 'price', $post->meta_tags[0]) &&
+					$post->meta_tags[0][ $prefix . 'price'][0] ?
+					$post->meta_tags[0][ $prefix . 'price'][0] : '';
 
 		// Add the taxonomies.
 		$has_taxonomies = count( $post->taxonomies ) > 0;

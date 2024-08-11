@@ -182,14 +182,15 @@ class KKW_MultimediaManager {
 					),
 			)
 		);
-		// Priority.
+		// Order.
 		$cmb->add_field(
 			array(
-				'id'      => $prefix . 'pages',
-				'name'    => __( 'Priority', 'kkwdomain'),
-				'desc'    => __( 'The priority of this item', 'kkwdomain'),
+				'id'      => $prefix . 'order',
+				'name'    => __( 'Order', 'kkwdomain'),
+				'desc'    => __( 'The position of this item', 'kkwdomain'),
 				'default' => '1',
 				'type'    => 'text_small',
+				'column'  => true,
 			)
 		);
 	}
