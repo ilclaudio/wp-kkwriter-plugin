@@ -307,6 +307,24 @@ class KKW_BooksManager {
 				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
 			)
 		);
+		// Field: link to a book.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . BOOK_LINK_SUFFIX,
+				'name'    => __( 'Book', 'kkwdomain' ),
+				'before'  => __( 'Select linked books' , 'kkwdomain' ),
+				'type'    => 'custom_attached_posts',
+				'column'  => true,
+				'options' => array(
+					'show_thumbnails' => false, // Show thumbnails on the left
+					'filter_boxes'    => true, // Show a text box for filtering the results
+					'query_args'      => array(
+							'posts_per_page' => -1,
+							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+					),
+					),
+			)
+		);
 		// Field Show in carousel.
 		$cmb->add_field(
 			array(
