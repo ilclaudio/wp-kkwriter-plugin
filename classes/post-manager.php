@@ -95,7 +95,7 @@ class KKW_PostManager {
 					)
 				),
 			),
-			'time_format' => 'h:i:s A',
+			'time_format' => 'H:i',
 			)
 		);
 		// Field: End date.
@@ -127,7 +127,7 @@ class KKW_PostManager {
 					)
 				),
 			),
-			'time_format' => 'h:i:s A',
+			'time_format' => 'H:i',
 			)
 		);
 		// Field: Address.
