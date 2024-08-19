@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-31 18:08+0000\n"
-"PO-Revision-Date: 2024-04-16 21:01+0000\n"
+"PO-Revision-Date: 2024-08-19 07:19+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.7; wp-6.5.2\n"
+"X-Loco-Version: 2.6.11; wp-6.6.1\n"
 "X-Domain: kkwdomain"
 
 #. Description of the plugin
@@ -21,11 +21,11 @@ msgstr "Un plugin"
 
 #: templates/archive/archive-kkw_book.php:2
 msgid "Archive detail page from the PLUGIN"
-msgstr ""
+msgstr "Pagina di dettaglio dell'archivio del PLUGIN"
 
 #. Author of the plugin
 msgid "BatClaudio"
-msgstr ""
+msgstr "BatClaudio"
 
 #: classes/books-manager.php:45
 msgid "Book"
@@ -33,7 +33,7 @@ msgstr "Libro"
 
 #: classes/collections-manager.php:39
 msgid "Collection"
-msgstr ""
+msgstr "Collezione"
 
 #: classes/events-manager.php:39
 msgid "Event"
@@ -45,19 +45,19 @@ msgstr "Ciao"
 
 #. URI of the plugin
 msgid "https://github.com/ilclaudio/wp-kkwriter-plugin.git"
-msgstr ""
+msgstr "https://github.com/ilclaudio/wp-kkwriter-plugin.git"
 
 #. Author URI of the plugin
 msgid "https://www.wp-recipes.com"
-msgstr ""
+msgstr "https://www.wp-recipes.com"
 
 #: classes/interviews-manager.php:39
 msgid "Interview"
-msgstr ""
+msgstr "Intervista"
 
 #: classes/news-manager.php:39
 msgid "News"
-msgstr ""
+msgstr "Notizie"
 
 #: classes/books-manager.php:36
 msgctxt "Post Type General Name"
@@ -67,42 +67,42 @@ msgstr "Libri"
 #: classes/collections-manager.php:30
 msgctxt "Post Type General Name"
 msgid "Collections"
-msgstr ""
+msgstr "Collezioni"
 
 #: classes/events-manager.php:30
 msgctxt "Post Type General Name"
 msgid "Events"
-msgstr ""
+msgstr "Eventi"
 
 #: classes/excerpts-manager.php:30
 msgctxt "Post Type General Name"
 msgid "Excerpts"
-msgstr ""
+msgstr "Estratti"
 
 #: classes/interviews-manager.php:30
 msgctxt "Post Type General Name"
 msgid "Interviews"
-msgstr ""
+msgstr "Insterviste"
 
 #: classes/multimedia-manager.php:30
 msgctxt "Post Type General Name"
 msgid "MultiMedia"
-msgstr ""
+msgstr "https://www.wp-recipes.com"
 
 #: classes/news-manager.php:30
 msgctxt "Post Type General Name"
 msgid "News"
-msgstr ""
+msgstr "News"
 
 #: classes/reviews-manager.php:30
 msgctxt "Post Type General Name"
 msgid "Reviews"
-msgstr ""
+msgstr "Recensioni"
 
 #: classes/sections-manager.php:30
 msgctxt "Post Type General Name"
 msgid "Sections"
-msgstr ""
+msgstr "Sezioni"
 
 #: classes/books-manager.php:38 classes/books-manager.php:39
 msgctxt "Post Type Singular Name"
@@ -122,32 +122,32 @@ msgstr "Aggiungi un evento"
 #: classes/excerpts-manager.php:32 classes/excerpts-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add a excerpt"
-msgstr ""
+msgstr "Aggiungi un estratto"
 
 #: classes/multimedia-manager.php:32 classes/multimedia-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add a media"
-msgstr ""
+msgstr "Aggiungi un media"
 
 #: classes/news-manager.php:32 classes/news-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add a news"
-msgstr ""
+msgstr "Aggiungi una notizia"
 
 #: classes/reviews-manager.php:32 classes/reviews-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add a review"
-msgstr ""
+msgstr "Aggiungi una recensione"
 
 #: classes/sections-manager.php:32 classes/sections-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add a section"
-msgstr ""
+msgstr "Aggiungi una sezione"
 
 #: classes/interviews-manager.php:32 classes/interviews-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Add an interview"
-msgstr ""
+msgstr "Aggiungi una intervista"
 
 #: classes/books-manager.php:37
 msgctxt "Post Type Singular Name"
@@ -157,7 +157,7 @@ msgstr "Libro"
 #: classes/collections-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "Collection"
-msgstr ""
+msgstr "Collezione"
 
 #: classes/books-manager.php:40
 msgctxt "Post Type Singular Name"
@@ -167,128 +167,128 @@ msgstr "Modifica un libro"
 #: classes/collections-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit a collection"
-msgstr ""
+msgstr "Modifica collezione"
 
 #: classes/events-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit a event"
-msgstr ""
+msgstr "Modifica evento"
 
 #: classes/excerpts-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit a excerpt"
-msgstr ""
+msgstr "Modifica estratto"
 
 #: classes/multimedia-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit a media"
-msgstr ""
+msgstr "Modifica media"
 
 #: classes/news-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit a news"
-msgstr ""
+msgstr "Modifica notizia"
 
 #: classes/reviews-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit a review"
-msgstr ""
+msgstr "Modifica recensione"
 
 #: classes/sections-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit a section"
-msgstr ""
+msgstr "Modifica sezione"
 
 #: classes/interviews-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Edit an interview"
-msgstr ""
+msgstr "Modifica intervista"
 
 #: classes/events-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "Event"
-msgstr ""
+msgstr "Evento"
 
 #: classes/excerpts-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "Excerpt"
-msgstr ""
+msgstr "Estratto"
 
 #: classes/interviews-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "Interview"
-msgstr ""
+msgstr "Intervista"
 
 #: classes/multimedia-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "MultiMedia"
-msgstr ""
+msgstr "https://www.wp-recipes.com"
 
 #: classes/news-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "News"
-msgstr ""
+msgstr "News"
 
 #: classes/reviews-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "Review"
-msgstr ""
+msgstr "Recensione"
 
 #: classes/sections-manager.php:31
 msgctxt "Post Type Singular Name"
 msgid "Section"
-msgstr ""
+msgstr "Sezione"
 
 #: classes/books-manager.php:41
 msgctxt "Post Type Singular Name"
 msgid "View a book"
-msgstr ""
+msgstr "Visualizza libro"
 
 #: classes/collections-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View a collection"
-msgstr ""
+msgstr "Visualizza collezione"
 
 #: classes/events-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View a event"
-msgstr ""
+msgstr "Visualizza evento"
 
 #: classes/excerpts-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View a excerpt"
-msgstr ""
+msgstr "Visualizza estratto"
 
 #: classes/multimedia-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View a media"
-msgstr ""
+msgstr "Visualizza media"
 
 #: classes/news-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View a news"
-msgstr ""
+msgstr "Visualizza notizia"
 
 #: classes/reviews-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View a review"
-msgstr ""
+msgstr "Visualizza recensione"
 
 #: classes/sections-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View a section"
-msgstr ""
+msgstr "Visualizza sezione"
 
 #: classes/interviews-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "View an interview"
-msgstr ""
+msgstr "Visualizza intervista"
 
 #: classes/excerpts-manager.php:39 classes/multimedia-manager.php:39
 #: classes/reviews-manager.php:39 classes/sections-manager.php:39
 msgid "Section"
-msgstr ""
+msgstr "Sezione"
 
 #. Name of the plugin
 msgid "WP KK Writer Plugin"
-msgstr ""
+msgstr "WP KK Writer Plugin"

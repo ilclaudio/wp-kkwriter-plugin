@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-31 18:09+0000\n"
+"POT-Creation-Date: 2024-08-19 07:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,24 +20,167 @@ msgstr ""
 msgid "A plugin"
 msgstr ""
 
+#: classes/books-manager.php:195
+msgid "A short description of the book"
+msgstr ""
+
+#: classes/interviews-manager.php:111 classes/post-manager.php:54
+msgid "A short excerpt from the interview"
+msgstr ""
+
+#: classes/reviews-manager.php:105
+msgid "A short excerpt from the review"
+msgstr ""
+
+#: classes/books-manager.php:70
+msgid "Add a Collection"
+msgstr ""
+
+#: classes/books-manager.php:124
+msgid "Add a Publisher"
+msgstr ""
+
+#: classes/books-manager.php:42
+msgid "Add a Section"
+msgstr ""
+
+#: classes/books-manager.php:97
+msgid "Add an author"
+msgstr ""
+
+#: classes/post-manager.php:137
+msgid "Address"
+msgstr ""
+
+#: classes/books-manager.php:94
+msgid "All the authors"
+msgstr ""
+
+#: classes/books-manager.php:67
+msgid "All the Collections"
+msgstr ""
+
+#: classes/books-manager.php:121
+msgid "All the Publishers"
+msgstr ""
+
+#: classes/books-manager.php:39
+msgid "All the Sections"
+msgstr ""
+
 #: templates/archive/archive-kkw_book.php:2
 msgid "Archive detail page from the PLUGIN"
+msgstr ""
+
+#: classes/multimedia-manager.php:84 classes/post-manager.php:42
+msgid "Article"
+msgstr ""
+
+#: classes/multimedia-manager.php:122
+msgid "Audio file"
+msgstr ""
+
+#: classes/multimedia-manager.php:101
+msgid "Audio MP3"
+msgstr ""
+
+#: classes/interviews-manager.php:80 classes/reviews-manager.php:74
+msgid "Author"
+msgstr ""
+
+#: classes/books-manager.php:99
+msgid "Authors"
+msgstr ""
+
+#: classes/books-manager.php:292
+msgid "Back cover"
 msgstr ""
 
 #. Author of the plugin
 msgid "BatClaudio"
 msgstr ""
 
-#: classes/books-manager.php:45
+#: classes/books-manager.php:160 classes/books-manager.php:314
+#: classes/excerpts-manager.php:69 classes/interviews-manager.php:139
+#: classes/multimedia-manager.php:171 classes/post-manager.php:206
+#: classes/reviews-manager.php:124
 msgid "Book"
 msgstr ""
 
-#: classes/collections-manager.php:39
+#: classes/books-manager.php:184
+msgid "Book data"
+msgstr ""
+
+#: classes/books-manager.php:263
+msgid "Buy it"
+msgstr ""
+
+#: classes/collections-manager.php:44
 msgid "Collection"
 msgstr ""
 
-#: classes/events-manager.php:39
+#: classes/books-manager.php:72
+msgid "Collections"
+msgstr ""
+
+#: classes/post-manager.php:157
+msgid "Contact mail"
+msgstr ""
+
+#: classes/post-manager.php:147
+msgid "Contact person"
+msgstr ""
+
+#: classes/post-manager.php:167
+msgid "Contact phone number"
+msgstr ""
+
+#: classes/interviews-manager.php:70
+msgid "Date"
+msgstr ""
+
+#: classes/multimedia-manager.php:85
+msgid "Documentary"
+msgstr ""
+
+#: classes/books-manager.php:282
+msgid "EAN"
+msgstr ""
+
+#: classes/books-manager.php:95
+msgid "Edit author"
+msgstr ""
+
+#: classes/books-manager.php:68
+msgid "Edit Collection"
+msgstr ""
+
+#: classes/books-manager.php:122
+msgid "Edit Publisher"
+msgstr ""
+
+#: classes/books-manager.php:40
+msgid "Edit Section"
+msgstr ""
+
+#: classes/post-manager.php:105
+msgid "End date"
+msgstr ""
+
+#: classes/post-manager.php:120 classes/post-manager.php:124
+msgid "End hour"
+msgstr ""
+
+#: classes/post-manager.php:43
 msgid "Event"
+msgstr ""
+
+#: classes/post-manager.php:177
+msgid "External link"
+msgstr ""
+
+#: classes/books-manager.php:303 classes/post-manager.php:195
+msgid "Gallery"
 msgstr ""
 
 #: templates/archive/archive-kkw_book.php:5
@@ -52,244 +195,530 @@ msgstr ""
 msgid "https://www.wp-recipes.com"
 msgstr ""
 
-#: classes/interviews-manager.php:39
+#: classes/multimedia-manager.php:102
+msgid "Image"
+msgstr ""
+
+#: classes/multimedia-manager.php:155
+msgid "Image file"
+msgstr ""
+
+#: classes/books-manager.php:304 classes/post-manager.php:196
+msgid "Images and photos of the book"
+msgstr ""
+
+#: classes/interviews-manager.php:41 classes/multimedia-manager.php:86
 msgid "Interview"
 msgstr ""
 
-#: classes/news-manager.php:39
+#: classes/excerpts-manager.php:59 classes/interviews-manager.php:60
+msgid "Interview data"
+msgstr ""
+
+#: classes/interviews-manager.php:130
+msgid "Interview link"
+msgstr ""
+
+#: classes/books-manager.php:272
+msgid "ISBN"
+msgstr ""
+
+#: classes/settings-manager.php:43
+msgid "KKW Plugin"
+msgstr ""
+
+#: classes/multimedia-manager.php:103
+msgid "Link Image"
+msgstr ""
+
+#: classes/multimedia-manager.php:104
+msgid "Link Youtube"
+msgstr ""
+
+#: classes/settings-manager.php:180 classes/settings-manager.php:181
+msgid "Load example data"
+msgstr ""
+
+#: classes/multimedia-manager.php:78
+msgid "Media Category"
+msgstr ""
+
+#: classes/multimedia-manager.php:113
+msgid "Media link"
+msgstr ""
+
+#: classes/multimedia-manager.php:95
+msgid "Media Type"
+msgstr ""
+
+#: classes/multimedia-manager.php:68
+msgid "Multimedia data"
+msgstr ""
+
+#: classes/books-manager.php:98
+msgid "New author"
+msgstr ""
+
+#: classes/books-manager.php:71
+msgid "New Collection"
+msgstr ""
+
+#: classes/books-manager.php:125
+msgid "New Publisher"
+msgstr ""
+
+#: classes/books-manager.php:43
+msgid "New Section"
+msgstr ""
+
+#: classes/post-manager.php:44
 msgid "News"
 msgstr ""
 
-#: classes/books-manager.php:36
+#: classes/excerpts-manager.php:87 classes/interviews-manager.php:157
+#: classes/multimedia-manager.php:189 classes/reviews-manager.php:142
+msgid "Order"
+msgstr ""
+
+#: classes/books-manager.php:234
+msgid "Pages"
+msgstr ""
+
+#: classes/multimedia-manager.php:87
+msgid "Piece"
+msgstr ""
+
+#: classes/post-manager.php:28
+msgid "Post custom data"
+msgstr ""
+
+#: classes/books-manager.php:152
 msgctxt "Post Type General Name"
 msgid "Books"
 msgstr ""
 
-#: classes/collections-manager.php:30
+#: classes/collections-manager.php:35
 msgctxt "Post Type General Name"
 msgid "Collections"
 msgstr ""
 
-#: classes/events-manager.php:30
-msgctxt "Post Type General Name"
-msgid "Events"
-msgstr ""
-
-#: classes/excerpts-manager.php:30
+#: classes/excerpts-manager.php:32
 msgctxt "Post Type General Name"
 msgid "Excerpts"
 msgstr ""
 
-#: classes/interviews-manager.php:30
+#: classes/interviews-manager.php:33
 msgctxt "Post Type General Name"
 msgid "Interviews"
 msgstr ""
 
-#: classes/multimedia-manager.php:30
+#: classes/multimedia-manager.php:36
 msgctxt "Post Type General Name"
 msgid "MultiMedia"
 msgstr ""
 
-#: classes/news-manager.php:30
-msgctxt "Post Type General Name"
-msgid "News"
-msgstr ""
-
-#: classes/reviews-manager.php:30
+#: classes/reviews-manager.php:32
 msgctxt "Post Type General Name"
 msgid "Reviews"
 msgstr ""
 
-#: classes/sections-manager.php:30
-msgctxt "Post Type General Name"
-msgid "Sections"
-msgstr ""
-
-#: classes/books-manager.php:38 classes/books-manager.php:39
+#: classes/books-manager.php:154 classes/books-manager.php:155
 msgctxt "Post Type Singular Name"
 msgid "Add a book"
 msgstr ""
 
-#: classes/collections-manager.php:32 classes/collections-manager.php:33
+#: classes/collections-manager.php:37 classes/collections-manager.php:38
 msgctxt "Post Type Singular Name"
 msgid "Add a collection"
 msgstr ""
 
-#: classes/events-manager.php:32 classes/events-manager.php:33
-msgctxt "Post Type Singular Name"
-msgid "Add a event"
-msgstr ""
-
-#: classes/excerpts-manager.php:32 classes/excerpts-manager.php:33
+#: classes/excerpts-manager.php:34 classes/excerpts-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "Add a excerpt"
 msgstr ""
 
-#: classes/multimedia-manager.php:32 classes/multimedia-manager.php:33
+#: classes/multimedia-manager.php:38 classes/multimedia-manager.php:39
 msgctxt "Post Type Singular Name"
 msgid "Add a media"
 msgstr ""
 
-#: classes/news-manager.php:32 classes/news-manager.php:33
-msgctxt "Post Type Singular Name"
-msgid "Add a news"
-msgstr ""
-
-#: classes/reviews-manager.php:32 classes/reviews-manager.php:33
+#: classes/reviews-manager.php:34 classes/reviews-manager.php:35
 msgctxt "Post Type Singular Name"
 msgid "Add a review"
 msgstr ""
 
-#: classes/sections-manager.php:32 classes/sections-manager.php:33
-msgctxt "Post Type Singular Name"
-msgid "Add a section"
-msgstr ""
-
-#: classes/interviews-manager.php:32 classes/interviews-manager.php:33
+#: classes/interviews-manager.php:35 classes/interviews-manager.php:36
 msgctxt "Post Type Singular Name"
 msgid "Add an interview"
 msgstr ""
 
-#: classes/books-manager.php:37
+#: classes/books-manager.php:153
 msgctxt "Post Type Singular Name"
 msgid "Book"
 msgstr ""
 
-#: classes/collections-manager.php:31
+#: classes/collections-manager.php:36
 msgctxt "Post Type Singular Name"
 msgid "Collection"
 msgstr ""
 
-#: classes/books-manager.php:40
+#: classes/books-manager.php:156
 msgctxt "Post Type Singular Name"
 msgid "Edit a book"
 msgstr ""
 
-#: classes/collections-manager.php:34
+#: classes/collections-manager.php:39
 msgctxt "Post Type Singular Name"
 msgid "Edit a collection"
 msgstr ""
 
-#: classes/events-manager.php:34
-msgctxt "Post Type Singular Name"
-msgid "Edit a event"
-msgstr ""
-
-#: classes/excerpts-manager.php:34
+#: classes/excerpts-manager.php:36
 msgctxt "Post Type Singular Name"
 msgid "Edit a excerpt"
 msgstr ""
 
-#: classes/multimedia-manager.php:34
+#: classes/multimedia-manager.php:40
 msgctxt "Post Type Singular Name"
 msgid "Edit a media"
 msgstr ""
 
-#: classes/news-manager.php:34
-msgctxt "Post Type Singular Name"
-msgid "Edit a news"
-msgstr ""
-
-#: classes/reviews-manager.php:34
+#: classes/reviews-manager.php:36
 msgctxt "Post Type Singular Name"
 msgid "Edit a review"
 msgstr ""
 
-#: classes/sections-manager.php:34
-msgctxt "Post Type Singular Name"
-msgid "Edit a section"
-msgstr ""
-
-#: classes/interviews-manager.php:34
+#: classes/interviews-manager.php:37
 msgctxt "Post Type Singular Name"
 msgid "Edit an interview"
 msgstr ""
 
-#: classes/events-manager.php:31
-msgctxt "Post Type Singular Name"
-msgid "Event"
-msgstr ""
-
-#: classes/excerpts-manager.php:31
+#: classes/excerpts-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Excerpt"
 msgstr ""
 
-#: classes/interviews-manager.php:31
+#: classes/interviews-manager.php:34
 msgctxt "Post Type Singular Name"
 msgid "Interview"
 msgstr ""
 
-#: classes/multimedia-manager.php:31
+#: classes/multimedia-manager.php:37
 msgctxt "Post Type Singular Name"
 msgid "MultiMedia"
 msgstr ""
 
-#: classes/news-manager.php:31
-msgctxt "Post Type Singular Name"
-msgid "News"
-msgstr ""
-
-#: classes/reviews-manager.php:31
+#: classes/reviews-manager.php:33
 msgctxt "Post Type Singular Name"
 msgid "Review"
 msgstr ""
 
-#: classes/sections-manager.php:31
-msgctxt "Post Type Singular Name"
-msgid "Section"
-msgstr ""
-
-#: classes/books-manager.php:41
+#: classes/books-manager.php:157
 msgctxt "Post Type Singular Name"
 msgid "View a book"
 msgstr ""
 
-#: classes/collections-manager.php:35
+#: classes/collections-manager.php:40
 msgctxt "Post Type Singular Name"
 msgid "View a collection"
 msgstr ""
 
-#: classes/events-manager.php:35
-msgctxt "Post Type Singular Name"
-msgid "View a event"
-msgstr ""
-
-#: classes/excerpts-manager.php:35
+#: classes/excerpts-manager.php:37
 msgctxt "Post Type Singular Name"
 msgid "View a excerpt"
 msgstr ""
 
-#: classes/multimedia-manager.php:35
+#: classes/multimedia-manager.php:41
 msgctxt "Post Type Singular Name"
 msgid "View a media"
 msgstr ""
 
-#: classes/news-manager.php:35
-msgctxt "Post Type Singular Name"
-msgid "View a news"
-msgstr ""
-
-#: classes/reviews-manager.php:35
+#: classes/reviews-manager.php:37
 msgctxt "Post Type Singular Name"
 msgid "View a review"
 msgstr ""
 
-#: classes/sections-manager.php:35
-msgctxt "Post Type Singular Name"
-msgid "View a section"
-msgstr ""
-
-#: classes/interviews-manager.php:35
+#: classes/interviews-manager.php:38
 msgctxt "Post Type Singular Name"
 msgid "View an interview"
 msgstr ""
 
-#: classes/excerpts-manager.php:39 classes/multimedia-manager.php:39
-#: classes/reviews-manager.php:39 classes/sections-manager.php:39
+#: classes/books-manager.php:244
+msgid "Price"
+msgstr ""
+
+#: classes/books-manager.php:254
+msgid "Publisher page"
+msgstr ""
+
+#: classes/books-manager.php:126
+msgid "Publishers"
+msgstr ""
+
+#: classes/reviews-manager.php:64
+msgid "Review data"
+msgstr ""
+
+#: classes/books-manager.php:93
+msgid "Search author"
+msgstr ""
+
+#: classes/books-manager.php:66
+msgid "Search Collection"
+msgstr ""
+
+#: classes/books-manager.php:120
+msgid "Search Publisher"
+msgstr ""
+
+#: classes/books-manager.php:38
+msgid "Search Section"
+msgstr ""
+
+#: classes/excerpts-manager.php:40 classes/multimedia-manager.php:44
+#: classes/reviews-manager.php:40
 msgid "Section"
+msgstr ""
+
+#: classes/books-manager.php:44
+msgid "Sections"
+msgstr ""
+
+#: classes/multimedia-manager.php:79 classes/multimedia-manager.php:96
+msgid "Select an option"
+msgstr ""
+
+#: classes/books-manager.php:315 classes/excerpts-manager.php:70
+#: classes/interviews-manager.php:140 classes/multimedia-manager.php:172
+#: classes/post-manager.php:207 classes/reviews-manager.php:125
+msgid "Select linked books"
+msgstr ""
+
+#: classes/books-manager.php:214
+msgid "Series"
+msgstr ""
+
+#: classes/books-manager.php:194 classes/interviews-manager.php:110
+#: classes/post-manager.php:53 classes/reviews-manager.php:104
+msgid "Short description"
+msgstr ""
+
+#: classes/books-manager.php:332 classes/post-manager.php:226
+msgid "Show in carousel"
+msgstr ""
+
+#: classes/books-manager.php:342 classes/post-manager.php:236
+msgid "Show in evidence"
+msgstr ""
+
+#: classes/books-manager.php:343 classes/post-manager.php:237
+msgid "Show the book in the 'in evidence' section"
+msgstr ""
+
+#: classes/books-manager.php:333 classes/post-manager.php:227
+msgid "Show the book in the carousel"
+msgstr ""
+
+#: classes/interviews-manager.php:90 classes/reviews-manager.php:84
+msgid "Source description"
+msgstr ""
+
+#: classes/post-manager.php:73
+msgid "Start date"
+msgstr ""
+
+#: classes/post-manager.php:88 classes/post-manager.php:92
+msgid "Start hour"
+msgstr ""
+
+#: classes/books-manager.php:91
+msgctxt "taxonomy general name"
+msgid "Author"
+msgstr ""
+
+#: classes/books-manager.php:64
+msgctxt "taxonomy general name"
+msgid "Collection"
+msgstr ""
+
+#: classes/books-manager.php:118
+msgctxt "taxonomy general name"
+msgid "Publisher"
+msgstr ""
+
+#: classes/books-manager.php:36
+msgctxt "taxonomy general name"
+msgid "Section"
+msgstr ""
+
+#: classes/books-manager.php:92
+msgctxt "taxonomy singular name"
+msgid "Author"
+msgstr ""
+
+#: classes/books-manager.php:65
+msgctxt "taxonomy singular name"
+msgid "Collection"
+msgstr ""
+
+#: classes/books-manager.php:119
+msgctxt "taxonomy singular name"
+msgid "Publisher"
+msgstr ""
+
+#: classes/books-manager.php:37
+msgctxt "taxonomy singular name"
+msgid "Section"
+msgstr ""
+
+#: classes/interviews-manager.php:81
+msgid "The author of the interview"
+msgstr ""
+
+#: classes/reviews-manager.php:75
+msgid "The author of the review"
+msgstr ""
+
+#: classes/books-manager.php:293
+msgid "The back cover of the book"
+msgstr ""
+
+#: classes/post-manager.php:158
+msgid "The contact mail"
+msgstr ""
+
+#: classes/post-manager.php:148
+msgid "The contact person"
+msgstr ""
+
+#: classes/post-manager.php:168
+msgid "The contact phone number"
+msgstr ""
+
+#: classes/interviews-manager.php:71
+msgid "The date of the interview"
+msgstr ""
+
+#: classes/interviews-manager.php:91
+msgid "The description of the source of the interview"
+msgstr ""
+
+#: classes/reviews-manager.php:85
+msgid "The description of the source of the review"
+msgstr ""
+
+#: classes/books-manager.php:283
+msgid "The EAN code"
+msgstr ""
+
+#: classes/post-manager.php:106
+msgid "The end date of the event"
+msgstr ""
+
+#: classes/post-manager.php:138
+msgid "The full address of the event"
+msgstr ""
+
+#: classes/books-manager.php:273
+msgid "The ISBN code"
+msgstr ""
+
+#: classes/books-manager.php:264
+msgid "The link to buy the book"
+msgstr ""
+
+#: classes/books-manager.php:255
+msgid "The link to the book page on the publisher site"
+msgstr ""
+
+#: classes/post-manager.php:178
+msgid "The link to the event/news"
+msgstr ""
+
+#: classes/interviews-manager.php:131
+msgid "The link to the interview"
+msgstr ""
+
+#: classes/multimedia-manager.php:114
+msgid "The link to the media"
+msgstr ""
+
+#: classes/post-manager.php:187
+msgid "The link to the video"
+msgstr ""
+
+#: classes/books-manager.php:235
+msgid "The number of pages"
+msgstr ""
+
+#: classes/excerpts-manager.php:88 classes/interviews-manager.php:158
+#: classes/multimedia-manager.php:190 classes/reviews-manager.php:143
+msgid "The position of this item"
+msgstr ""
+
+#: classes/books-manager.php:245
+msgid "The price of the book with the currency."
+msgstr ""
+
+#: classes/books-manager.php:225
+msgid "The publication year"
+msgstr ""
+
+#: classes/books-manager.php:215
+msgid "The series of the book"
+msgstr ""
+
+#: classes/post-manager.php:74
+msgid "The start date of the event"
+msgstr ""
+
+#: classes/post-manager.php:39
+msgid "Type"
+msgstr ""
+
+#: classes/books-manager.php:96
+msgid "Update author"
+msgstr ""
+
+#: classes/books-manager.php:69
+msgid "Update Collection"
+msgstr ""
+
+#: classes/books-manager.php:123
+msgid "Update Publisher"
+msgstr ""
+
+#: classes/books-manager.php:41
+msgid "Update Section"
+msgstr ""
+
+#: classes/multimedia-manager.php:123
+msgid "Upload the audio media file"
+msgstr ""
+
+#: classes/multimedia-manager.php:156
+msgid "Upload the image media file"
+msgstr ""
+
+#: classes/multimedia-manager.php:141
+msgid "Upload the video media file"
+msgstr ""
+
+#: classes/multimedia-manager.php:140
+msgid "Video file"
+msgstr ""
+
+#: classes/post-manager.php:186
+msgid "Video link"
+msgstr ""
+
+#: classes/multimedia-manager.php:105
+msgid "Video MP4"
 msgstr ""
 
 #. Name of the plugin
 msgid "WP KK Writer Plugin"
+msgstr ""
+
+#: classes/books-manager.php:224
+msgid "Year"
 msgstr ""
