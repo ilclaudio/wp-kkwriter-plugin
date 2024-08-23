@@ -181,7 +181,7 @@ class KKW_BooksManager {
 		$cmb    = new_cmb2_box(
 			array(
 				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_BOOK ]['name'] . '_custom_fields',
-				'title'        => __( 'Book data', 'kkwdomain'),
+				'title'        => __( 'Book data', 'kkwdomain' ),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_BOOK ]['name'] ),
 				'context'      => 'normal',
 				'priority'     => 'high',
@@ -191,8 +191,8 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'short_description',
-				'name'    => __( 'Short description', 'kkwdomain'),
-				'desc'    => __( 'A short description of the book', 'kkwdomain'),
+				'name'    => __( 'Short description', 'kkwdomain' ),
+				'desc'    => __( 'A short description of the book', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'wysiwyg',
 				'options' => array(
@@ -211,8 +211,8 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'series',
-				'name'    => __( 'Series', 'kkwdomain'),
-				'desc'    => __( 'The series of the book', 'kkwdomain'),
+				'name'    => __( 'Series', 'kkwdomain' ),
+				'desc'    => __( 'The series of the book', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -221,8 +221,8 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'year',
-				'name'    => __( 'Year', 'kkwdomain'),
-				'desc'    => __( 'The publication year', 'kkwdomain'),
+				'name'    => __( 'Year', 'kkwdomain' ),
+				'desc'    => __( 'The publication year', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text_small',
 			)
@@ -231,37 +231,56 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'pages',
-				'name'    => __( 'Pages', 'kkwdomain'),
-				'desc'    => __( 'The number of pages', 'kkwdomain'),
+				'name'    => __( 'Pages', 'kkwdomain' ),
+				'desc'    => __( 'The number of pages', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text_small',
+			)
+		);
+		// Field: Show the price.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'show_price',
+				'name'    => __( 'Show price', 'kkwdomain' ),
+				'desc'    => __( 'Show the the price of the book', 'kkwdomain' ),
+				'default' => false,
+				'type'    => 'checkbox',
 			)
 		);
 		// Field: Price.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'price',
-				'name'    => __( 'Price', 'kkwdomain'),
-				'desc'    => __( 'The price of the book with the currency.', 'kkwdomain'),
+				'name'    => __( 'Price', 'kkwdomain' ),
+				'desc'    => __( 'The price of the book with the currency.', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text_small',
 			)
 		);
-		// Field: Link publisher site.
+		// Field: Link to the publisher site.
 		$cmb->add_field(
 			array(
 				'id'         => $prefix . 'publisher_page',
-				'name'       => __( 'Publisher page', 'kkwdomain'),
-				'desc'       => __( 'The link to the book page on the publisher site', 'kkwdomain'),
+				'name'       => __( 'Publisher page', 'kkwdomain' ),
+				'desc'       => __( 'The link to the publisher site', 'kkwdomain' ),
 				'type'       => 'text_url',
 			)
 		);
-		// Field: Link publisher site.
+		// Field: Link to the book on the publisher site.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'buy',
-				'name'       => __( 'Buy it', 'kkwdomain'),
-				'desc'       => __( 'The link to buy the book', 'kkwdomain'),
+				'id'         => $prefix . 'publisher_book_page',
+				'name'       => __( 'Link on the publisher site', 'kkwdomain' ),
+				'desc'       => __( 'The link to the book page on the publisher site', 'kkwdomain' ),
+				'type'       => 'text_url',
+			)
+		);
+		// Field: Link where to buy the book.
+		$cmb->add_field(
+			array(
+				'id'         => $prefix . 'shop_page',
+				'name'       => __( 'Link to buy', 'kkwdomain' ),
+				'desc'       => __( 'The link to buy the book', 'kkwdomain' ),
 				'type'       => 'text_url',
 			)
 		);
@@ -269,8 +288,8 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'isbn',
-				'name'    => __( 'ISBN', 'kkwdomain'),
-				'desc'    => __( 'The ISBN code', 'kkwdomain'),
+				'name'    => __( 'ISBN', 'kkwdomain' ),
+				'desc'    => __( 'The ISBN code', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -279,8 +298,8 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'ean',
-				'name'    => __( 'EAN', 'kkwdomain'),
-				'desc'    => __( 'The EAN code', 'kkwdomain'),
+				'name'    => __( 'EAN', 'kkwdomain' ),
+				'desc'    => __( 'The EAN code', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -289,8 +308,8 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'           => $prefix . 'back_cover',
-				'name'         => __( 'Back cover', 'kkwdomain'),
-				'desc'         => __( 'The back cover of the book', 'kkwdomain'),
+				'name'         => __( 'Back cover', 'kkwdomain' ),
+				'desc'         => __( 'The back cover of the book', 'kkwdomain' ),
 				'type'         => 'file',
 				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
 				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
@@ -300,8 +319,8 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'           => $prefix . 'gallery',
-				'name'         => __( 'Gallery', 'kkwdomain'),
-				'desc'         => __( 'Images and photos of the book', 'kkwdomain'),
+				'name'         => __( 'Gallery', 'kkwdomain' ),
+				'desc'         => __( 'Images and photos of the book', 'kkwdomain' ),
 				'type'         => 'file_list',
 				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
 				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
@@ -329,18 +348,18 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'show_in_carousel',
-				'name'    => __( 'Show in carousel', 'kkwdomain'),
-				'desc'    => __( 'Show the book in the carousel', 'kkwdomain'),
+				'name'    => __( 'Show in the Carousel', 'kkwdomain' ),
+				'desc'    => __( 'Show the book in the Carousel', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'checkbox',
 			)
 		);
-		// Field Show in evidence section.
+		// Field Show in the Featured Contents section.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'show_in_evidence',
-				'name'    => __( 'Show in evidence', 'kkwdomain'),
-				'desc'    => __( "Show the book in the 'in evidence' section", 'kkwdomain'),
+				'name'    => __( 'Show in the Featured Contents', 'kkwdomain' ),
+				'desc'    => __( 'Show the book in the Featured Contents section', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'checkbox',
 			)

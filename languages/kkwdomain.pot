@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-22 16:28+0000\n"
+"POT-Creation-Date: 2024-08-23 16:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,6 +20,18 @@ msgstr ""
 msgid "A plugin"
 msgstr ""
 
+#: classes/page-manager.php:39
+msgid "A prologue for this page"
+msgstr ""
+
+#: classes/page-manager.php:81
+msgid "A quote"
+msgstr ""
+
+#: classes/page-manager.php:82
+msgid "A quote for this page"
+msgstr ""
+
 #: classes/books-manager.php:195
 msgid "A short description of the book"
 msgstr ""
@@ -30,6 +42,14 @@ msgstr ""
 
 #: classes/reviews-manager.php:105
 msgid "A short excerpt from the review"
+msgstr ""
+
+#: classes/page-manager.php:40
+msgid "A short text that will be shown above the body of the page"
+msgstr ""
+
+#: classes/page-manager.php:61
+msgid "A short text that will be shown below the body of the page"
 msgstr ""
 
 #: classes/books-manager.php:154 classes/books-manager.php:155
@@ -49,6 +69,7 @@ msgid "Add a excerpt"
 msgstr ""
 
 #: classes/multimedia-manager.php:38 classes/multimedia-manager.php:39
+#: classes/settings-manager.php:171 classes/settings-manager.php:172
 msgid "Add a media"
 msgstr ""
 
@@ -73,6 +94,7 @@ msgid "Add an excerpt"
 msgstr ""
 
 #: classes/interviews-manager.php:35 classes/interviews-manager.php:36
+#: classes/settings-manager.php:135 classes/settings-manager.php:136
 msgid "Add an interview"
 msgstr ""
 
@@ -94,6 +116,10 @@ msgstr ""
 
 #: classes/books-manager.php:39
 msgid "All the Sections"
+msgstr ""
+
+#: classes/page-manager.php:60
+msgid "An epilogue for this page"
 msgstr ""
 
 #: templates/archive/archive-kkw_book.php:2
@@ -121,7 +147,7 @@ msgstr ""
 msgid "Authors"
 msgstr ""
 
-#: classes/books-manager.php:292
+#: classes/books-manager.php:311
 msgid "Back cover"
 msgstr ""
 
@@ -130,7 +156,7 @@ msgid "BatClaudio"
 msgstr ""
 
 #: classes/books-manager.php:153 classes/books-manager.php:160
-#: classes/books-manager.php:314 classes/excerpts-manager.php:69
+#: classes/books-manager.php:333 classes/excerpts-manager.php:69
 #: classes/interviews-manager.php:139 classes/multimedia-manager.php:171
 #: classes/post-manager.php:206 classes/reviews-manager.php:124
 msgid "Book"
@@ -142,10 +168,6 @@ msgstr ""
 
 #: classes/books-manager.php:152
 msgid "Books"
-msgstr ""
-
-#: classes/books-manager.php:263
-msgid "Buy it"
 msgstr ""
 
 #: classes/books-manager.php:64 classes/books-manager.php:65
@@ -177,7 +199,7 @@ msgstr ""
 msgid "Documentary"
 msgstr ""
 
-#: classes/books-manager.php:282
+#: classes/books-manager.php:301
 msgid "EAN"
 msgstr ""
 
@@ -245,7 +267,7 @@ msgstr ""
 msgid "External link"
 msgstr ""
 
-#: classes/books-manager.php:303 classes/post-manager.php:195
+#: classes/books-manager.php:322 classes/post-manager.php:195
 msgid "Gallery"
 msgstr ""
 
@@ -269,7 +291,7 @@ msgstr ""
 msgid "Image file"
 msgstr ""
 
-#: classes/books-manager.php:304 classes/post-manager.php:196
+#: classes/books-manager.php:323 classes/post-manager.php:196
 msgid "Images and photos of the book"
 msgstr ""
 
@@ -290,7 +312,7 @@ msgstr ""
 msgid "Interviews"
 msgstr ""
 
-#: classes/books-manager.php:272
+#: classes/books-manager.php:291
 msgid "ISBN"
 msgstr ""
 
@@ -300,6 +322,14 @@ msgstr ""
 
 #: classes/multimedia-manager.php:103
 msgid "Link Image"
+msgstr ""
+
+#: classes/books-manager.php:273
+msgid "Link on the publisher site"
+msgstr ""
+
+#: classes/books-manager.php:282
+msgid "Link to buy"
 msgstr ""
 
 #: classes/multimedia-manager.php:104
@@ -355,6 +385,10 @@ msgstr ""
 msgid "Order"
 msgstr ""
 
+#: classes/page-manager.php:28
+msgid "Page custom data"
+msgstr ""
+
 #: classes/books-manager.php:234
 msgid "Pages"
 msgstr ""
@@ -367,7 +401,7 @@ msgstr ""
 msgid "Post custom data"
 msgstr ""
 
-#: classes/books-manager.php:244
+#: classes/books-manager.php:254
 msgid "Price"
 msgstr ""
 
@@ -375,7 +409,7 @@ msgstr ""
 msgid "Publisher"
 msgstr ""
 
-#: classes/books-manager.php:254
+#: classes/books-manager.php:264
 msgid "Publisher page"
 msgstr ""
 
@@ -425,7 +459,7 @@ msgstr ""
 msgid "Select an option"
 msgstr ""
 
-#: classes/books-manager.php:315 classes/excerpts-manager.php:70
+#: classes/books-manager.php:334 classes/excerpts-manager.php:70
 #: classes/interviews-manager.php:140 classes/multimedia-manager.php:172
 #: classes/post-manager.php:207 classes/reviews-manager.php:125
 msgid "Select linked books"
@@ -440,20 +474,44 @@ msgstr ""
 msgid "Short description"
 msgstr ""
 
-#: classes/books-manager.php:332 classes/post-manager.php:226
+#: classes/books-manager.php:351
 msgid "Show in carousel"
 msgstr ""
 
-#: classes/books-manager.php:342 classes/post-manager.php:236
+#: classes/books-manager.php:361
 msgid "Show in evidence"
 msgstr ""
 
-#: classes/books-manager.php:343 classes/post-manager.php:237
+#: classes/post-manager.php:226
+msgid "Show in the Carousel"
+msgstr ""
+
+#: classes/post-manager.php:236
+msgid "Show in the Featured Contents"
+msgstr ""
+
+#: classes/books-manager.php:244
+msgid "Show price"
+msgstr ""
+
+#: classes/books-manager.php:362
 msgid "Show the book in the 'in evidence' section"
 msgstr ""
 
-#: classes/books-manager.php:333 classes/post-manager.php:227
+#: classes/post-manager.php:227
+msgid "Show the book in the Carousel"
+msgstr ""
+
+#: classes/books-manager.php:352
 msgid "Show the book in the carousel"
+msgstr ""
+
+#: classes/post-manager.php:237
+msgid "Show the book in the Featured Contents"
+msgstr ""
+
+#: classes/books-manager.php:245
+msgid "Show the the price of the book"
 msgstr ""
 
 #: classes/interviews-manager.php:90 classes/reviews-manager.php:84
@@ -476,7 +534,7 @@ msgstr ""
 msgid "The author of the review"
 msgstr ""
 
-#: classes/books-manager.php:293
+#: classes/books-manager.php:312
 msgid "The back cover of the book"
 msgstr ""
 
@@ -504,7 +562,7 @@ msgstr ""
 msgid "The description of the source of the review"
 msgstr ""
 
-#: classes/books-manager.php:283
+#: classes/books-manager.php:302
 msgid "The EAN code"
 msgstr ""
 
@@ -516,15 +574,15 @@ msgstr ""
 msgid "The full address of the event"
 msgstr ""
 
-#: classes/books-manager.php:273
+#: classes/books-manager.php:292
 msgid "The ISBN code"
 msgstr ""
 
-#: classes/books-manager.php:264
+#: classes/books-manager.php:283
 msgid "The link to buy the book"
 msgstr ""
 
-#: classes/books-manager.php:255
+#: classes/books-manager.php:274
 msgid "The link to the book page on the publisher site"
 msgstr ""
 
@@ -540,6 +598,10 @@ msgstr ""
 msgid "The link to the media"
 msgstr ""
 
+#: classes/books-manager.php:265
+msgid "The link to the publisher site"
+msgstr ""
+
 #: classes/post-manager.php:187
 msgid "The link to the video"
 msgstr ""
@@ -553,7 +615,7 @@ msgstr ""
 msgid "The position of this item"
 msgstr ""
 
-#: classes/books-manager.php:245
+#: classes/books-manager.php:255
 msgid "The price of the book with the currency."
 msgstr ""
 

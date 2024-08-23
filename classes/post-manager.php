@@ -25,7 +25,7 @@ class KKW_PostManager {
 		$cmb = new_cmb2_box(
 			array(
 				'id'            => $prefix . 'post_type_metabox',
-				'title'         => __( 'Post custom data', 'kkwdomain'),
+				'title'         => __( 'Post custom data', 'kkwdomain' ),
 				'object_types'  => array( KKW_DEFAULT_POST ),
 				'context'       => 'normal',
 				'priority'      => 'high',
@@ -50,8 +50,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'short_description',
-				'name'    => __( 'Short description', 'kkwdomain'),
-				'desc'    => __( 'A short excerpt from the interview', 'kkwdomain'),
+				'name'    => __( 'Short description', 'kkwdomain' ),
+				'desc'    => __( 'A short excerpt from the interview', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'wysiwyg',
 				'options' => array(
@@ -134,8 +134,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'address',
-				'name'    => __( 'Address', 'kkwdomain'),
-				'desc'    => __( 'The full address of the event', 'kkwdomain'),
+				'name'    => __( 'Address', 'kkwdomain' ),
+				'desc'    => __( 'The full address of the event', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -144,8 +144,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'contact_person',
-				'name'    => __( 'Contact person', 'kkwdomain'),
-				'desc'    => __( 'The contact person', 'kkwdomain'),
+				'name'    => __( 'Contact person', 'kkwdomain' ),
+				'desc'    => __( 'The contact person', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -154,8 +154,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'contact_mail',
-				'name'    => __( 'Contact mail', 'kkwdomain'),
-				'desc'    => __( 'The contact mail', 'kkwdomain'),
+				'name'    => __( 'Contact mail', 'kkwdomain' ),
+				'desc'    => __( 'The contact mail', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -164,8 +164,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'contact_phone',
-				'name'    => __( 'Contact phone number', 'kkwdomain'),
-				'desc'    => __( 'The contact phone number', 'kkwdomain'),
+				'name'    => __( 'Contact phone number', 'kkwdomain' ),
+				'desc'    => __( 'The contact phone number', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -174,8 +174,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'         => $prefix . 'external_link',
-				'name'       => __( 'External link', 'kkwdomain'),
-				'desc'       => __( 'The link to the event/news', 'kkwdomain'),
+				'name'       => __( 'External link', 'kkwdomain' ),
+				'desc'       => __( 'The link to the event/news', 'kkwdomain' ),
 				'type'       => 'text_url',
 			)
 		);
@@ -183,8 +183,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'         => $prefix . 'video_link',
-				'name'       => __( 'Video link', 'kkwdomain'),
-				'desc'       => __( 'The link to the video', 'kkwdomain'),
+				'name'       => __( 'Video link', 'kkwdomain' ),
+				'desc'       => __( 'The link to the video', 'kkwdomain' ),
 				'type'       => 'text_url',
 			)
 		);
@@ -192,8 +192,8 @@ class KKW_PostManager {
 		$cmb->add_field(
 			array(
 				'id'           => $prefix . 'gallery',
-				'name'         => __( 'Gallery', 'kkwdomain'),
-				'desc'         => __( 'Images and photos of the book', 'kkwdomain'),
+				'name'         => __( 'Gallery', 'kkwdomain' ),
+				'desc'         => __( 'Images and photos of the book', 'kkwdomain' ),
 				'type'         => 'file_list',
 				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
 				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
@@ -219,22 +219,22 @@ class KKW_PostManager {
 				),
 			)
 		);
-		// Field Show in carousel.
+		// Field Show in the Carousel.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'show_in_carousel',
-				'name'    => __( 'Show in carousel', 'kkwdomain'),
-				'desc'    => __( 'Show the book in the carousel', 'kkwdomain'),
+				'name'    => __( 'Show in the Carousel', 'kkwdomain' ),
+				'desc'    => __( 'Show the book in the Carousel', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'checkbox',
 			)
 		);
-		// Field Show in evidence section.
+		// Field Show in Evidence Section.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'show_in_evidence',
-				'name'    => __( 'Show in evidence', 'kkwdomain'),
-				'desc'    => __( "Show the book in the 'in evidence' section", 'kkwdomain'),
+				'name'    => __( 'Show in the Featured Contents', 'kkwdomain' ),
+				'desc'    => __( 'Show the book in the Featured Contents section', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'checkbox',
 			)
