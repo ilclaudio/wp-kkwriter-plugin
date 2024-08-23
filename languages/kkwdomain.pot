@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 16:39+0000\n"
+"POT-Creation-Date: 2024-08-23 22:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -474,19 +474,11 @@ msgstr ""
 msgid "Short description"
 msgstr ""
 
-#: classes/books-manager.php:351
-msgid "Show in carousel"
-msgstr ""
-
-#: classes/books-manager.php:361
-msgid "Show in evidence"
-msgstr ""
-
-#: classes/post-manager.php:226
+#: classes/books-manager.php:351 classes/post-manager.php:226
 msgid "Show in the Carousel"
 msgstr ""
 
-#: classes/post-manager.php:236
+#: classes/books-manager.php:361 classes/post-manager.php:236
 msgid "Show in the Featured Contents"
 msgstr ""
 
@@ -494,20 +486,12 @@ msgstr ""
 msgid "Show price"
 msgstr ""
 
-#: classes/books-manager.php:362
-msgid "Show the book in the 'in evidence' section"
-msgstr ""
-
-#: classes/post-manager.php:227
+#: classes/books-manager.php:352 classes/post-manager.php:227
 msgid "Show the book in the Carousel"
 msgstr ""
 
-#: classes/books-manager.php:352
-msgid "Show the book in the carousel"
-msgstr ""
-
-#: classes/post-manager.php:237
-msgid "Show the book in the Featured Contents"
+#: classes/books-manager.php:362 classes/post-manager.php:237
+msgid "Show the book in the Featured Contents section"
 msgstr ""
 
 #: classes/books-manager.php:245

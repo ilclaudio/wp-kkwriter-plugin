@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-31 18:08+0000\n"
-"PO-Revision-Date: 2024-08-23 16:49+0000\n"
+"PO-Revision-Date: 2024-08-23 22:25+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -325,7 +325,7 @@ msgstr "Link dell'immagine"
 
 #: classes/books-manager.php:273
 msgid "Link on the publisher site"
-msgstr ""
+msgstr "Link al sito dell'editore"
 
 #: classes/books-manager.php:282
 msgid "Link to buy"
@@ -473,19 +473,11 @@ msgstr "Collane"
 msgid "Short description"
 msgstr "Descrizione breve"
 
-#: classes/books-manager.php:351
-msgid "Show in carousel"
-msgstr "Mostra nel Carosello"
-
-#: classes/books-manager.php:361
-msgid "Show in evidence"
-msgstr "Mostra"
-
-#: classes/post-manager.php:226
+#: classes/books-manager.php:351 classes/post-manager.php:226
 msgid "Show in the Carousel"
 msgstr "Mostra nel Carosello"
 
-#: classes/post-manager.php:236
+#: classes/books-manager.php:361 classes/post-manager.php:236
 msgid "Show in the Featured Contents"
 msgstr "Mostra nei Contenuti in evidenza"
 
@@ -493,20 +485,14 @@ msgstr "Mostra nei Contenuti in evidenza"
 msgid "Show price"
 msgstr "Mostra il prezzo"
 
-#: classes/books-manager.php:362
-msgid "Show the book in the 'in evidence' section"
-msgstr ""
-
-#: classes/post-manager.php:227
+#: classes/books-manager.php:352 classes/post-manager.php:227
 msgid "Show the book in the Carousel"
 msgstr "Mostra il libro nel Carosello"
 
-#: classes/books-manager.php:352
-msgid "Show the book in the carousel"
-msgstr ""
-
-#: classes/post-manager.php:237
-msgid "Show the book in the Featured Contents"
+#: classes/books-manager.php:362 classes/post-manager.php:237
+#, fuzzy
+#| msgid "Show the book in the Featured Contents"
+msgid "Show the book in the Featured Contents section"
 msgstr "Mostra il libro nei contenuti in evidenza"
 
 #: classes/books-manager.php:245
@@ -515,7 +501,7 @@ msgstr "Mostra il prezzo del libro"
 
 #: classes/interviews-manager.php:90 classes/reviews-manager.php:84
 msgid "Source description"
-msgstr ""
+msgstr "Descrizione della fonte"
 
 #: classes/post-manager.php:73
 msgid "Start date"
@@ -555,11 +541,11 @@ msgstr "La data dell'intervista"
 
 #: classes/interviews-manager.php:91
 msgid "The description of the source of the interview"
-msgstr ""
+msgstr "La descrizione della fonte dell'intervista"
 
 #: classes/reviews-manager.php:85
 msgid "The description of the source of the review"
-msgstr ""
+msgstr "La descrizione della fonte della recensione"
 
 #: classes/books-manager.php:302
 msgid "The EAN code"
@@ -704,4 +690,4 @@ msgstr "WP KK Writer Plugin"
 
 #: classes/books-manager.php:224
 msgid "Year"
-msgstr "anno"
+msgstr "Anno"
