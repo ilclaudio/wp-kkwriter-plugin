@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-19 07:09+0000\n"
+"POT-Creation-Date: 2024-08-22 16:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -32,12 +32,32 @@ msgstr ""
 msgid "A short excerpt from the review"
 msgstr ""
 
+#: classes/books-manager.php:154 classes/books-manager.php:155
+msgid "Add a book"
+msgstr ""
+
 #: classes/books-manager.php:70
 msgid "Add a Collection"
 msgstr ""
 
+#: classes/collections-manager.php:37 classes/collections-manager.php:38
+msgid "Add a collection"
+msgstr ""
+
+#: classes/excerpts-manager.php:34 classes/excerpts-manager.php:35
+msgid "Add a excerpt"
+msgstr ""
+
+#: classes/multimedia-manager.php:38 classes/multimedia-manager.php:39
+msgid "Add a media"
+msgstr ""
+
 #: classes/books-manager.php:124
 msgid "Add a Publisher"
+msgstr ""
+
+#: classes/reviews-manager.php:34 classes/reviews-manager.php:35
+msgid "Add a review"
 msgstr ""
 
 #: classes/books-manager.php:42
@@ -46,6 +66,14 @@ msgstr ""
 
 #: classes/books-manager.php:97
 msgid "Add an author"
+msgstr ""
+
+#: classes/settings-manager.php:153 classes/settings-manager.php:154
+msgid "Add an excerpt"
+msgstr ""
+
+#: classes/interviews-manager.php:35 classes/interviews-manager.php:36
+msgid "Add an interview"
 msgstr ""
 
 #: classes/post-manager.php:137
@@ -84,6 +112,7 @@ msgstr ""
 msgid "Audio MP3"
 msgstr ""
 
+#: classes/books-manager.php:91 classes/books-manager.php:92
 #: classes/interviews-manager.php:80 classes/reviews-manager.php:74
 msgid "Author"
 msgstr ""
@@ -100,10 +129,10 @@ msgstr ""
 msgid "BatClaudio"
 msgstr ""
 
-#: classes/books-manager.php:160 classes/books-manager.php:314
-#: classes/excerpts-manager.php:69 classes/interviews-manager.php:139
-#: classes/multimedia-manager.php:171 classes/post-manager.php:206
-#: classes/reviews-manager.php:124
+#: classes/books-manager.php:153 classes/books-manager.php:160
+#: classes/books-manager.php:314 classes/excerpts-manager.php:69
+#: classes/interviews-manager.php:139 classes/multimedia-manager.php:171
+#: classes/post-manager.php:206 classes/reviews-manager.php:124
 msgid "Book"
 msgstr ""
 
@@ -111,15 +140,20 @@ msgstr ""
 msgid "Book data"
 msgstr ""
 
+#: classes/books-manager.php:152
+msgid "Books"
+msgstr ""
+
 #: classes/books-manager.php:263
 msgid "Buy it"
 msgstr ""
 
-#: classes/collections-manager.php:44
+#: classes/books-manager.php:64 classes/books-manager.php:65
+#: classes/collections-manager.php:36 classes/collections-manager.php:44
 msgid "Collection"
 msgstr ""
 
-#: classes/books-manager.php:72
+#: classes/books-manager.php:72 classes/collections-manager.php:35
 msgid "Collections"
 msgstr ""
 
@@ -145,6 +179,30 @@ msgstr ""
 
 #: classes/books-manager.php:282
 msgid "EAN"
+msgstr ""
+
+#: classes/books-manager.php:156
+msgid "Edit a book"
+msgstr ""
+
+#: classes/collections-manager.php:39
+msgid "Edit a collection"
+msgstr ""
+
+#: classes/excerpts-manager.php:36
+msgid "Edit a excerpt"
+msgstr ""
+
+#: classes/multimedia-manager.php:40
+msgid "Edit a media"
+msgstr ""
+
+#: classes/reviews-manager.php:36
+msgid "Edit a review"
+msgstr ""
+
+#: classes/interviews-manager.php:37
+msgid "Edit an interview"
 msgstr ""
 
 #: classes/books-manager.php:95
@@ -173,6 +231,14 @@ msgstr ""
 
 #: classes/post-manager.php:43
 msgid "Event"
+msgstr ""
+
+#: classes/excerpts-manager.php:33
+msgid "Excerpt"
+msgstr ""
+
+#: classes/excerpts-manager.php:32
+msgid "Excerpts"
 msgstr ""
 
 #: classes/post-manager.php:177
@@ -207,7 +273,8 @@ msgstr ""
 msgid "Images and photos of the book"
 msgstr ""
 
-#: classes/interviews-manager.php:41 classes/multimedia-manager.php:86
+#: classes/interviews-manager.php:34 classes/interviews-manager.php:41
+#: classes/multimedia-manager.php:86
 msgid "Interview"
 msgstr ""
 
@@ -217,6 +284,10 @@ msgstr ""
 
 #: classes/interviews-manager.php:130
 msgid "Interview link"
+msgstr ""
+
+#: classes/interviews-manager.php:33
+msgid "Interviews"
 msgstr ""
 
 #: classes/books-manager.php:272
@@ -249,6 +320,10 @@ msgstr ""
 
 #: classes/multimedia-manager.php:95
 msgid "Media Type"
+msgstr ""
+
+#: classes/multimedia-manager.php:36 classes/multimedia-manager.php:37
+msgid "MultiMedia"
 msgstr ""
 
 #: classes/multimedia-manager.php:68
@@ -292,158 +367,12 @@ msgstr ""
 msgid "Post custom data"
 msgstr ""
 
-#: classes/books-manager.php:152
-msgctxt "Post Type General Name"
-msgid "Books"
-msgstr ""
-
-#: classes/collections-manager.php:35
-msgctxt "Post Type General Name"
-msgid "Collections"
-msgstr ""
-
-#: classes/excerpts-manager.php:32
-msgctxt "Post Type General Name"
-msgid "Excerpts"
-msgstr ""
-
-#: classes/interviews-manager.php:33
-msgctxt "Post Type General Name"
-msgid "Interviews"
-msgstr ""
-
-#: classes/multimedia-manager.php:36
-msgctxt "Post Type General Name"
-msgid "MultiMedia"
-msgstr ""
-
-#: classes/reviews-manager.php:32
-msgctxt "Post Type General Name"
-msgid "Reviews"
-msgstr ""
-
-#: classes/books-manager.php:154 classes/books-manager.php:155
-msgctxt "Post Type Singular Name"
-msgid "Add a book"
-msgstr ""
-
-#: classes/collections-manager.php:37 classes/collections-manager.php:38
-msgctxt "Post Type Singular Name"
-msgid "Add a collection"
-msgstr ""
-
-#: classes/excerpts-manager.php:34 classes/excerpts-manager.php:35
-msgctxt "Post Type Singular Name"
-msgid "Add a excerpt"
-msgstr ""
-
-#: classes/multimedia-manager.php:38 classes/multimedia-manager.php:39
-msgctxt "Post Type Singular Name"
-msgid "Add a media"
-msgstr ""
-
-#: classes/reviews-manager.php:34 classes/reviews-manager.php:35
-msgctxt "Post Type Singular Name"
-msgid "Add a review"
-msgstr ""
-
-#: classes/interviews-manager.php:35 classes/interviews-manager.php:36
-msgctxt "Post Type Singular Name"
-msgid "Add an interview"
-msgstr ""
-
-#: classes/books-manager.php:153
-msgctxt "Post Type Singular Name"
-msgid "Book"
-msgstr ""
-
-#: classes/collections-manager.php:36
-msgctxt "Post Type Singular Name"
-msgid "Collection"
-msgstr ""
-
-#: classes/books-manager.php:156
-msgctxt "Post Type Singular Name"
-msgid "Edit a book"
-msgstr ""
-
-#: classes/collections-manager.php:39
-msgctxt "Post Type Singular Name"
-msgid "Edit a collection"
-msgstr ""
-
-#: classes/excerpts-manager.php:36
-msgctxt "Post Type Singular Name"
-msgid "Edit a excerpt"
-msgstr ""
-
-#: classes/multimedia-manager.php:40
-msgctxt "Post Type Singular Name"
-msgid "Edit a media"
-msgstr ""
-
-#: classes/reviews-manager.php:36
-msgctxt "Post Type Singular Name"
-msgid "Edit a review"
-msgstr ""
-
-#: classes/interviews-manager.php:37
-msgctxt "Post Type Singular Name"
-msgid "Edit an interview"
-msgstr ""
-
-#: classes/excerpts-manager.php:33
-msgctxt "Post Type Singular Name"
-msgid "Excerpt"
-msgstr ""
-
-#: classes/interviews-manager.php:34
-msgctxt "Post Type Singular Name"
-msgid "Interview"
-msgstr ""
-
-#: classes/multimedia-manager.php:37
-msgctxt "Post Type Singular Name"
-msgid "MultiMedia"
-msgstr ""
-
-#: classes/reviews-manager.php:33
-msgctxt "Post Type Singular Name"
-msgid "Review"
-msgstr ""
-
-#: classes/books-manager.php:157
-msgctxt "Post Type Singular Name"
-msgid "View a book"
-msgstr ""
-
-#: classes/collections-manager.php:40
-msgctxt "Post Type Singular Name"
-msgid "View a collection"
-msgstr ""
-
-#: classes/excerpts-manager.php:37
-msgctxt "Post Type Singular Name"
-msgid "View a excerpt"
-msgstr ""
-
-#: classes/multimedia-manager.php:41
-msgctxt "Post Type Singular Name"
-msgid "View a media"
-msgstr ""
-
-#: classes/reviews-manager.php:37
-msgctxt "Post Type Singular Name"
-msgid "View a review"
-msgstr ""
-
-#: classes/interviews-manager.php:38
-msgctxt "Post Type Singular Name"
-msgid "View an interview"
-msgstr ""
-
 #: classes/books-manager.php:244
 msgid "Price"
+msgstr ""
+
+#: classes/books-manager.php:118 classes/books-manager.php:119
+msgid "Publisher"
 msgstr ""
 
 #: classes/books-manager.php:254
@@ -454,8 +383,16 @@ msgstr ""
 msgid "Publishers"
 msgstr ""
 
+#: classes/reviews-manager.php:33
+msgid "Review"
+msgstr ""
+
 #: classes/reviews-manager.php:64
 msgid "Review data"
+msgstr ""
+
+#: classes/reviews-manager.php:32
+msgid "Reviews"
 msgstr ""
 
 #: classes/books-manager.php:93
@@ -474,6 +411,7 @@ msgstr ""
 msgid "Search Section"
 msgstr ""
 
+#: classes/books-manager.php:36 classes/books-manager.php:37
 #: classes/excerpts-manager.php:40 classes/multimedia-manager.php:44
 #: classes/reviews-manager.php:40
 msgid "Section"
@@ -528,46 +466,6 @@ msgstr ""
 
 #: classes/post-manager.php:88 classes/post-manager.php:92
 msgid "Start hour"
-msgstr ""
-
-#: classes/books-manager.php:91
-msgctxt "taxonomy general name"
-msgid "Author"
-msgstr ""
-
-#: classes/books-manager.php:64
-msgctxt "taxonomy general name"
-msgid "Collection"
-msgstr ""
-
-#: classes/books-manager.php:118
-msgctxt "taxonomy general name"
-msgid "Publisher"
-msgstr ""
-
-#: classes/books-manager.php:36
-msgctxt "taxonomy general name"
-msgid "Section"
-msgstr ""
-
-#: classes/books-manager.php:92
-msgctxt "taxonomy singular name"
-msgid "Author"
-msgstr ""
-
-#: classes/books-manager.php:65
-msgctxt "taxonomy singular name"
-msgid "Collection"
-msgstr ""
-
-#: classes/books-manager.php:119
-msgctxt "taxonomy singular name"
-msgid "Publisher"
-msgstr ""
-
-#: classes/books-manager.php:37
-msgctxt "taxonomy singular name"
-msgid "Section"
 msgstr ""
 
 #: classes/interviews-manager.php:81
@@ -713,6 +611,30 @@ msgstr ""
 
 #: classes/multimedia-manager.php:105
 msgid "Video MP4"
+msgstr ""
+
+#: classes/books-manager.php:157
+msgid "View a book"
+msgstr ""
+
+#: classes/collections-manager.php:40
+msgid "View a collection"
+msgstr ""
+
+#: classes/excerpts-manager.php:37
+msgid "View a excerpt"
+msgstr ""
+
+#: classes/multimedia-manager.php:41
+msgid "View a media"
+msgstr ""
+
+#: classes/reviews-manager.php:37
+msgid "View a review"
+msgstr ""
+
+#: classes/interviews-manager.php:38
+msgid "View an interview"
 msgstr ""
 
 #. Name of the plugin

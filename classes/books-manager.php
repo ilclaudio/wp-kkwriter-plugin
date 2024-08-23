@@ -2,7 +2,7 @@
 /**
  * Definition of the BOOK post type.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 /**
@@ -33,8 +33,8 @@ class KKW_BooksManager {
 	public function register_taxonomies() {
 		// Section taxonomy.
 		$tax_labels = array(
-			'name'              => _x( 'Section', 'taxonomy general name', 'kkwdomain' ),
-			'singular_name'     => _x( 'Section', 'taxonomy singular name', 'kkwdomain' ),
+			'name'              => __( 'Section', 'kkwdomain' ),
+			'singular_name'     => __( 'Section', 'kkwdomain' ),
 			'search_items'      => __( 'Search Section', 'kkwdomain' ),
 			'all_items'         => __( 'All the Sections', 'kkwdomain' ),
 			'edit_item'         => __( 'Edit Section', 'kkwdomain' ),
@@ -61,8 +61,8 @@ class KKW_BooksManager {
 
 		// Collection taxonomy.
 		$tax_labels = array(
-			'name'              => _x( 'Collection', 'taxonomy general name', 'kkwdomain' ),
-			'singular_name'     => _x( 'Collection', 'taxonomy singular name', 'kkwdomain' ),
+			'name'              => __( 'Collection', 'kkwdomain' ),
+			'singular_name'     => __( 'Collection', 'kkwdomain' ),
 			'search_items'      => __( 'Search Collection', 'kkwdomain' ),
 			'all_items'         => __( 'All the Collections', 'kkwdomain' ),
 			'edit_item'         => __( 'Edit Collection', 'kkwdomain' ),
@@ -88,8 +88,8 @@ class KKW_BooksManager {
 
 		// Author taxonomy.
 		$tax_labels = array(
-			'name'              => _x( 'Author', 'taxonomy general name', 'kkwdomain' ),
-			'singular_name'     => _x( 'Author', 'taxonomy singular name', 'kkwdomain' ),
+			'name'              => __( 'Author', 'kkwdomain' ),
+			'singular_name'     => __( 'Author', 'kkwdomain' ),
 			'search_items'      => __( 'Search author', 'kkwdomain' ),
 			'all_items'         => __( 'All the authors', 'kkwdomain' ),
 			'edit_item'         => __( 'Edit author', 'kkwdomain' ),
@@ -115,8 +115,8 @@ class KKW_BooksManager {
 
 		// Publisher taxonomy.
 		$tax_labels = array(
-			'name'              => _x( 'Publisher', 'taxonomy general name', 'kkwdomain' ),
-			'singular_name'     => _x( 'Publisher', 'taxonomy singular name', 'kkwdomain' ),
+			'name'              => __( 'Publisher', 'kkwdomain' ),
+			'singular_name'     => __( 'Publisher', 'kkwdomain' ),
 			'search_items'      => __( 'Search Publisher', 'kkwdomain' ),
 			'all_items'         => __( 'All the Publishers', 'kkwdomain' ),
 			'edit_item'         => __( 'Edit Publisher', 'kkwdomain' ),
@@ -149,12 +149,12 @@ class KKW_BooksManager {
 	 */
 	public function add_post_type() {
 		$labels = array(
-			'name'          => _x( 'Books', 'Post Type General Name', 'kkwdomain' ),
-			'singular_name' => _x( 'Book', 'Post Type Singular Name', 'kkwdomain' ),
-			'add_new'       => _x( 'Add a book', 'Post Type Singular Name', 'kkwdomain' ),
-			'add_new_item'  => _x( 'Add a book', 'Post Type Singular Name', 'kkwdomain' ),
-			'edit_item'     => _x( 'Edit a book', 'Post Type Singular Name', 'kkwdomain' ),
-			'view_item'     => _x( 'View a book', 'Post Type Singular Name', 'kkwdomain' ),
+			'name'          => __( 'Books', 'kkwdomain' ),
+			'singular_name' => __( 'Book', 'kkwdomain' ),
+			'add_new'       => __( 'Add a book', 'kkwdomain' ),
+			'add_new_item'  => __( 'Add a book', 'kkwdomain' ),
+			'edit_item'     => __( 'Edit a book', 'kkwdomain' ),
+			'view_item'     => __( 'View a book', 'kkwdomain' ),
 		);
 		$args = array(
 			'label'        => __( 'Book', 'kkwdomain' ),

@@ -2,7 +2,7 @@
 /**
  * Definition of the EXCERPT post type.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 /**
@@ -29,12 +29,12 @@ class KKW_ExcerptsManager {
 	 */
 	public function add_post_type() {
 		$labels = array(
-			'name'          => _x( 'Excerpts', 'Post Type General Name', 'kkwdomain' ),
-			'singular_name' => _x( 'Excerpt', 'Post Type Singular Name', 'kkwdomain' ),
-			'add_new'       => _x( 'Add a excerpt', 'Post Type Singular Name', 'kkwdomain' ),
-			'add_new_item'  => _x( 'Add a excerpt', 'Post Type Singular Name', 'kkwdomain' ),
-			'edit_item'     => _x( 'Edit a excerpt', 'Post Type Singular Name', 'kkwdomain' ),
-			'view_item'     => _x( 'View a excerpt', 'Post Type Singular Name', 'kkwdomain' ),
+			'name'          => __( 'Excerpts', 'kkwdomain' ),
+			'singular_name' => __( 'Excerpt', 'kkwdomain' ),
+			'add_new'       => __( 'Add a excerpt', 'kkwdomain' ),
+			'add_new_item'  => __( 'Add a excerpt', 'kkwdomain' ),
+			'edit_item'     => __( 'Edit a excerpt', 'kkwdomain' ),
+			'view_item'     => __( 'View a excerpt', 'kkwdomain' ),
 		);
 		$args = array(
 			'label'        => __( 'Section', 'kkwdomain' ),

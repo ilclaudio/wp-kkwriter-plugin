@@ -3,7 +3,7 @@
 /**
  * Activation Manager definition.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 /**

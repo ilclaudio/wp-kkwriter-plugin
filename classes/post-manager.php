@@ -2,7 +2,7 @@
 /**
  * Definition of the default POST type.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 /**

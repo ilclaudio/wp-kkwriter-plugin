@@ -2,7 +2,7 @@
 /**
  * Definition of the plugin settings and of the main menu.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 require_once( 'search-manager.php' );

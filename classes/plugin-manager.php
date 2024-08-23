@@ -2,7 +2,7 @@
 /**
  * Definition of the Plugin Manager.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 if ( ! class_exists( 'KKW_MultilangManager' ) ) {
@@ -28,6 +28,9 @@ if ( ! class_exists( 'KKW_InterviewsManager' ) ) {
 }
 if ( ! class_exists( 'KKW_PostManager' ) ) {
 	include_once 'post-manager.php';
+}
+if ( ! class_exists( 'KKW_PageManager' ) ) {
+	include_once 'page-manager.php';
 }
 if ( ! class_exists( 'KKW_ActivationManager' ) ) {
 	include_once 'activation-manager.php';
@@ -87,8 +90,12 @@ class KKW_PluginManager {
 		$im->setup();
 
 		// Setup the default post type.
-		$em = new KKW_PostManager();
-		$em->setup();
+		$sm = new KKW_PostManager();
+		$sm->setup();
+
+		// Setup the default post type.
+		$gm = new KKW_PageManager();
+		$gm->setup();
 
 		// Setup of the Settings manager (menu).
 		$settm = new KKW_SettingsManager();

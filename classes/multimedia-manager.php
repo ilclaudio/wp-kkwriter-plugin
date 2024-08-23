@@ -2,7 +2,7 @@
 /**
  * Definition of the MULTIMEDIA post type.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 /**
@@ -33,12 +33,12 @@ class KKW_MultimediaManager {
 	 */
 	public function add_post_type() {
 		$labels = array(
-			'name'          => _x( 'MultiMedia', 'Post Type General Name', 'kkwdomain' ),
-			'singular_name' => _x( 'MultiMedia', 'Post Type Singular Name', 'kkwdomain' ),
-			'add_new'       => _x( 'Add a media', 'Post Type Singular Name', 'kkwdomain' ),
-			'add_new_item'  => _x( 'Add a media', 'Post Type Singular Name', 'kkwdomain' ),
-			'edit_item'     => _x( 'Edit a media', 'Post Type Singular Name', 'kkwdomain' ),
-			'view_item'     => _x( 'View a media', 'Post Type Singular Name', 'kkwdomain' ),
+			'name'          => __( 'MultiMedia', 'kkwdomain' ),
+			'singular_name' => __( 'MultiMedia', 'kkwdomain' ),
+			'add_new'       => __( 'Add a media', 'kkwdomain' ),
+			'add_new_item'  => __( 'Add a media', 'kkwdomain' ),
+			'edit_item'     => __( 'Edit a media', 'kkwdomain' ),
+			'view_item'     => __( 'View a media', 'kkwdomain' ),
 		);
 		$args = array(
 			'label'        => __( 'Section', 'kkwdomain' ),

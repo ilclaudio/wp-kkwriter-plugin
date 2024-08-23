@@ -2,7 +2,7 @@
 /**
  * Definition of the plugin settings and of the main menu.
  *
- * @package @package WP_KK_Writer_Plugin
+ * @package WP_KK_Writer_Plugin
  */
 
 /**
@@ -132,8 +132,8 @@ class KKW_SettingsManager {
 		// Add an interview.
 		add_submenu_page(
 			$main_menu,
-			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['singular_label'], 'kkwdomain' ),
-			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['singular_label'], 'kkwdomain' ),
+			__( 'Add an interview', 'kkwdomain' ),
+			__( 'Add an interview', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name']
 		);
@@ -150,8 +150,8 @@ class KKW_SettingsManager {
 		// Add an excerpt.
 		add_submenu_page(
 			$main_menu,
-			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['singular_label'], 'kkwdomain' ),
-			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['singular_label'], 'kkwdomain' ),
+			__( 'Add an excerpt', 'kkwdomain' ),
+			__( 'Add an excerpt', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['name']
 		);
@@ -168,8 +168,8 @@ class KKW_SettingsManager {
 		// Add a multimedia.
 		add_submenu_page(
 			$main_menu,
-			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['singular_label'], 'kkwdomain' ),
-			__( 'Add an ' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['singular_label'], 'kkwdomain' ),
+			__( 'Add a media', 'kkwdomain' ),
+			__( 'Add a media', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name']
 		);
