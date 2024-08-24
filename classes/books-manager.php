@@ -207,6 +207,16 @@ class KKW_BooksManager {
 				),
 			)
 		);
+		// Field: Presentation Author.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'presentation_author',
+				'name'    => __( 'Presentation author', 'kkwdomain' ),
+				'desc'    => __( 'The author of the presentation of the book', 'kkwdomain' ),
+				'default' => '',
+				'type'    => 'text',
+			)
+		);
 		// Field: Series.
 		$cmb->add_field(
 			array(
@@ -237,6 +247,16 @@ class KKW_BooksManager {
 				'type'    => 'text_small',
 			)
 		);
+		// Field: Format.
+		$cmb->add_field(
+			array(
+				'id'      => $prefix . 'format',
+				'name'    => __( 'Format', 'kkwdomain' ),
+				'desc'    => __( 'The format of the book (dimensions)', 'kkwdomain' ),
+				'default' => '',
+				'type'    => 'text_small',
+			)
+		);
 		// Field: Show the price.
 		$cmb->add_field(
 			array(
@@ -261,7 +281,7 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'         => $prefix . 'publisher_page',
-				'name'       => __( 'Publisher page', 'kkwdomain' ),
+				'name'       => __( 'Publisher site', 'kkwdomain' ),
 				'desc'       => __( 'The link to the publisher site', 'kkwdomain' ),
 				'type'       => 'text_url',
 			)
@@ -270,7 +290,7 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'         => $prefix . 'publisher_book_page',
-				'name'       => __( 'Link on the publisher site', 'kkwdomain' ),
+				'name'       => __( 'Link of the book on the publisher site', 'kkwdomain' ),
 				'desc'       => __( 'The link to the book page on the publisher site', 'kkwdomain' ),
 				'type'       => 'text_url',
 			)
@@ -279,7 +299,7 @@ class KKW_BooksManager {
 		$cmb->add_field(
 			array(
 				'id'         => $prefix . 'shop_page',
-				'name'       => __( 'Link to buy', 'kkwdomain' ),
+				'name'       => __( 'Link to buy the book', 'kkwdomain' ),
 				'desc'       => __( 'The link to buy the book', 'kkwdomain' ),
 				'type'       => 'text_url',
 			)

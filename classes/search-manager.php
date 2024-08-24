@@ -240,22 +240,46 @@ class KKW_SearchManager {
 			array_key_exists( $prefix . 'short_description', $post->meta_tags[0]) &&
 			$post->meta_tags[0][ $prefix . 'short_description'][0] ?
 			$post->meta_tags[0][ $prefix . 'short_description'][0] : '';
-		$book['year']        = $has_meta && 
+		$book['year'] = $has_meta && 
 			array_key_exists( $prefix . 'year', $post->meta_tags[0]) &&
 			$post->meta_tags[0][ $prefix . 'year'][0] ?
 				$post->meta_tags[0][ $prefix . 'year'][0] : '';
-		$book['pages']        = $has_meta && 
+		$book['pages'] = $has_meta && 
 			array_key_exists( $prefix . 'pages', $post->meta_tags[0]) &&
 			$post->meta_tags[0][ $prefix . 'pages'][0] ?
 			$post->meta_tags[0][ $prefix . 'pages'][0] : '';
-		$book['isbn']        = $has_meta &&
+		$book['format'] = $has_meta && 
+			array_key_exists( $prefix . 'format', $post->meta_tags[0]) &&
+			$post->meta_tags[0][ $prefix . 'format'][0] ?
+			$post->meta_tags[0][ $prefix . 'format'][0] : '';
+		$book['isbn'] = $has_meta &&
 			array_key_exists( $prefix . 'isbn', $post->meta_tags[0]) &&
 				$post->meta_tags[0][ $prefix . 'isbn'][0] ?
 				$post->meta_tags[0][ $prefix . 'isbn'][0] : '';
-		$book['price']        = $has_meta &&
+		$book['price'] = $has_meta &&
 				array_key_exists( $prefix . 'price', $post->meta_tags[0]) &&
 					$post->meta_tags[0][ $prefix . 'price'][0] ?
 					$post->meta_tags[0][ $prefix . 'price'][0] : '';
+		$book['show_price'] = $has_meta &&
+					array_key_exists( $prefix . 'show_price', $post->meta_tags[0]) &&
+						$post->meta_tags[0][ $prefix . 'show_price'][0] ?
+						$post->meta_tags[0][ $prefix . 'show_price'][0] : '';
+		$book['series'] = $has_meta && 
+						array_key_exists( $prefix . 'series', $post->meta_tags[0]) &&
+						$post->meta_tags[0][ $prefix . 'series'][0] ?
+						$post->meta_tags[0][ $prefix . 'series'][0] : '';
+		$book['publisher_page'] = $has_meta && 
+						array_key_exists( $prefix . 'publisher_page', $post->meta_tags[0]) &&
+						$post->meta_tags[0][ $prefix . 'publisher_page'][0] ?
+						$post->meta_tags[0][ $prefix . 'publisher_page'][0] : '';
+		$book['publisher_book_page'] = $has_meta && 
+						array_key_exists( $prefix . 'publisher_book_page', $post->meta_tags[0]) &&
+						$post->meta_tags[0][ $prefix . 'publisher_book_page'][0] ?
+						$post->meta_tags[0][ $prefix . 'publisher_book_page'][0] : '';
+		$book['presentation_author'] = $has_meta && 
+						array_key_exists( $prefix . 'presentation_author', $post->meta_tags[0]) &&
+						$post->meta_tags[0][ $prefix . 'presentation_author'][0] ?
+						$post->meta_tags[0][ $prefix . 'presentation_author'][0] : '';
 
 		// Add the taxonomies.
 		$has_taxonomies = count( $post->taxonomies ) > 0;

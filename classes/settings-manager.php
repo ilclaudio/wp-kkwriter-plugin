@@ -51,8 +51,8 @@ class KKW_SettingsManager {
 		// Taxonomy: sections.
 		add_submenu_page(
 			$main_menu,
-			'Sections',
-			'Sections',
+			__( 'Sections', 'kkwdomain' ),
+			__( 'Sections', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'edit-tags.php?taxonomy=' . KKW_SECTION_TAXONOMY
 		);
@@ -60,8 +60,8 @@ class KKW_SettingsManager {
 		// Taxonomy: collections.
 		add_submenu_page(
 			$main_menu,
-			'Collections',
-			'Collections',
+			__( 'Collections', 'kkwdomain' ),
+			__( 'Collections', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'edit-tags.php?taxonomy=' . KKW_COLLECTION_TAXONOMY
 		);
@@ -69,8 +69,8 @@ class KKW_SettingsManager {
 		// Taxonomy: authors.
 		add_submenu_page(
 			$main_menu,
-			'Authors',
-			'Authors',
+			__( 'Authors', 'kkwdomain' ),
+			__( 'Authors', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'edit-tags.php?taxonomy=' . KKW_AUTHOR_TAXONOMY
 		);
@@ -78,8 +78,8 @@ class KKW_SettingsManager {
 		// Taxonomy: publishers.
 		add_submenu_page(
 			$main_menu,
-			'Publishers',
-			'Publishers',
+			__( 'Publishers', 'kkwdomain' ),
+			__( 'Publishers', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'edit-tags.php?taxonomy=' . KKW_PUBLISHER_TAXONOMY
 		);
@@ -96,8 +96,8 @@ class KKW_SettingsManager {
 		// Add a book.
 		add_submenu_page(
 			$main_menu,
-			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
-			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_BOOK ]['singular_label'], 'kkwdomain' ),
+			__( 'Add a book', 'kkwdomain' ),
+			__( 'Add a book', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']
 		);
@@ -114,8 +114,8 @@ class KKW_SettingsManager {
 		// Add a review.
 		add_submenu_page(
 			$main_menu,
-			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_REVIEW ]['singular_label'], 'kkwdomain' ),
-			__( 'Add a ' . KKW_POST_TYPES[ ID_PT_REVIEW ]['singular_label'], 'kkwdomain' ),
+			__( 'Add a review', 'kkwdomain' ),
+			__( 'Add a review', 'kkwdomain' ),
 			KKW_EDIT_PERMISSION,
 			'post-new.php?post_type=' . KKW_POST_TYPES[ ID_PT_REVIEW ]['name']
 		);
