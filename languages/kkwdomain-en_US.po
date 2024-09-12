@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-31 18:09+0000\n"
-"PO-Revision-Date: 2024-08-24 17:20+0000\n"
+"PO-Revision-Date: 2024-09-12 19:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -568,7 +568,7 @@ msgid "The end date of the event"
 msgstr ""
 
 #: classes/books-manager.php:255
-msgid "The format of th book (dimensions)"
+msgid "The format of the book (dimensions)"
 msgstr ""
 
 #: classes/post-manager.php:138
