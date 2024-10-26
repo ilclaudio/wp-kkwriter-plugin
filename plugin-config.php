@@ -47,8 +47,8 @@ define(
 	array(
 		ID_PT_BOOK       => array(
 			'name'            => 'kkw_book',
-			'plural_label'    => 'Books',
-			'singular_label'  => 'Book',
+			'plural_label'    => __( 'Books', 'kkwdomain' ),
+			'singular_label'  => __( 'Book', 'kkwdomain' ),
 			'archive_page_en' => 'books',
 			'archive_page_it' => 'libri',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -56,8 +56,8 @@ define(
 		),
 		ID_PT_REVIEW     => array(
 			'name'            => 'kkw_review',
-			'plural_label'    => 'Reviews',
-			'singular_label'  => 'Review',
+			'plural_label'    =>  __( 'Reviews', 'kkwdomain' ),
+			'singular_label'  =>  __( 'Review', 'kkwdomain' ),
 			'archive_page_en' => 'reviews',
 			'archive_page_it' => 'recensioni',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -65,8 +65,8 @@ define(
 		),
 		ID_PT_EXCERPT    => array(
 			'name'            => 'kkw_excerpt',
-			'plural_label'    => 'Excerpts',
-			'singular_label'  => 'Excerpt',
+			'plural_label'    => __( 'Excerpts', 'kkwdomain' ),
+			'singular_label'  => __( 'Excerpt', 'kkwdomain' ),
 			'archive_page_en' => 'excerpts',
 			'archive_page_it' => 'brani',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -74,8 +74,8 @@ define(
 		),
 		ID_PT_MULTIMEDIA => array(
 			'name'            => 'kkw_multimedia',
-			'plural_label'    => 'Multimedia',
-			'singular_label'  => 'Multimedia',
+			'plural_label'    => __( 'Multimedia', 'kkwdomain' ),
+			'singular_label'  => __( 'Multimedia', 'kkwdomain' ),
 			'archive_page_en' => 'multimedia_en',
 			'archive_page_it' => 'multimedia_it',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -83,8 +83,8 @@ define(
 		),
 		ID_PT_INTERVIEW  => array(
 			'name'            => 'kkw_interview',
-			'plural_label'    => 'Interviews',
-			'singular_label'  => 'Interview',
+			'plural_label'    => __( 'Interviews', 'kkwdomain' ),
+			'singular_label'  => __( 'Interview', 'kkwdomain' ),
 			'archive_page_en' => 'interviews',
 			'archive_page_it' => 'interviste',
 			'supports'        => KKW_DEFAULT_SUPPORTS,

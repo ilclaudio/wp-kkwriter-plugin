@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-24 17:21+0000\n"
+"POT-Creation-Date: 2024-10-26 15:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -145,7 +145,8 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: classes/books-manager.php:99
+#: classes/books-manager.php:99 classes/settings-manager.php:72
+#: classes/settings-manager.php:73
 msgid "Authors"
 msgstr ""
 
@@ -157,10 +158,11 @@ msgstr ""
 msgid "BatClaudio"
 msgstr ""
 
-#: classes/books-manager.php:153 classes/books-manager.php:160
-#: classes/books-manager.php:353 classes/excerpts-manager.php:69
-#: classes/interviews-manager.php:139 classes/multimedia-manager.php:171
-#: classes/post-manager.php:206 classes/reviews-manager.php:124
+#: plugin-config.php:51 classes/books-manager.php:153
+#: classes/books-manager.php:160 classes/books-manager.php:353
+#: classes/excerpts-manager.php:69 classes/interviews-manager.php:139
+#: classes/multimedia-manager.php:171 classes/post-manager.php:206
+#: classes/reviews-manager.php:124
 msgid "Book"
 msgstr ""
 
@@ -168,7 +170,7 @@ msgstr ""
 msgid "Book data"
 msgstr ""
 
-#: classes/books-manager.php:152
+#: plugin-config.php:50 classes/books-manager.php:152
 msgid "Books"
 msgstr ""
 
@@ -178,6 +180,7 @@ msgid "Collection"
 msgstr ""
 
 #: classes/books-manager.php:72 classes/collections-manager.php:35
+#: classes/settings-manager.php:63 classes/settings-manager.php:64
 msgid "Collections"
 msgstr ""
 
@@ -257,11 +260,11 @@ msgstr ""
 msgid "Event"
 msgstr ""
 
-#: classes/excerpts-manager.php:33
+#: plugin-config.php:69 classes/excerpts-manager.php:33
 msgid "Excerpt"
 msgstr ""
 
-#: classes/excerpts-manager.php:32
+#: plugin-config.php:68 classes/excerpts-manager.php:32
 msgid "Excerpts"
 msgstr ""
 
@@ -301,8 +304,8 @@ msgstr ""
 msgid "Images and photos of the book"
 msgstr ""
 
-#: classes/interviews-manager.php:34 classes/interviews-manager.php:41
-#: classes/multimedia-manager.php:86
+#: plugin-config.php:87 classes/interviews-manager.php:34
+#: classes/interviews-manager.php:41 classes/multimedia-manager.php:86
 msgid "Interview"
 msgstr ""
 
@@ -314,7 +317,7 @@ msgstr ""
 msgid "Interview link"
 msgstr ""
 
-#: classes/interviews-manager.php:33
+#: plugin-config.php:86 classes/interviews-manager.php:33
 msgid "Interviews"
 msgstr ""
 
@@ -360,6 +363,10 @@ msgstr ""
 
 #: classes/multimedia-manager.php:36 classes/multimedia-manager.php:37
 msgid "MultiMedia"
+msgstr ""
+
+#: plugin-config.php:77 plugin-config.php:78
+msgid "Multimedia"
 msgstr ""
 
 #: classes/multimedia-manager.php:68
@@ -423,11 +430,12 @@ msgstr ""
 msgid "Publisher site"
 msgstr ""
 
-#: classes/books-manager.php:126
+#: classes/books-manager.php:126 classes/settings-manager.php:81
+#: classes/settings-manager.php:82
 msgid "Publishers"
 msgstr ""
 
-#: classes/reviews-manager.php:33
+#: plugin-config.php:60 classes/reviews-manager.php:33
 msgid "Review"
 msgstr ""
 
@@ -435,7 +443,7 @@ msgstr ""
 msgid "Review data"
 msgstr ""
 
-#: classes/reviews-manager.php:32
+#: plugin-config.php:59 classes/reviews-manager.php:32
 msgid "Reviews"
 msgstr ""
 
@@ -461,7 +469,8 @@ msgstr ""
 msgid "Section"
 msgstr ""
 
-#: classes/books-manager.php:44
+#: classes/books-manager.php:44 classes/settings-manager.php:54
+#: classes/settings-manager.php:55
 msgid "Sections"
 msgstr ""
 
