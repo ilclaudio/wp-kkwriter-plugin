@@ -47,8 +47,8 @@ define(
 	array(
 		ID_PT_BOOK       => array(
 			'name'            => 'kkw_book',
-			'plural_label'    => __( 'Books', 'kkwdomain' ),
-			'singular_label'  => __( 'Book', 'kkwdomain' ),
+			'plural_label'    => 'BookPluralLabel',
+			'singular_label'  => 'BookSingularLabel',
 			'archive_page_en' => 'books',
 			'archive_page_it' => 'libri',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -56,8 +56,8 @@ define(
 		),
 		ID_PT_REVIEW     => array(
 			'name'            => 'kkw_review',
-			'plural_label'    =>  __( 'Reviews', 'kkwdomain' ),
-			'singular_label'  =>  __( 'Review', 'kkwdomain' ),
+			'plural_label'    => 'ReviewPluralLabel',
+			'singular_label'  => 'ReviewSingularLabel',
 			'archive_page_en' => 'reviews',
 			'archive_page_it' => 'recensioni',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -65,8 +65,8 @@ define(
 		),
 		ID_PT_EXCERPT    => array(
 			'name'            => 'kkw_excerpt',
-			'plural_label'    => __( 'Excerpts', 'kkwdomain' ),
-			'singular_label'  => __( 'Excerpt', 'kkwdomain' ),
+			'plural_label'    => 'ExcerptPluralLabel',
+			'singular_label'  => 'ExcerptSingularLabel',
 			'archive_page_en' => 'excerpts',
 			'archive_page_it' => 'brani',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -74,8 +74,8 @@ define(
 		),
 		ID_PT_MULTIMEDIA => array(
 			'name'            => 'kkw_multimedia',
-			'plural_label'    => __( 'Multimedia', 'kkwdomain' ),
-			'singular_label'  => __( 'Multimedia', 'kkwdomain' ),
+			'plural_label'    => 'MultimediaPluralLabel',
+			'singular_label'  => 'MultimediaSingularLabel',
 			'archive_page_en' => 'multimedia_en',
 			'archive_page_it' => 'multimedia_it',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -83,8 +83,8 @@ define(
 		),
 		ID_PT_INTERVIEW  => array(
 			'name'            => 'kkw_interview',
-			'plural_label'    => __( 'Interviews', 'kkwdomain' ),
-			'singular_label'  => __( 'Interview', 'kkwdomain' ),
+			'plural_label'    => 'InterviewPluralLabel',
+			'singular_label'  => 'InterviewSingularLabel',
 			'archive_page_en' => 'interviews',
 			'archive_page_it' => 'interviste',
 			'supports'        => KKW_DEFAULT_SUPPORTS,
@@ -101,3 +101,33 @@ define( 'KKW_SLUG_MAIN_MENU', 'kkw_main_menu' );
 
 // ROLES AND PERMISSIONS.
 define( 'KKW_EDIT_PERMISSION', 'edit_posts' );
+
+
+/**
+ *  This feature is used so that translation plugins like Loco Translate
+ *  can automatically extract these tags from the theme to translate.
+ *
+ *  @TODO: Check if it is possible to remove these duplications.
+ */
+if ( ! function_exists( 'kkw_translate_data' ) ) {
+	/**
+	 * Return translatable activation labels for static and archive pages.
+	 *
+	 * @return array<string, string>
+	 */
+	function dis_translate_data() {
+		// Standard pages.
+		return array(
+			'BookPluralLabel'         => __( 'BookPluralLabel', 'kkwdomain' ),
+			'BookSingularLabel'       => __( 'BookSingularLabel', 'kkwdomain' ),
+			'ReviewPluralLabel'       => __( 'ReviewPluralLabel', 'kkwdomain' ),
+			'ReviewSingularLabel'     => __( 'ReviewSingularLabel', 'kkwdomain' ),
+			'ExcerptPluralLabel'      => __( 'ExcerptPluralLabel', 'kkwdomain' ),
+			'ExcerptSingularLabel'    => __( 'ExcerptSingularLabel', 'kkwdomain' ),
+			'MultimediaPluralLabel'   => __( 'MultimediaPluralLabel', 'kkwdomain' ),
+			'MultimediaSingularLabel' => __( 'MultimediaSingularLabel', 'kkwdomain' ),
+			'InterviewPluralLabel'    => __( 'InterviewPluralLabel', 'kkwdomain' ),
+			'InterviewSingularLabel'  => __( 'InterviewSingularLabel', 'kkwdomain' ),
+		);
+	}
+}

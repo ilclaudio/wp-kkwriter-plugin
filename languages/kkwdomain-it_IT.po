@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP KK Writer Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-31 18:08+0000\n"
-"PO-Revision-Date: 2024-10-26 15:25+0000\n"
+"PO-Revision-Date: 2026-03-26 16:02+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -157,11 +157,10 @@ msgstr "Quarta di copertina"
 msgid "BatClaudio"
 msgstr "BatClaudio"
 
-#: plugin-config.php:51 classes/books-manager.php:153
-#: classes/books-manager.php:160 classes/books-manager.php:353
-#: classes/excerpts-manager.php:69 classes/interviews-manager.php:139
-#: classes/multimedia-manager.php:171 classes/post-manager.php:206
-#: classes/reviews-manager.php:124
+#: classes/books-manager.php:153 classes/books-manager.php:160
+#: classes/books-manager.php:353 classes/excerpts-manager.php:69
+#: classes/interviews-manager.php:139 classes/multimedia-manager.php:171
+#: classes/post-manager.php:206 classes/reviews-manager.php:124
 msgid "Book"
 msgstr "Libro"
 
@@ -169,9 +168,17 @@ msgstr "Libro"
 msgid "Book data"
 msgstr "Dati del libro"
 
-#: plugin-config.php:50 classes/books-manager.php:152
+#: plugin-config.php:121
+msgid "BookPluralLabel"
+msgstr "Libri"
+
+#: classes/books-manager.php:152
 msgid "Books"
 msgstr "Libri"
+
+#: plugin-config.php:122
+msgid "BookSingularLabel"
+msgstr "Libro"
 
 #: classes/books-manager.php:64 classes/books-manager.php:65
 #: classes/collections-manager.php:36 classes/collections-manager.php:44
@@ -259,13 +266,21 @@ msgstr "Ora fine"
 msgid "Event"
 msgstr "Evento"
 
-#: plugin-config.php:69 classes/excerpts-manager.php:33
+#: classes/excerpts-manager.php:33
 msgid "Excerpt"
 msgstr "Testo"
 
-#: plugin-config.php:68 classes/excerpts-manager.php:32
+#: plugin-config.php:125
+msgid "ExcerptPluralLabel"
+msgstr "Estratti"
+
+#: classes/excerpts-manager.php:32
 msgid "Excerpts"
 msgstr "Testi/Brani"
+
+#: plugin-config.php:126
+msgid "ExcerptSingularLabel"
+msgstr "Estratto"
 
 #: classes/post-manager.php:177
 msgid "External link"
@@ -303,8 +318,8 @@ msgstr "File dell'immagine"
 msgid "Images and photos of the book"
 msgstr "Immagini e foto del libro"
 
-#: plugin-config.php:87 classes/interviews-manager.php:34
-#: classes/interviews-manager.php:41 classes/multimedia-manager.php:86
+#: classes/interviews-manager.php:34 classes/interviews-manager.php:41
+#: classes/multimedia-manager.php:86
 msgid "Interview"
 msgstr "Intervista"
 
@@ -316,8 +331,16 @@ msgstr "Dati dell'intervista"
 msgid "Interview link"
 msgstr "Link all'intervista"
 
-#: plugin-config.php:86 classes/interviews-manager.php:33
+#: plugin-config.php:129
+msgid "InterviewPluralLabel"
+msgstr "Intervista"
+
+#: classes/interviews-manager.php:33
 msgid "Interviews"
+msgstr "Interviste"
+
+#: plugin-config.php:130
+msgid "InterviewSingularLabel"
 msgstr "Interviste"
 
 #: classes/books-manager.php:311
@@ -364,13 +387,17 @@ msgstr "Tipo del media"
 msgid "MultiMedia"
 msgstr "MultiMedia"
 
-#: plugin-config.php:77 plugin-config.php:78
-msgid "Multimedia"
-msgstr "Multimedia"
-
 #: classes/multimedia-manager.php:68
 msgid "Multimedia data"
 msgstr "Dati del multimedia"
+
+#: plugin-config.php:127
+msgid "MultimediaPluralLabel"
+msgstr "Multimedia"
+
+#: plugin-config.php:128
+msgid "MultimediaSingularLabel"
+msgstr "Multimedia"
 
 #: classes/books-manager.php:98
 msgid "New author"
@@ -436,7 +463,7 @@ msgstr "Link sito editore"
 msgid "Publishers"
 msgstr "Editori"
 
-#: plugin-config.php:60 classes/reviews-manager.php:33
+#: classes/reviews-manager.php:33
 msgid "Review"
 msgstr "Recensione"
 
@@ -444,8 +471,16 @@ msgstr "Recensione"
 msgid "Review data"
 msgstr "Dati della recensione"
 
-#: plugin-config.php:59 classes/reviews-manager.php:32
+#: plugin-config.php:123
+msgid "ReviewPluralLabel"
+msgstr "Recensioni"
+
+#: classes/reviews-manager.php:32
 msgid "Reviews"
+msgstr "Recensioni"
+
+#: plugin-config.php:124
+msgid "ReviewSingularLabel"
 msgstr "Recensioni"
 
 #: classes/books-manager.php:93
