@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress Plugin Coding Standards">
-	<description>PHPCS ruleset for the WP KKWriter Plugin.</description>
+	<description>A custom set of code standard rules to check for WordPress plugins.</description>
 
 	<arg value="ps"/>
 	<arg name="parallel" value="8"/>
@@ -12,9 +12,7 @@
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/build/*</exclude-pattern>
 	<exclude-pattern>*/dist/*</exclude-pattern>
-	<exclude-pattern>*/DEV/*</exclude-pattern>
-	<exclude-pattern>*/tests/*</exclude-pattern>
-	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/languages/*.l10n.php</exclude-pattern>
 
 	<rule ref="WordPress"/>
 
@@ -27,7 +25,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="kkwdomain"/>
+				<element value="kk_writer_plugin"/>
 			</property>
 		</properties>
 	</rule>
@@ -39,9 +37,8 @@
 				<element value="KKW_"/>
 			</property>
 		</properties>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound"/>
 	</rule>
 
-
 	<config name="minimum_supported_wp_version" value="6.0"/>
-
 </ruleset>
