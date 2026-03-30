@@ -12,6 +12,7 @@ TAGS: Added, Changed, Deprecated, Removed, Fixed, Security.
 ## [1.0.3] - 2026-03-30
 ### Added
 ### Fixed
+- Fixed sintax of all the php files of the project.
 ### Security
 ### Changed
 

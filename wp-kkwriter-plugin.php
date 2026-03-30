@@ -8,6 +8,7 @@
  * Author URI: https://www.wp-recipes.com
  * Text Domain: kkwdomain
  * Domain Path: /languages
+ *
  * @package WP_KK_Writer_Plugin
  */
 
@@ -48,10 +49,10 @@ require 'inc/utils.php';
  *
  * @return void
  */
-function setup_the_plugin() {
+function kkw_setup_the_plugin() {
 	global $kkw_plugin_manager;
 	include_once 'classes/plugin-manager.php';
 	$kkw_plugin_manager = new KKW_PluginManager();
 	$kkw_plugin_manager->plugin_setup();
 }
-add_action( 'init', 'setup_the_plugin', 1 );
+add_action( 'init', 'kkw_setup_the_plugin', 1 );

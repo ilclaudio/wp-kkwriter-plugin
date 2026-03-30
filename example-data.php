@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Default data of the plugin.
  *

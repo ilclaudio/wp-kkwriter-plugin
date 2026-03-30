@@ -5,10 +5,10 @@
  * @package WP_KK_Writer_Plugin
  */
 
- // PLUGIN CONSTANTS.
+// PLUGIN CONSTANTS.
 define( 'KKW_PLUGIN_NAME', 'wp-kkwriter-plugin' );
 define( 'KKW_PLUGIN_PATH', WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . KKW_PLUGIN_NAME );
-define( 'KKW_PLUGIN_URL', plugin_dir_url(__FILE__) );
+define( 'KKW_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // POST TYPES.
 define( 'KKW_DEFAULT_CATEGORY', 'category' );
@@ -93,7 +93,7 @@ define(
 	)
 );
 
-/* */
+// TAXONOMY.
 define( 'KKW_MAX_TAXONOMY_LENGTH', 60 );
 
 /* MENU */
@@ -115,7 +115,7 @@ if ( ! function_exists( 'kkw_translate_data' ) ) {
 	 *
 	 * @return array<string, string>
 	 */
-	function dis_translate_data() {
+	function kkw_translate_data() {
 		// Standard pages.
 		return array(
 			'BookPluralLabel'         => __( 'BookPluralLabel', 'kkwdomain' ),
