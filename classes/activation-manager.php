@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Activation Manager definition.
  *
@@ -9,18 +8,16 @@
 /**
  * The Activation manager.
  */
-class KKW_ActivationManager
-{
+class KKW_ActivationManager {
+
 
 	/**
 	 * Initialize the plugin.
 	 *
 	 * @return boolean
 	 */
-	public function load_data()
-	{
+	public function load_data() {
 		$result = true;
-		error_log( '@@@ Here you call the function to reload data @@@' );
 
 		$result = $result && $this->load_taxonomy_terms();
 		$result = $result && $this->load_example_books();
@@ -33,13 +30,12 @@ class KKW_ActivationManager
 	 *
 	 * @return boolean
 	 */
-	private function load_taxonomy_terms()
-	{
+	private function load_taxonomy_terms() {
 		try {
 			foreach ( KKW_DEFAULT_TERMS as $item ) {
 				foreach ( $item['items'] as $term ) {
 					$slug = kkw_generate_slug( $term );
-					if (!get_term_by( 'slug', $slug, $item['taxonomy'] ) ) {
+					if ( ! get_term_by( 'slug', $slug, $item['taxonomy'] ) ) {
 						wp_insert_term(
 							$term,
 							$item['taxonomy'],
@@ -53,7 +49,6 @@ class KKW_ActivationManager
 			}
 			return true;
 		} catch ( Exception $e ) {
-			error_log( '@@ Caught exception: ' . $e->getMessage() );
 			return false;
 		}
 	}
@@ -62,23 +57,23 @@ class KKW_ActivationManager
 	 * Create the books.
 	 *
 	 * @return boolean
+	 * @throws ErrorException When a sample book cannot be inserted.
 	 */
-	private function load_example_books()
-	{
+	private function load_example_books() {
 		try {
 			foreach ( KKW_EXAMPLE_BOOKS as $item ) {
 				$book_title     = $item['title'];
-				$book_slug      = kkw_generate_slug($item['title']);
+				$book_slug      = kkw_generate_slug( $item['title'] );
 				$post_type      = KKW_POST_TYPES[ ID_PT_BOOK ]['name'];
-				$book_author    = kkw_generate_slug($item['author']);
-				$book_section   = kkw_generate_slug($item['section']);
-				$book_publisher = kkw_generate_slug($item['publisher']);
+				$book_author    = kkw_generate_slug( $item['author'] );
+				$book_section   = kkw_generate_slug( $item['section'] );
+				$book_publisher = kkw_generate_slug( $item['publisher'] );
 
 				// Check if the book exists.
-				$args = array(
+				$args  = array(
 					'name'        => $book_slug,
 					'post_type'   => $post_type,
-					'numberposts' => 1
+					'numberposts' => 1,
 				);
 				$posts = get_posts( $args );
 				if ( $posts ) {
@@ -94,10 +89,10 @@ class KKW_ActivationManager
 						'post_author'  => get_current_user_id(),
 					);
 					// Add the book.
-					$result  = wp_insert_post($book_item, true);
-					$book_id = is_numeric($result) ? $result : 0;
+					$result  = wp_insert_post( $book_item, true );
+					$book_id = is_numeric( $result ) ? $result : 0;
 					if ( ! $book_id ) {
-						throw new ErrorException('Book not inserted: ' . $book_title);
+						throw new ErrorException( 'Book not inserted: ' . $book_title );
 					}
 				}
 				// Set the author.
@@ -124,7 +119,6 @@ class KKW_ActivationManager
 			}
 			return true;
 		} catch ( Exception $e ) {
-			error_log( '@@ Caught exception: ' . $e->getMessage() );
 			return false;
 		}
 	}

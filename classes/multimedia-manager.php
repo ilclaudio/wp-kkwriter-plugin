@@ -40,7 +40,7 @@ class KKW_MultimediaManager {
 			'edit_item'     => __( 'Edit a media', 'kkwdomain' ),
 			'view_item'     => __( 'View a media', 'kkwdomain' ),
 		);
-		$args = array(
+		$args   = array(
 			'label'        => __( 'Section', 'kkwdomain' ),
 			'labels'       => $labels,
 			'supports'     => KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['supports'],
@@ -65,7 +65,7 @@ class KKW_MultimediaManager {
 		$cmb    = new_cmb2_box(
 			array(
 				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name'] . '_custom_fields',
-				'title'        => __( 'Multimedia data', 'kkwdomain'),
+				'title'        => __( 'Multimedia data', 'kkwdomain' ),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name'] ),
 				'context'      => 'normal',
 				'priority'     => 'high',
@@ -75,16 +75,16 @@ class KKW_MultimediaManager {
 		$cmb->add_field(
 			array(
 				'id'               => $prefix . 'media_category',
-				'name'             => __( 'Media Category', 'kkwdomain'),
-				'desc'             => __( 'Select an option', 'kkwdomain'),
+				'name'             => __( 'Media Category', 'kkwdomain' ),
+				'desc'             => __( 'Select an option', 'kkwdomain' ),
 				'type'             => 'select',
 				'show_option_none' => true,
 				'default'          => 'custom',
 				'options'          => array(
-						'article'   => __( 'Article', 'kkwdomain' ),
-						'doc'       => __( 'Documentary', 'kkwdomain' ),
-						'interview' => __( 'Interview', 'kkwdomain' ),
-						'piece'     => __( 'Piece', 'kkwdomain' ),
+					'article'   => __( 'Article', 'kkwdomain' ),
+					'doc'       => __( 'Documentary', 'kkwdomain' ),
+					'interview' => __( 'Interview', 'kkwdomain' ),
+					'piece'     => __( 'Piece', 'kkwdomain' ),
 				),
 			)
 		);
@@ -92,107 +92,106 @@ class KKW_MultimediaManager {
 		$cmb->add_field(
 			array(
 				'id'               => $prefix . 'media_type',
-				'name'             => __( 'Media Type', 'kkwdomain'),
-				'desc'             => __( 'Select an option', 'kkwdomain'),
+				'name'             => __( 'Media Type', 'kkwdomain' ),
+				'desc'             => __( 'Select an option', 'kkwdomain' ),
 				'type'             => 'select',
 				'show_option_none' => true,
 				'default'          => 'custom',
 				'options'          => array(
-						'mp3'       => __( 'Audio MP3', 'kkwdomain' ),
-						'image'     => __( 'Image', 'kkwdomain' ),
-						'linkimage' => __( 'Link Image', 'kkwdomain' ),
-						'youtube'   => __( 'Link Youtube', 'kkwdomain' ),
-						'mp4'       => __( 'Video MP4', 'kkwdomain' ),
+					'mp3'       => __( 'Audio MP3', 'kkwdomain' ),
+					'image'     => __( 'Image', 'kkwdomain' ),
+					'linkimage' => __( 'Link Image', 'kkwdomain' ),
+					'youtube'   => __( 'Link Youtube', 'kkwdomain' ),
+					'mp4'       => __( 'Video MP4', 'kkwdomain' ),
 				),
 			)
 		);
 		// Field: Media link.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'media_link',
-				'name'       => __( 'Media link', 'kkwdomain'),
-				'desc'       => __( 'The link to the media', 'kkwdomain'),
-				'type'       => 'text_url',
+				'id'   => $prefix . 'media_link',
+				'name' => __( 'Media link', 'kkwdomain' ),
+				'desc' => __( 'The link to the media', 'kkwdomain' ),
+				'type' => 'text_url',
 			)
 		);
 		// Field: Audio media file.
 		$cmb->add_field(
 			array(
-				'id'      => 'upload_media_audio',
-				'name'    => __( 'Audio file', 'kkwdomain'),
-				'desc'    => __( 'Upload the audio media file', 'kkwdomain'),
-				'type'    => 'file',
+				'id'         => 'upload_media_audio',
+				'name'       => __( 'Audio file', 'kkwdomain' ),
+				'desc'       => __( 'Upload the audio media file', 'kkwdomain' ),
+				'type'       => 'file',
 				// query_args are passed to wp.media's library query.
 				'query_args' => array(
-						'type' => array(
+					'type' => array(
 						'audio/mpeg',
 						'audio/mp4',
 						'audio/basic',
 						'audio/vnd.wav',
-						),
 					),
-				)
+				),
+			)
 		);
 		// Field: Video media file.
 		$cmb->add_field(
 			array(
-				'id'      => 'upload_media_video',
-				'name'    => __( 'Video file', 'kkwdomain'),
-				'desc'    => __( 'Upload the video media file', 'kkwdomain'),
-				'type'    => 'file',
+				'id'         => 'upload_media_video',
+				'name'       => __( 'Video file', 'kkwdomain' ),
+				'desc'       => __( 'Upload the video media file', 'kkwdomain' ),
+				'type'       => 'file',
 				'query_args' => array(
-						'type' => array(
+					'type' => array(
 						'video/mp4',
 						'video/webm',
-						),
 					),
-				)
+				),
+			)
 		);
 		// Field: Image media file.
 		$cmb->add_field(
 			array(
-				'id'      => 'upload_media_image',
-				'name'    => __( 'Image file', 'kkwdomain'),
-				'desc'    => __( 'Upload the image media file', 'kkwdomain'),
-				'type'    => 'file',
+				'id'         => 'upload_media_image',
+				'name'       => __( 'Image file', 'kkwdomain' ),
+				'desc'       => __( 'Upload the image media file', 'kkwdomain' ),
+				'type'       => 'file',
 				'query_args' => array(
-						'type' => array(
+					'type' => array(
 						'image/gif',
 						'image/jpeg',
 						'image/png',
-						),
 					),
-				)
+				),
+			)
 		);
 		// Field: link to a book.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . BOOK_LINK_SUFFIX,
 				'name'    => __( 'Book', 'kkwdomain' ),
-				'before'  => __( 'Select linked books' , 'kkwdomain' ),
+				'before'  => __( 'Select linked books', 'kkwdomain' ),
 				'type'    => 'custom_attached_posts',
 				'column'  => true,
 				'options' => array(
 					'show_thumbnails' => false, // Show thumbnails on the left.
 					'filter_boxes'    => true, // Show a text box for filtering the results.
 					'query_args'      => array(
-							'posts_per_page' => -1,
-							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
-						),
+						'posts_per_page' => -1,
+						'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
 					),
+				),
 			)
 		);
 		// Order.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'order',
-				'name'    => __( 'Order', 'kkwdomain'),
-				'desc'    => __( 'The position of this item', 'kkwdomain'),
+				'name'    => __( 'Order', 'kkwdomain' ),
+				'desc'    => __( 'The position of this item', 'kkwdomain' ),
 				'default' => '1',
 				'type'    => 'text_small',
 				'column'  => true,
 			)
 		);
 	}
-
 }

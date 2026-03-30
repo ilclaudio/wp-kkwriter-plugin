@@ -51,7 +51,6 @@ class KKW_CollectionsManager {
 			'has_archive'  => true,
 			'show_in_rest' => true,
 			'taxonomies'   => array( KKW_DEFAULT_TAGS ),
-			// 'menu_position' => 6,
 		);
 
 		register_post_type( KKW_POST_TYPES[ ID_PT_COLLECTION ]['name'], $args );
@@ -66,7 +65,5 @@ class KKW_CollectionsManager {
 	 * @return void
 	 */
 	public function add_fields() {
-
 	}
-
 }

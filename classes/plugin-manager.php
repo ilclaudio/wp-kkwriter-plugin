@@ -8,9 +8,6 @@
 if ( ! class_exists( 'KKW_MultilangManager' ) ) {
 	include_once 'multilang-manager.php';
 }
-// if ( ! class_exists( 'KKW_CollectionsManager' ) ) {
-// 	include_once 'collections-manager.php';
-// }
 if ( ! class_exists( 'KKW_BookManager' ) ) {
 	include_once 'books-manager.php';
 }
@@ -42,7 +39,7 @@ if ( ! class_exists( 'KKW_RestApiManager' ) ) {
 	include_once 'restapi-manager.php';
 }
 /**
- * The manager that builds the tool and configures Wordpress.
+ * The manager that builds the tool and configures WordPress.
  */
 class KKW_PluginManager {
 
@@ -64,10 +61,6 @@ class KKW_PluginManager {
 		// Setup of the Multilang features.
 		$langm = new KKW_MultilangManager();
 		$langm->setup();
-
-		// // Setup the collection post type.
-		// $cm = new KKW_CollectionsManager();
-		// $cm->setup();
 
 		// Setup the book post type.
 		$bm = new KKW_BooksManager();

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Definition of the plugin multilang manager.
+ *
+ * @package WP_KK_Writer_Plugin
+ */
 
 /**
  * The Multilang manager.
@@ -26,5 +31,4 @@ class KKW_MultilangManager {
 	public function upload_languages() {
 		load_plugin_textdomain( 'kkwdomain', false, KKW_PLUGIN_NAME . '/languages' );
 	}
-
 }

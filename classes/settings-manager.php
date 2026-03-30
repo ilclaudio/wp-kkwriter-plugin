@@ -29,6 +29,20 @@ class KKW_SettingsManager {
 	}
 
 	/**
+	 * Get translated plural label for a configured post type.
+	 *
+	 * @param string $post_type_id Configured post type ID constant value.
+	 * @return string
+	 */
+	private function get_post_type_plural_label( $post_type_id ) {
+		$label_key        = KKW_POST_TYPES[ $post_type_id ]['plural_label'];
+		$translated_data  = kkw_translate_data();
+		$translated_label = isset( $translated_data[ $label_key ] ) ? $translated_data[ $label_key ] : $label_key;
+
+		return $translated_label;
+	}
+
+	/**
 	 * Build the menu of the plugin.
 	 *
 	 * @return void
@@ -85,10 +99,11 @@ class KKW_SettingsManager {
 		);
 
 		// List of the books.
+		$book_plural_label = $this->get_post_type_plural_label( ID_PT_BOOK );
 		add_submenu_page(
 			$main_menu,                                                      // parent slug.
-			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // page title.
-			__( KKW_POST_TYPES[ ID_PT_BOOK ]['plural_label'], 'kkwdomain' ), // sub-menu title.
+			$book_plural_label,                                             // page title.
+			$book_plural_label,                                             // sub-menu title.
 			KKW_EDIT_PERMISSION,                                             // capability.
 			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_BOOK ]['name']     // link.
 		);
@@ -103,10 +118,11 @@ class KKW_SettingsManager {
 		);
 
 		// List of the reviews.
+		$review_plural_label = $this->get_post_type_plural_label( ID_PT_REVIEW );
 		add_submenu_page(
 			$main_menu,
-			__( KKW_POST_TYPES[ ID_PT_REVIEW ]['plural_label'], 'kkwdomain' ),
-			__( KKW_POST_TYPES[ ID_PT_REVIEW ]['plural_label'], 'kkwdomain' ),
+			$review_plural_label,
+			$review_plural_label,
 			KKW_EDIT_PERMISSION,
 			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_REVIEW ]['name']
 		);
@@ -121,10 +137,11 @@ class KKW_SettingsManager {
 		);
 
 		// List of the interviews.
+		$interview_plural_label = $this->get_post_type_plural_label( ID_PT_INTERVIEW );
 		add_submenu_page(
 			$main_menu,
-			__( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['plural_label'], 'kkwdomain' ),
-			__( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['plural_label'], 'kkwdomain' ),
+			$interview_plural_label,
+			$interview_plural_label,
 			KKW_EDIT_PERMISSION,
 			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name']
 		);
@@ -139,10 +156,11 @@ class KKW_SettingsManager {
 		);
 
 		// List of the excerpts.
+		$excerpt_plural_label = $this->get_post_type_plural_label( ID_PT_EXCERPT );
 		add_submenu_page(
 			$main_menu,
-			__( KKW_POST_TYPES[ ID_PT_EXCERPT ]['plural_label'], 'kkwdomain' ),
-			__( KKW_POST_TYPES[ ID_PT_EXCERPT ]['plural_label'], 'kkwdomain' ),
+			$excerpt_plural_label,
+			$excerpt_plural_label,
 			KKW_EDIT_PERMISSION,
 			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_EXCERPT ]['name']
 		);
@@ -157,10 +175,11 @@ class KKW_SettingsManager {
 		);
 
 		// List of the multimedia.
+		$multimedia_plural_label = $this->get_post_type_plural_label( ID_PT_MULTIMEDIA );
 		add_submenu_page(
 			$main_menu,
-			__( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['plural_label'], 'kkwdomain' ),
-			__( KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['plural_label'], 'kkwdomain' ),
+			$multimedia_plural_label,
+			$multimedia_plural_label,
 			KKW_EDIT_PERMISSION,
 			'edit.php?post_type=' . KKW_POST_TYPES[ ID_PT_MULTIMEDIA ]['name']
 		);
@@ -183,7 +202,6 @@ class KKW_SettingsManager {
 			'kkw_loadexamples_menu',
 			array( $this, 'get_loadexamples_page' )
 		);
-
 	}
 
 	/**
@@ -204,11 +222,17 @@ class KKW_SettingsManager {
 		// @TODO: check the user permission
 		$result_activation = false;
 		$is_reload         = false;
-		if( isset( $_GET['action'] ) && 'reload' === $_GET['action'] ) {
+		$action            = isset( $_GET['action'] ) ? sanitize_key( wp_unslash( $_GET['action'] ) ) : '';
+		$nonce             = isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '';
+		if ( 'reload' === $action && wp_verify_nonce( $nonce, 'kkw_reload_examples' ) ) {
 			$is_reload         = true;
 			$actm              = new KKW_ActivationManager();
 			$result_activation = $actm->load_data();
 		}
+		$reload_url = wp_nonce_url(
+			admin_url( 'admin.php?page=kkw_loadexamples_menu&action=reload' ),
+			'kkw_reload_examples'
+		);
 
 		echo "<div class='wrap'>";
 		echo '<h1>Load examples</h1>';
@@ -216,7 +240,7 @@ class KKW_SettingsManager {
 		echo '<div id="admin_load_examples">';
 
 		echo '<p>Click the button load some example data: books, sections, authors, publishers, etc. .</p>';
-		echo '<a href="admin.php?page=kkw_loadexamples_menu&action=reload" class="button button-primary">Load example data</a>';
+		echo '<a href="' . esc_url( $reload_url ) . '" class="button button-primary">Load example data</a>';
 		echo '</div>';
 
 		if ( $is_reload ) {
@@ -228,21 +252,20 @@ class KKW_SettingsManager {
 		}
 
 		echo '</div>';
-
 	}
 
 	/**
 	 * Return the name of the parent of a taxonomy in the menu.
 	 *
-	 * @param [type] $parent_file
-	 * @return void
+	 * @param string $parent_file Parent menu slug.
+	 * @return string
 	 */
 	public function keep_taxonomy_menu_open( $parent_file ) {
 		global $current_screen;
 		$taxonomy = $current_screen->taxonomy;
-		if ( in_array( $taxonomy, KKW_CUSTOM_BOOK_TAXONOMIES ) )
+		if ( in_array( $taxonomy, KKW_CUSTOM_BOOK_TAXONOMIES, true ) ) {
 			$parent_file = KKW_SLUG_MAIN_MENU;
+		}
 		return $parent_file;
 	}
-
 }

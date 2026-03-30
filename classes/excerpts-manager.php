@@ -36,7 +36,7 @@ class KKW_ExcerptsManager {
 			'edit_item'     => __( 'Edit a excerpt', 'kkwdomain' ),
 			'view_item'     => __( 'View a excerpt', 'kkwdomain' ),
 		);
-		$args = array(
+		$args   = array(
 			'label'        => __( 'Section', 'kkwdomain' ),
 			'labels'       => $labels,
 			'supports'     => KKW_POST_TYPES[ ID_PT_EXCERPT ]['supports'],
@@ -51,12 +51,17 @@ class KKW_ExcerptsManager {
 		register_post_type( KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'], $args );
 	}
 
+		/**
+		 * Register the custom fields.
+		 *
+		 * @return void
+		 */
 	public function register_custom_fields() {
 		$prefix = 'kkw_';
 		$cmb    = new_cmb2_box(
 			array(
 				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'] . '_custom_fields',
-				'title'        => __( 'Interview data', 'kkwdomain'),
+				'title'        => __( 'Interview data', 'kkwdomain' ),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_EXCERPT ]['name'] ),
 				'context'      => 'normal',
 				'priority'     => 'high',
@@ -67,30 +72,29 @@ class KKW_ExcerptsManager {
 			array(
 				'id'      => $prefix . BOOK_LINK_SUFFIX,
 				'name'    => __( 'Book', 'kkwdomain' ),
-				'before'  => __( 'Select linked books' , 'kkwdomain' ),
+				'before'  => __( 'Select linked books', 'kkwdomain' ),
 				'type'    => 'custom_attached_posts',
 				'column'  => true,
 				'options' => array(
-					'show_thumbnails' => false, // Show thumbnails on the left
-					'filter_boxes'    => true, // Show a text box for filtering the results
+					'show_thumbnails' => false, // Show thumbnails on the left.
+					'filter_boxes'    => true, // Show a text box for filtering the results.
 					'query_args'      => array(
-							'posts_per_page' => -1,
-							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+						'posts_per_page' => -1,
+						'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
 					),
-					),
+				),
 			)
 		);
 		// Order.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'order',
-				'name'    => __( 'Order', 'kkwdomain'),
-				'desc'    => __( 'The position of this item', 'kkwdomain'),
+				'name'    => __( 'Order', 'kkwdomain' ),
+				'desc'    => __( 'The position of this item', 'kkwdomain' ),
 				'default' => '1',
 				'type'    => 'text_small',
 				'column'  => true,
 			)
 		);
 	}
-
 }

@@ -20,24 +20,29 @@ class KKW_PageManager {
 		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
 	}
 
+	/**
+	 * Register the custom fields.
+	 *
+	 * @return void
+	 */
 	public function register_custom_fields() {
 		$prefix = 'kkw_';
-		$cmb = new_cmb2_box(
+		$cmb    = new_cmb2_box(
 			array(
-				'id'            => $prefix . 'page_type_metabox',
-				'title'         => __( 'Page custom data', 'kkwdomain'),
-				'object_types'  => array( KKW_DEFAULT_PAGE ),
-				'context'       => 'normal',
-				'priority'      => 'high',
-				'show_names'    => true,
+				'id'           => $prefix . 'page_type_metabox',
+				'title'        => __( 'Page custom data', 'kkwdomain' ),
+				'object_types' => array( KKW_DEFAULT_PAGE ),
+				'context'      => 'normal',
+				'priority'     => 'high',
+				'show_names'   => true,
 			)
 		);
 		// Field: Prologue.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'prologue_text',
-				'name'    => __( 'A prologue for this page', 'kkwdomain'),
-				'desc'    => __( 'A short text that will be shown above the body of the page', 'kkwdomain'),
+				'name'    => __( 'A prologue for this page', 'kkwdomain' ),
+				'desc'    => __( 'A short text that will be shown above the body of the page', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'wysiwyg',
 				'options' => array(
@@ -57,8 +62,8 @@ class KKW_PageManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'epilogue_text',
-				'name'    => __( 'An epilogue for this page', 'kkwdomain'),
-				'desc'    => __( 'A short text that will be shown below the body of the page', 'kkwdomain'),
+				'name'    => __( 'An epilogue for this page', 'kkwdomain' ),
+				'desc'    => __( 'A short text that will be shown below the body of the page', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'wysiwyg',
 				'options' => array(
@@ -78,8 +83,8 @@ class KKW_PageManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'quote_text',
-				'name'    => __( 'A quote', 'kkwdomain'),
-				'desc'    => __( 'A quote for this page', 'kkwdomain'),
+				'name'    => __( 'A quote', 'kkwdomain' ),
+				'desc'    => __( 'A quote for this page', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'wysiwyg',
 				'options' => array(
@@ -96,5 +101,4 @@ class KKW_PageManager {
 			)
 		);
 	}
-
 }

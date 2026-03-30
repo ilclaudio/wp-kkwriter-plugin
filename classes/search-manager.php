@@ -5,7 +5,6 @@
  * @package WP_KK_Writer_Plugin
  */
 
-
 /**
  * The Settings manager.
  */
@@ -25,7 +24,7 @@ class KKW_SearchManager {
 				'order'     => 'ASC',
 			)
 		);
-		$posts = $results->get_posts();
+		$posts   = $results->get_posts();
 		// Loop through each post to retrieve and include meta tags, related post types and taxonomies.
 		foreach ( $posts as &$post ) {
 			self::fill_post_with_meta( $post );
@@ -42,7 +41,7 @@ class KKW_SearchManager {
 	/**
 	 * Return a book by id.
 	 *
-	 * @param integer $id.
+	 * @param int $id Book post ID.
 	 * @return object.
 	 */
 	public static function get_book( $id ) {
@@ -53,7 +52,7 @@ class KKW_SearchManager {
 				'post_type' => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
 			)
 		);
-		$post = $results->get_posts()[0];
+		$post    = $results->get_posts()[0];
 		self::fill_post_with_meta( $post );
 		$book_object = self::normalize_book( $post );
 		return $book_object;
@@ -62,18 +61,18 @@ class KKW_SearchManager {
 	/**
 	 * Find books.
 	 *
-	 * @param array $parameters
+	 * @param array $parameters Search parameters.
 	 * @return array.
 	 */
 	public static function find( $parameters ) {
 
 		// Base args of the query.
 		$query_args = array(
-			'post_type'         => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
-			'orderby'           => 'title',
-			'order'             => 'ASC',
-			'meta_query'        => array(),
-			'tax_query'         => array(),
+			'post_type'  => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+			'orderby'    => 'title',
+			'order'      => 'ASC',
+			'meta_query' => array(),
+			'tax_query'  => array(),
 		);
 
 		// Prepare title and search_string filters.
@@ -90,7 +89,7 @@ class KKW_SearchManager {
 		self::prepare_filters( $parameters, $meta_filters, $tax_filters );
 
 		// Add meta filters.
-		if ( count ( $meta_filters ) ) {
+		if ( count( $meta_filters ) ) {
 			$query_args['meta_query'] = array_merge(
 				array( 'relation' => 'AND' ),
 				$meta_filters,
@@ -98,7 +97,7 @@ class KKW_SearchManager {
 		}
 
 		// Add tax filters.
-		if ( count ( $tax_filters ) ) {
+		if ( count( $tax_filters ) ) {
 			$query_args['tax_query'] = array_merge(
 				array( 'relation' => 'AND' ),
 				$tax_filters,
@@ -107,7 +106,7 @@ class KKW_SearchManager {
 
 		// Find the posts.
 		$results = new WP_Query( $query_args );
-		$posts = $results->get_posts();
+		$posts   = $results->get_posts();
 		// Loop through each post to retrieve and include meta tags, related post types and taxonomies.
 		foreach ( $posts as &$post ) {
 			self::fill_post_with_meta( $post );
@@ -121,6 +120,14 @@ class KKW_SearchManager {
 		return $normalized;
 	}
 
+	/**
+	 * Build tax/meta filters from search parameters.
+	 *
+	 * @param array $parameters   Input parameters.
+	 * @param array $meta_filters Output meta filters.
+	 * @param array $tax_filters  Output taxonomy filters.
+	 * @return bool
+	 */
 	private static function prepare_filters( $parameters, &$meta_filters, &$tax_filters ) {
 		foreach ( $parameters as $label => $value ) {
 			if ( $value ) {
@@ -145,17 +152,6 @@ class KKW_SearchManager {
 							),
 						);
 						break;
-					// case 'arrival_date':
-					// 	array_push(
-					// 		$meta_filters,
-					// 		array(
-					// 			'key'     => 'emt_start_date',
-					// 			'value'   =>  DateTime::createFromFormat( EMT_FORM_DATE_FORMAT, $par['value'] )->format( EMT_ACF_DB_DATE_FORMAT ),
-					// 			'compare' => '>=',
-					// 			'type'    => 'DATE',
-					// 		),
-					// 	);
-					// 	break;
 				}
 			}
 		}
@@ -165,7 +161,7 @@ class KKW_SearchManager {
 	/**
 	 * Fill the post adding meta_tags, taxonomies, etc.
 	 *
-	 * @param WP_Post $post.
+	 * @param WP_Post $post Post object to enrich.
 	 * @return void.
 	 */
 	private static function fill_post_with_meta( &$post ) {
@@ -180,7 +176,7 @@ class KKW_SearchManager {
 		$taxonomy_data    = array();
 		// Loop through each taxonomy and retrieve the terms.
 		foreach ( $taxonomies as $taxonomy ) {
-			$terms = wp_get_post_terms(
+			$terms                      = wp_get_post_terms(
 				$post->ID,
 				$taxonomy,
 				array( 'fields' => 'names' )
@@ -198,11 +194,11 @@ class KKW_SearchManager {
 	/**
 	 * Retrieve the featured image of the post.
 	 *
-	 * @param integer $post_id
+	 * @param int $post_id Post ID.
 	 * @return array
 	 */
-	private static function get_featured_image( int $post_id ){
-		$image = array();
+	private static function get_featured_image( int $post_id ) {
+		$image        = array();
 		$thumbnail_id = get_post_thumbnail_id( $post_id );
 		if ( $thumbnail_id ) {
 				$image_src    = wp_get_attachment_image_src( $thumbnail_id, 'full' );
@@ -213,12 +209,12 @@ class KKW_SearchManager {
 	}
 
 	/**
-	 * Convert a nested Wordpress object into a onel-level array.
+	 * Convert a nested WordPress object into a onel-level array.
 	 *
-	 * @param WP_Post $post - The post to be converted.
+	 * @param WP_Post $post The post to be converted.
 	 * @return array.
 	 */
-	private static function normalize_book ( $post ) {
+	private static function normalize_book( $post ) {
 		$book = array();
 
 		// Add the post fields.
@@ -230,70 +226,69 @@ class KKW_SearchManager {
 		$book['content'] = $post->post_content;
 
 		// Add the meta-tags.
-		$has_meta      = ( count( $post->meta_tags) > 0 ) && ( count( $post->meta_tags[0] )  > 0 );
-		$prefix        = 'kkw_';
-		$book['group'] = $has_meta &&
-			array_key_exists( $prefix . 'group', $post->meta_tags[0]) &&
-			$post->meta_tags[0][ $prefix . 'group'][0] ?
-			$post->meta_tags[0][ $prefix . 'group'][0] : '';
-		$book['description'] = $has_meta &&
-			array_key_exists( $prefix . 'short_description', $post->meta_tags[0]) &&
-			$post->meta_tags[0][ $prefix . 'short_description'][0] ?
-			$post->meta_tags[0][ $prefix . 'short_description'][0] : '';
-		$book['year'] = $has_meta && 
-			array_key_exists( $prefix . 'year', $post->meta_tags[0]) &&
-			$post->meta_tags[0][ $prefix . 'year'][0] ?
-				$post->meta_tags[0][ $prefix . 'year'][0] : '';
-		$book['pages'] = $has_meta && 
-			array_key_exists( $prefix . 'pages', $post->meta_tags[0]) &&
-			$post->meta_tags[0][ $prefix . 'pages'][0] ?
-			$post->meta_tags[0][ $prefix . 'pages'][0] : '';
-		$book['format'] = $has_meta && 
-			array_key_exists( $prefix . 'format', $post->meta_tags[0]) &&
-			$post->meta_tags[0][ $prefix . 'format'][0] ?
-			$post->meta_tags[0][ $prefix . 'format'][0] : '';
-		$book['isbn'] = $has_meta &&
-			array_key_exists( $prefix . 'isbn', $post->meta_tags[0]) &&
-				$post->meta_tags[0][ $prefix . 'isbn'][0] ?
-				$post->meta_tags[0][ $prefix . 'isbn'][0] : '';
-		$book['price'] = $has_meta &&
-				array_key_exists( $prefix . 'price', $post->meta_tags[0]) &&
-					$post->meta_tags[0][ $prefix . 'price'][0] ?
-					$post->meta_tags[0][ $prefix . 'price'][0] : '';
-		$book['show_price'] = $has_meta &&
-					array_key_exists( $prefix . 'show_price', $post->meta_tags[0]) &&
-						$post->meta_tags[0][ $prefix . 'show_price'][0] ?
-						$post->meta_tags[0][ $prefix . 'show_price'][0] : '';
-		$book['series'] = $has_meta && 
-						array_key_exists( $prefix . 'series', $post->meta_tags[0]) &&
-						$post->meta_tags[0][ $prefix . 'series'][0] ?
-						$post->meta_tags[0][ $prefix . 'series'][0] : '';
-		$book['publisher_page'] = $has_meta && 
-						array_key_exists( $prefix . 'publisher_page', $post->meta_tags[0]) &&
-						$post->meta_tags[0][ $prefix . 'publisher_page'][0] ?
-						$post->meta_tags[0][ $prefix . 'publisher_page'][0] : '';
-		$book['publisher_book_page'] = $has_meta && 
-						array_key_exists( $prefix . 'publisher_book_page', $post->meta_tags[0]) &&
-						$post->meta_tags[0][ $prefix . 'publisher_book_page'][0] ?
-						$post->meta_tags[0][ $prefix . 'publisher_book_page'][0] : '';
-		$book['presentation_author'] = $has_meta && 
-						array_key_exists( $prefix . 'presentation_author', $post->meta_tags[0]) &&
-						$post->meta_tags[0][ $prefix . 'presentation_author'][0] ?
-						$post->meta_tags[0][ $prefix . 'presentation_author'][0] : '';
+		$has_meta                    = ( count( $post->meta_tags ) > 0 ) && ( count( $post->meta_tags[0] ) > 0 );
+		$prefix                      = 'kkw_';
+		$book['group']               = $has_meta &&
+			array_key_exists( $prefix . 'group', $post->meta_tags[0] ) &&
+			$post->meta_tags[0][ $prefix . 'group' ][0] ?
+			$post->meta_tags[0][ $prefix . 'group' ][0] : '';
+		$book['description']         = $has_meta &&
+			array_key_exists( $prefix . 'short_description', $post->meta_tags[0] ) &&
+			$post->meta_tags[0][ $prefix . 'short_description' ][0] ?
+			$post->meta_tags[0][ $prefix . 'short_description' ][0] : '';
+		$book['year']                = $has_meta &&
+			array_key_exists( $prefix . 'year', $post->meta_tags[0] ) &&
+			$post->meta_tags[0][ $prefix . 'year' ][0] ?
+				$post->meta_tags[0][ $prefix . 'year' ][0] : '';
+		$book['pages']               = $has_meta &&
+			array_key_exists( $prefix . 'pages', $post->meta_tags[0] ) &&
+			$post->meta_tags[0][ $prefix . 'pages' ][0] ?
+			$post->meta_tags[0][ $prefix . 'pages' ][0] : '';
+		$book['format']              = $has_meta &&
+			array_key_exists( $prefix . 'format', $post->meta_tags[0] ) &&
+			$post->meta_tags[0][ $prefix . 'format' ][0] ?
+			$post->meta_tags[0][ $prefix . 'format' ][0] : '';
+		$book['isbn']                = $has_meta &&
+			array_key_exists( $prefix . 'isbn', $post->meta_tags[0] ) &&
+				$post->meta_tags[0][ $prefix . 'isbn' ][0] ?
+				$post->meta_tags[0][ $prefix . 'isbn' ][0] : '';
+		$book['price']               = $has_meta &&
+				array_key_exists( $prefix . 'price', $post->meta_tags[0] ) &&
+					$post->meta_tags[0][ $prefix . 'price' ][0] ?
+					$post->meta_tags[0][ $prefix . 'price' ][0] : '';
+		$book['show_price']          = $has_meta &&
+					array_key_exists( $prefix . 'show_price', $post->meta_tags[0] ) &&
+						$post->meta_tags[0][ $prefix . 'show_price' ][0] ?
+						$post->meta_tags[0][ $prefix . 'show_price' ][0] : '';
+		$book['series']              = $has_meta &&
+						array_key_exists( $prefix . 'series', $post->meta_tags[0] ) &&
+						$post->meta_tags[0][ $prefix . 'series' ][0] ?
+						$post->meta_tags[0][ $prefix . 'series' ][0] : '';
+		$book['publisher_page']      = $has_meta &&
+						array_key_exists( $prefix . 'publisher_page', $post->meta_tags[0] ) &&
+						$post->meta_tags[0][ $prefix . 'publisher_page' ][0] ?
+						$post->meta_tags[0][ $prefix . 'publisher_page' ][0] : '';
+		$book['publisher_book_page'] = $has_meta &&
+						array_key_exists( $prefix . 'publisher_book_page', $post->meta_tags[0] ) &&
+						$post->meta_tags[0][ $prefix . 'publisher_book_page' ][0] ?
+						$post->meta_tags[0][ $prefix . 'publisher_book_page' ][0] : '';
+		$book['presentation_author'] = $has_meta &&
+						array_key_exists( $prefix . 'presentation_author', $post->meta_tags[0] ) &&
+						$post->meta_tags[0][ $prefix . 'presentation_author' ][0] ?
+						$post->meta_tags[0][ $prefix . 'presentation_author' ][0] : '';
 
 		// Add the taxonomies.
-		$has_taxonomies = count( $post->taxonomies ) > 0;
-		$book['sections'] = $has_taxonomies && $post->taxonomies['section'] ?
+		$has_taxonomies      = count( $post->taxonomies ) > 0;
+		$book['sections']    = $has_taxonomies && $post->taxonomies['section'] ?
 			$post->taxonomies['section'] : array();
-		$book['categories'] = $has_taxonomies && $post->taxonomies['category'] ?
+		$book['categories']  = $has_taxonomies && $post->taxonomies['category'] ?
 			$post->taxonomies['category'] : array();
 		$book['collections'] = $has_taxonomies && $post->taxonomies['collection'] ?
 			$post->taxonomies['collection'] : array();
-		$book['authors'] = $has_taxonomies && $post->taxonomies['author'] ?
+		$book['authors']     = $has_taxonomies && $post->taxonomies['author'] ?
 			$post->taxonomies['author'] : array();
-		$book['publishers'] = $has_taxonomies && $post->taxonomies['publisher'] ?
+		$book['publishers']  = $has_taxonomies && $post->taxonomies['publisher'] ?
 			$post->taxonomies['publisher'] : array();
 		return $book;
 	}
-
 }

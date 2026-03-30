@@ -22,6 +22,8 @@
 		<properties>
 			<property name="is_theme" value="false"/>
 		</properties>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
 	</rule>
 
 	<rule ref="WordPress.WP.I18n">
@@ -40,6 +42,10 @@
 			</property>
 		</properties>
 		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound"/>
+	</rule>
+
+	<rule ref="Squiz.Commenting.FileComment.Missing">
+		<exclude-pattern>*/classes/restapi-manager.php</exclude-pattern>
 	</rule>
 
 	<config name="minimum_supported_wp_version" value="6.0"/>

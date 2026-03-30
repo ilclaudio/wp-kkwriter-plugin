@@ -20,30 +20,35 @@ class KKW_PostManager {
 		add_action( 'cmb2_admin_init', array( $this, 'register_custom_fields' ) );
 	}
 
+	/**
+	 * Register the custom fields.
+	 *
+	 * @return void
+	 */
 	public function register_custom_fields() {
 		$prefix = 'kkw_';
-		$cmb = new_cmb2_box(
+		$cmb    = new_cmb2_box(
 			array(
-				'id'            => $prefix . 'post_type_metabox',
-				'title'         => __( 'Post custom data', 'kkwdomain' ),
-				'object_types'  => array( KKW_DEFAULT_POST ),
-				'context'       => 'normal',
-				'priority'      => 'high',
-				'show_names'    => true,
+				'id'           => $prefix . 'post_type_metabox',
+				'title'        => __( 'Post custom data', 'kkwdomain' ),
+				'object_types' => array( KKW_DEFAULT_POST ),
+				'context'      => 'normal',
+				'priority'     => 'high',
+				'show_names'   => true,
 			)
 		);
 		// Field: Post type: article, event, news, ecc.
 		$cmb->add_field(
 			array(
-				'id'            => $prefix . 'group',
-				'name'          => __( 'Type', 'kkwdomain' ),
-				'type'          => 'select',
-				'options'       => array(
-						'article'   => __( 'Article', 'kkwdomain' ),
-						'event'     => __( 'Event', 'kkwdomain' ),
-						'news'      => __( 'News', 'kkwdomain' ),
+				'id'      => $prefix . 'group',
+				'name'    => __( 'Type', 'kkwdomain' ),
+				'type'    => 'select',
+				'options' => array(
+					'article' => __( 'Article', 'kkwdomain' ),
+					'event'   => __( 'Event', 'kkwdomain' ),
+					'news'    => __( 'News', 'kkwdomain' ),
 				),
-				'default'       => 'article',
+				'default' => 'article',
 			)
 		);
 		// Field: Short description.
@@ -69,12 +74,12 @@ class KKW_PostManager {
 		// Field: Start date.
 		$cmb->add_field(
 			array(
-				'id'             => $prefix . 'start_date',
-				'name'           => __( 'Start date', 'kkwdomain' ),
-				'desc'           => __( 'The start date of the event', 'kkwdomain' ),
-				'type' => 'text_date',
-				'date_format' => 'd-m-Y',
-				'data-datepicker' => json_encode(
+				'id'              => $prefix . 'start_date',
+				'name'            => __( 'Start date', 'kkwdomain' ),
+				'desc'            => __( 'The start date of the event', 'kkwdomain' ),
+				'type'            => 'text_date',
+				'date_format'     => 'd-m-Y',
+				'data-datepicker' => wp_json_encode(
 					array(
 						'yearRange' => '-100:+0',
 					)
@@ -84,29 +89,30 @@ class KKW_PostManager {
 		// Field: Start hour.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'start_hour',
-				'name'       => __( 'Start hour', 'kkwdomain' ),
-				'type'       => 'text_time',
-				'attributes' => array(
-					'data-timepicker' => json_encode( array(
-					'timeOnlyTitle' => __( 'Start hour', 'kkwdomain' ),
-					'timeFormat' => 'HH:mm',
-					'stepMinute' => 5,
-					)
+				'id'          => $prefix . 'start_hour',
+				'name'        => __( 'Start hour', 'kkwdomain' ),
+				'type'        => 'text_time',
+				'attributes'  => array(
+					'data-timepicker' => wp_json_encode(
+						array(
+							'timeOnlyTitle' => __( 'Start hour', 'kkwdomain' ),
+							'timeFormat'    => 'HH:mm',
+							'stepMinute'    => 5,
+						)
+					),
 				),
-			),
-			'time_format' => 'H:i',
+				'time_format' => 'H:i',
 			)
 		);
 		// Field: End date.
 		$cmb->add_field(
 			array(
-				'id'             => $prefix . 'end_date',
-				'name'           => __( 'End date', 'kkwdomain' ),
-				'desc'           => __( 'The end date of the event', 'kkwdomain' ),
-				'type' => 'text_date',
-				'date_format' => 'd-m-Y',
-				'data-datepicker' => json_encode(
+				'id'              => $prefix . 'end_date',
+				'name'            => __( 'End date', 'kkwdomain' ),
+				'desc'            => __( 'The end date of the event', 'kkwdomain' ),
+				'type'            => 'text_date',
+				'date_format'     => 'd-m-Y',
+				'data-datepicker' => wp_json_encode(
 					array(
 						'yearRange' => '-100:+0',
 					)
@@ -116,18 +122,19 @@ class KKW_PostManager {
 		// Field: End hour.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'end_hour',
-				'name'       => __( 'End hour', 'kkwdomain' ),
-				'type'       => 'text_time',
-				'attributes' => array(
-					'data-timepicker' => json_encode( array(
-					'timeOnlyTitle' => __( 'End hour', 'kkwdomain' ),
-					'timeFormat' => 'HH:mm',
-					'stepMinute' => 5,
-					)
+				'id'          => $prefix . 'end_hour',
+				'name'        => __( 'End hour', 'kkwdomain' ),
+				'type'        => 'text_time',
+				'attributes'  => array(
+					'data-timepicker' => wp_json_encode(
+						array(
+							'timeOnlyTitle' => __( 'End hour', 'kkwdomain' ),
+							'timeFormat'    => 'HH:mm',
+							'stepMinute'    => 5,
+						)
+					),
 				),
-			),
-			'time_format' => 'H:i',
+				'time_format' => 'H:i',
 			)
 		);
 		// Field: Address.
@@ -173,19 +180,19 @@ class KKW_PostManager {
 		// Field: External link.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'external_link',
-				'name'       => __( 'External link', 'kkwdomain' ),
-				'desc'       => __( 'The link to the event/news', 'kkwdomain' ),
-				'type'       => 'text_url',
+				'id'   => $prefix . 'external_link',
+				'name' => __( 'External link', 'kkwdomain' ),
+				'desc' => __( 'The link to the event/news', 'kkwdomain' ),
+				'type' => 'text_url',
 			)
 		);
 		// Field: Video link.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'video_link',
-				'name'       => __( 'Video link', 'kkwdomain' ),
-				'desc'       => __( 'The link to the video', 'kkwdomain' ),
-				'type'       => 'text_url',
+				'id'   => $prefix . 'video_link',
+				'name' => __( 'Video link', 'kkwdomain' ),
+				'desc' => __( 'The link to the video', 'kkwdomain' ),
+				'type' => 'text_url',
 			)
 		);
 		// Field: Image gallery.
@@ -195,8 +202,8 @@ class KKW_PostManager {
 				'name'         => __( 'Gallery', 'kkwdomain' ),
 				'desc'         => __( 'Images and photos of the book', 'kkwdomain' ),
 				'type'         => 'file_list',
-				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
-				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
+				'preview_size' => array( 100, 100 ), // Default preview size is 50x50.
+				'query_args'   => array( 'type' => 'image' ), // Only image attachments.
 			)
 		);
 		// Field: link to a book.
@@ -204,7 +211,7 @@ class KKW_PostManager {
 			array(
 				'id'      => $prefix . BOOK_LINK_SUFFIX,
 				'name'    => __( 'Book', 'kkwdomain' ),
-				'before'  => __( 'Select linked books' , 'kkwdomain' ),
+				'before'  => __( 'Select linked books', 'kkwdomain' ),
 				'type'    => 'custom_attached_posts',
 				'column'  => true,
 				// Output in the admin post-listing as a custom column .
@@ -213,8 +220,8 @@ class KKW_PostManager {
 					'show_thumbnails' => false, // Show thumbnails on the left.
 					'filter_boxes'    => true, // Show a text box for filtering the results.
 					'query_args'      => array(
-							'posts_per_page' => -1,
-							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+						'posts_per_page' => -1,
+						'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
 					),
 				),
 			)
@@ -240,5 +247,4 @@ class KKW_PostManager {
 			)
 		);
 	}
-
 }

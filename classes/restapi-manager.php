@@ -1,14 +1,14 @@
 <?php
 /**
- * Definition of the plugin settings and of the main menu.
+ * Definition of the REST API manager.
  *
  * @package WP_KK_Writer_Plugin
  */
 
-require_once( 'search-manager.php' );
+require_once 'search-manager.php';
 
 /**
- * The Settings manager.
+ * The REST API manager.
  */
 class KKW_RestApiManager {
 
@@ -22,14 +22,18 @@ class KKW_RestApiManager {
 		add_action( 'rest_api_init', array( $this, 'define_endpoints' ) );
 	}
 
-	// Definition of all the endpoints.
-	public function define_endpoints () {
+	/**
+	 * Define all plugin REST endpoints.
+	 *
+	 * @return void
+	 */
+	public function define_endpoints() {
 		register_rest_route(
 			'wp-kkwriter/v1',
 			'getBooks',
 			array(
-				'methods'  => WP_REST_SERVER::READABLE,
-				'callback' => array( $this, 'get_books' ),
+				'methods'             => WP_REST_Server::READABLE,
+				'callback'            => array( $this, 'get_books' ),
 				'permission_callback' => '__return_true',
 			)
 		);
@@ -37,8 +41,8 @@ class KKW_RestApiManager {
 			'wp-kkwriter/v1',
 			'find',
 			array(
-				'methods'  => WP_REST_SERVER::READABLE,
-				'callback' => array( $this, 'find' ),
+				'methods'             => WP_REST_Server::READABLE,
+				'callback'            => array( $this, 'find' ),
 				'permission_callback' => '__return_true',
 			)
 		);
@@ -46,8 +50,8 @@ class KKW_RestApiManager {
 			'wp-kkwriter/v1',
 			'getBook/(?P<id>\d+)',
 			array(
-				'methods'  => WP_REST_SERVER::READABLE,
-				'callback' => array( $this, 'get_book' ),
+				'methods'             => WP_REST_Server::READABLE,
+				'callback'            => array( $this, 'get_book' ),
 				'permission_callback' => '__return_true',
 			)
 		);
@@ -76,7 +80,7 @@ class KKW_RestApiManager {
 
 	/**
 	 * Find objects by: section, title, text.
-	 * 
+	 *
 	 * @param WP_REST_Request $request - The request.
 	 * @return array.
 	 */
@@ -87,12 +91,11 @@ class KKW_RestApiManager {
 		$search_string = isset( $request['search_string'] ) ? $request['search_string'] : '';
 
 		$parameters = array(
-			'title'        => $title,
-			'section'      => $section,
-			'publisher'    => $publisher,
+			'title'         => $title,
+			'section'       => $section,
+			'publisher'     => $publisher,
 			'search_string' => $search_string,
 		);
 		return rest_ensure_response( KKW_SearchManager::find( $parameters ) );
 	}
-
 }

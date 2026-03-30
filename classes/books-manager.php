@@ -33,17 +33,17 @@ class KKW_BooksManager {
 	public function register_taxonomies() {
 		// Section taxonomy.
 		$tax_labels = array(
-			'name'              => __( 'Section', 'kkwdomain' ),
-			'singular_name'     => __( 'Section', 'kkwdomain' ),
-			'search_items'      => __( 'Search Section', 'kkwdomain' ),
-			'all_items'         => __( 'All the Sections', 'kkwdomain' ),
-			'edit_item'         => __( 'Edit Section', 'kkwdomain' ),
-			'update_item'       => __( 'Update Section', 'kkwdomain' ),
-			'add_new_item'      => __( 'Add a Section', 'kkwdomain' ),
-			'new_item_name'     => __( 'New Section', 'kkwdomain' ),
-			'menu_name'         => __( 'Sections', 'kkwdomain' ),
+			'name'          => __( 'Section', 'kkwdomain' ),
+			'singular_name' => __( 'Section', 'kkwdomain' ),
+			'search_items'  => __( 'Search Section', 'kkwdomain' ),
+			'all_items'     => __( 'All the Sections', 'kkwdomain' ),
+			'edit_item'     => __( 'Edit Section', 'kkwdomain' ),
+			'update_item'   => __( 'Update Section', 'kkwdomain' ),
+			'add_new_item'  => __( 'Add a Section', 'kkwdomain' ),
+			'new_item_name' => __( 'New Section', 'kkwdomain' ),
+			'menu_name'     => __( 'Sections', 'kkwdomain' ),
 		);
-		$tax_args = array(
+		$tax_args   = array(
 			'hierarchical'      => false,
 			'labels'            => $tax_labels,
 			'show_ui'           => true,
@@ -61,17 +61,17 @@ class KKW_BooksManager {
 
 		// Collection taxonomy.
 		$tax_labels = array(
-			'name'              => __( 'Collection', 'kkwdomain' ),
-			'singular_name'     => __( 'Collection', 'kkwdomain' ),
-			'search_items'      => __( 'Search Collection', 'kkwdomain' ),
-			'all_items'         => __( 'All the Collections', 'kkwdomain' ),
-			'edit_item'         => __( 'Edit Collection', 'kkwdomain' ),
-			'update_item'       => __( 'Update Collection', 'kkwdomain' ),
-			'add_new_item'      => __( 'Add a Collection', 'kkwdomain' ),
-			'new_item_name'     => __( 'New Collection', 'kkwdomain' ),
-			'menu_name'         => __( 'Collections', 'kkwdomain' ),
+			'name'          => __( 'Collection', 'kkwdomain' ),
+			'singular_name' => __( 'Collection', 'kkwdomain' ),
+			'search_items'  => __( 'Search Collection', 'kkwdomain' ),
+			'all_items'     => __( 'All the Collections', 'kkwdomain' ),
+			'edit_item'     => __( 'Edit Collection', 'kkwdomain' ),
+			'update_item'   => __( 'Update Collection', 'kkwdomain' ),
+			'add_new_item'  => __( 'Add a Collection', 'kkwdomain' ),
+			'new_item_name' => __( 'New Collection', 'kkwdomain' ),
+			'menu_name'     => __( 'Collections', 'kkwdomain' ),
 		);
-		$tax_args = array(
+		$tax_args   = array(
 			'hierarchical'      => false,
 			'labels'            => $tax_labels,
 			'show_ui'           => true,
@@ -88,17 +88,17 @@ class KKW_BooksManager {
 
 		// Author taxonomy.
 		$tax_labels = array(
-			'name'              => __( 'Author', 'kkwdomain' ),
-			'singular_name'     => __( 'Author', 'kkwdomain' ),
-			'search_items'      => __( 'Search author', 'kkwdomain' ),
-			'all_items'         => __( 'All the authors', 'kkwdomain' ),
-			'edit_item'         => __( 'Edit author', 'kkwdomain' ),
-			'update_item'       => __( 'Update author', 'kkwdomain' ),
-			'add_new_item'      => __( 'Add an author', 'kkwdomain' ),
-			'new_item_name'     => __( 'New author', 'kkwdomain' ),
-			'menu_name'         => __( 'Authors', 'kkwdomain' ),
+			'name'          => __( 'Author', 'kkwdomain' ),
+			'singular_name' => __( 'Author', 'kkwdomain' ),
+			'search_items'  => __( 'Search author', 'kkwdomain' ),
+			'all_items'     => __( 'All the authors', 'kkwdomain' ),
+			'edit_item'     => __( 'Edit author', 'kkwdomain' ),
+			'update_item'   => __( 'Update author', 'kkwdomain' ),
+			'add_new_item'  => __( 'Add an author', 'kkwdomain' ),
+			'new_item_name' => __( 'New author', 'kkwdomain' ),
+			'menu_name'     => __( 'Authors', 'kkwdomain' ),
 		);
-		$tax_args = array(
+		$tax_args   = array(
 			'hierarchical'      => false,
 			'labels'            => $tax_labels,
 			'show_ui'           => true,
@@ -115,17 +115,17 @@ class KKW_BooksManager {
 
 		// Publisher taxonomy.
 		$tax_labels = array(
-			'name'              => __( 'Publisher', 'kkwdomain' ),
-			'singular_name'     => __( 'Publisher', 'kkwdomain' ),
-			'search_items'      => __( 'Search Publisher', 'kkwdomain' ),
-			'all_items'         => __( 'All the Publishers', 'kkwdomain' ),
-			'edit_item'         => __( 'Edit Publisher', 'kkwdomain' ),
-			'update_item'       => __( 'Update Publisher', 'kkwdomain' ),
-			'add_new_item'      => __( 'Add a Publisher', 'kkwdomain' ),
-			'new_item_name'     => __( 'New Publisher', 'kkwdomain' ),
-			'menu_name'         => __( 'Publishers', 'kkwdomain' ),
+			'name'          => __( 'Publisher', 'kkwdomain' ),
+			'singular_name' => __( 'Publisher', 'kkwdomain' ),
+			'search_items'  => __( 'Search Publisher', 'kkwdomain' ),
+			'all_items'     => __( 'All the Publishers', 'kkwdomain' ),
+			'edit_item'     => __( 'Edit Publisher', 'kkwdomain' ),
+			'update_item'   => __( 'Update Publisher', 'kkwdomain' ),
+			'add_new_item'  => __( 'Add a Publisher', 'kkwdomain' ),
+			'new_item_name' => __( 'New Publisher', 'kkwdomain' ),
+			'menu_name'     => __( 'Publishers', 'kkwdomain' ),
 		);
-		$tax_args = array(
+		$tax_args   = array(
 			'hierarchical'      => false,
 			'labels'            => $tax_labels,
 			'show_ui'           => true,
@@ -139,7 +139,6 @@ class KKW_BooksManager {
 			array( KKW_POST_TYPES[ ID_PT_BOOK ]['name'] ),
 			$tax_args
 		);
-
 	}
 
 	/**
@@ -156,7 +155,7 @@ class KKW_BooksManager {
 			'edit_item'     => __( 'Edit a book', 'kkwdomain' ),
 			'view_item'     => __( 'View a book', 'kkwdomain' ),
 		);
-		$args = array(
+		$args   = array(
 			'label'        => __( 'Book', 'kkwdomain' ),
 			'labels'       => $labels,
 			'supports'     => KKW_POST_TYPES[ ID_PT_BOOK ]['supports'],
@@ -280,28 +279,28 @@ class KKW_BooksManager {
 		// Field: Link to the publisher site.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'publisher_page',
-				'name'       => __( 'Publisher site', 'kkwdomain' ),
-				'desc'       => __( 'The link to the publisher site', 'kkwdomain' ),
-				'type'       => 'text_url',
+				'id'   => $prefix . 'publisher_page',
+				'name' => __( 'Publisher site', 'kkwdomain' ),
+				'desc' => __( 'The link to the publisher site', 'kkwdomain' ),
+				'type' => 'text_url',
 			)
 		);
 		// Field: Link to the book on the publisher site.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'publisher_book_page',
-				'name'       => __( 'Link of the book on the publisher site', 'kkwdomain' ),
-				'desc'       => __( 'The link to the book page on the publisher site', 'kkwdomain' ),
-				'type'       => 'text_url',
+				'id'   => $prefix . 'publisher_book_page',
+				'name' => __( 'Link of the book on the publisher site', 'kkwdomain' ),
+				'desc' => __( 'The link to the book page on the publisher site', 'kkwdomain' ),
+				'type' => 'text_url',
 			)
 		);
 		// Field: Link where to buy the book.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'shop_page',
-				'name'       => __( 'Link to buy the book', 'kkwdomain' ),
-				'desc'       => __( 'The link to buy the book', 'kkwdomain' ),
-				'type'       => 'text_url',
+				'id'   => $prefix . 'shop_page',
+				'name' => __( 'Link to buy the book', 'kkwdomain' ),
+				'desc' => __( 'The link to buy the book', 'kkwdomain' ),
+				'type' => 'text_url',
 			)
 		);
 		// Field: ISBN.
@@ -331,8 +330,8 @@ class KKW_BooksManager {
 				'name'         => __( 'Back cover', 'kkwdomain' ),
 				'desc'         => __( 'The back cover of the book', 'kkwdomain' ),
 				'type'         => 'file',
-				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
-				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
+				'preview_size' => array( 100, 100 ), // Default preview size is 50x50.
+				'query_args'   => array( 'type' => 'image' ), // Only image attachments.
 			)
 		);
 		// Field: Image gallery.
@@ -342,8 +341,8 @@ class KKW_BooksManager {
 				'name'         => __( 'Gallery', 'kkwdomain' ),
 				'desc'         => __( 'Images and photos of the book', 'kkwdomain' ),
 				'type'         => 'file_list',
-				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
-				'query_args'   => array( 'type' => 'image' ), // Only images attachment.
+				'preview_size' => array( 100, 100 ), // Default preview size is 50x50.
+				'query_args'   => array( 'type' => 'image' ), // Only image attachments.
 			)
 		);
 		// Field: link to a book.
@@ -351,17 +350,17 @@ class KKW_BooksManager {
 			array(
 				'id'      => $prefix . BOOK_LINK_SUFFIX,
 				'name'    => __( 'Book', 'kkwdomain' ),
-				'before'  => __( 'Select linked books' , 'kkwdomain' ),
+				'before'  => __( 'Select linked books', 'kkwdomain' ),
 				'type'    => 'custom_attached_posts',
 				'column'  => true,
 				'options' => array(
-					'show_thumbnails' => false, // Show thumbnails on the left
-					'filter_boxes'    => true, // Show a text box for filtering the results
+					'show_thumbnails' => false, // Show thumbnails on the left.
+					'filter_boxes'    => true, // Show a text box for filtering the results.
 					'query_args'      => array(
-							'posts_per_page' => -1,
-							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+						'posts_per_page' => -1,
+						'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
 					),
-					),
+				),
 			)
 		);
 		// Field Show in carousel.
@@ -385,5 +384,4 @@ class KKW_BooksManager {
 			)
 		);
 	}
-
 }

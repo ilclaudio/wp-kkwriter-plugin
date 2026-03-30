@@ -37,7 +37,7 @@ class KKW_InterviewsManager {
 			'edit_item'     => __( 'Edit an interview', 'kkwdomain' ),
 			'view_item'     => __( 'View an interview', 'kkwdomain' ),
 		);
-		$args = array(
+		$args   = array(
 			'label'        => __( 'Interview', 'kkwdomain' ),
 			'labels'       => $labels,
 			'supports'     => KKW_POST_TYPES[ ID_PT_INTERVIEW ]['supports'],
@@ -52,12 +52,17 @@ class KKW_InterviewsManager {
 		register_post_type( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name'], $args );
 	}
 
+		/**
+		 * Register the custom fields.
+		 *
+		 * @return void
+		 */
 	public function register_custom_fields() {
 		$prefix = 'kkw_';
 		$cmb    = new_cmb2_box(
 			array(
 				'id'           => $prefix . KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name'] . '_custom_fields',
-				'title'        => __( 'Interview data', 'kkwdomain'),
+				'title'        => __( 'Interview data', 'kkwdomain' ),
 				'object_types' => array( KKW_POST_TYPES[ ID_PT_INTERVIEW ]['name'] ),
 				'context'      => 'normal',
 				'priority'     => 'high',
@@ -67,8 +72,8 @@ class KKW_InterviewsManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'date',
-				'name'    => __( 'Date', 'kkwdomain'),
-				'desc'    => __( 'The date of the interview', 'kkwdomain'),
+				'name'    => __( 'Date', 'kkwdomain' ),
+				'desc'    => __( 'The date of the interview', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text_small',
 			)
@@ -77,8 +82,8 @@ class KKW_InterviewsManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'author',
-				'name'    => __( 'Author', 'kkwdomain'),
-				'desc'    => __( 'The author of the interview', 'kkwdomain'),
+				'name'    => __( 'Author', 'kkwdomain' ),
+				'desc'    => __( 'The author of the interview', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'text',
 			)
@@ -87,8 +92,8 @@ class KKW_InterviewsManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'source_description',
-				'name'    => __( 'Source description', 'kkwdomain'),
-				'desc'    => __( 'The description of the source of the interview', 'kkwdomain'),
+				'name'    => __( 'Source description', 'kkwdomain' ),
+				'desc'    => __( 'The description of the source of the interview', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'wysiwyg',
 				'options' => array(
@@ -107,8 +112,8 @@ class KKW_InterviewsManager {
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'short_description',
-				'name'    => __( 'Short description', 'kkwdomain'),
-				'desc'    => __( 'A short excerpt from the interview', 'kkwdomain'),
+				'name'    => __( 'Short description', 'kkwdomain' ),
+				'desc'    => __( 'A short excerpt from the interview', 'kkwdomain' ),
 				'default' => '',
 				'type'    => 'wysiwyg',
 				'options' => array(
@@ -126,10 +131,10 @@ class KKW_InterviewsManager {
 		// Field: Link to the interview.
 		$cmb->add_field(
 			array(
-				'id'         => $prefix . 'link',
-				'name'       => __( 'Interview link', 'kkwdomain'),
-				'desc'       => __( 'The link to the interview', 'kkwdomain'),
-				'type'       => 'text_url',
+				'id'   => $prefix . 'link',
+				'name' => __( 'Interview link', 'kkwdomain' ),
+				'desc' => __( 'The link to the interview', 'kkwdomain' ),
+				'type' => 'text_url',
 			)
 		);
 		// Field: link to a book.
@@ -137,29 +142,28 @@ class KKW_InterviewsManager {
 			array(
 				'id'      => $prefix . BOOK_LINK_SUFFIX,
 				'name'    => __( 'Book', 'kkwdomain' ),
-				'before'  => __( 'Select linked books' , 'kkwdomain' ),
+				'before'  => __( 'Select linked books', 'kkwdomain' ),
 				'type'    => 'custom_attached_posts',
 				'column'  => true,
 				'options' => array(
 					'show_thumbnails' => false, // Show thumbnails on the left.
 					'filter_boxes'    => true, // Show a text box for filtering the results.
 					'query_args'      => array(
-							'posts_per_page' => -1,
-							'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
+						'posts_per_page' => -1,
+						'post_type'      => KKW_POST_TYPES[ ID_PT_BOOK ]['name'],
 					),
-					),
+				),
 			)
 		);
 		// Order.
 		$cmb->add_field(
 			array(
 				'id'      => $prefix . 'order',
-				'name'    => __( 'Order', 'kkwdomain'),
-				'desc'    => __( 'The position of this item', 'kkwdomain'),
+				'name'    => __( 'Order', 'kkwdomain' ),
+				'desc'    => __( 'The position of this item', 'kkwdomain' ),
 				'default' => '1',
 				'type'    => 'text_small',
 			)
 		);
 	}
-
 }
