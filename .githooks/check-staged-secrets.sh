@@ -45,14 +45,14 @@ patterns=(
 
 found=0
 for pattern in "${patterns[@]}"; do
-	if printf '%s\n' "$added_lines" | grep -E -i -n "$pattern" >/tmp/alm_secret_scan_matches.$$ 2>/dev/null; then
+	if printf '%s\n' "$added_lines" | grep -E -i -n "$pattern" >/tmp/kkw_secret_scan_matches.$$ 2>/dev/null; then
 		if [ "$found" -eq 0 ]; then
 			echo "[KKW pre-commit] Potential secret detected in staged changes:" >&2
 			found=1
 		fi
-		cat /tmp/alm_secret_scan_matches.$$ >&2
+		cat /tmp/kkw_secret_scan_matches.$$ >&2
 	fi
-	rm -f /tmp/alm_secret_scan_matches.$$ >/dev/null 2>&1 || true
+	rm -f /tmp/kkw_secret_scan_matches.$$ >/dev/null 2>&1 || true
 
 done
 
